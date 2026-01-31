@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>游戏档案 - ACGN档案馆</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">ACGN档案馆</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../video/" class="nav-link">游戏剧场</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">游戏档案</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> 搜索
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../video/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> 上一章
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    下一章 <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="目录">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style type="text/css">
+  /* 隐藏侧边栏（保留原有逻辑） */
+  .bs-sidebar,
+  .col-md-3,
+  div[role="navigation"],
+  .nav-sidebar {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 主内容区适配（保留原有逻辑并优化） */
+  .col-md-9,
+  .main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 20px 40px !important;
+    background-color: #f0f7ff !important; /* 浅蓝背景烘托档案氛围 */
+  }
+
+  body > div.container > div.row > div:first-child {
+    display: none !important;
+  }
+
+  /* 档案馆容器样式 - 整体布局 */
+  .game-archive-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin: 32px 0;
+    justify-content: flex-start;
+  }
+
+  /* 档案卡片（书本风格）核心样式 */
+  .game-archive-card {
+    width: 300px;
+    padding: 0;
+    border-radius: 12px 4px 12px 12px; /* 模拟书本翻角效果 */
+    background: linear-gradient(135deg, #e8f4f8 0%, #f0f8fb 100%); /* 浅蓝渐变纸张质感 */
+    border: 2px solid #2c7fb8; /* 深蓝边框模拟档案夹 */
+    box-shadow: 
+      0 8px 16px rgba(44, 127, 184, 0.15), /* 立体阴影 */
+      inset 0 1px 0 #ffffff, /* 内高光模拟纸张 */
+      3px 3px 0 #a8d8ea; /* 侧边投影强化书本感 */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  /* 卡片悬停效果 - 模拟书本拿起的动效 */
+  .game-archive-card:hover {
+    transform: translateY(-6px) rotate(1deg);
+    box-shadow: 
+      0 12px 24px rgba(44, 127, 184, 0.25),
+      inset 0 1px 0 #ffffff,
+      5px 5px 0 #8fc5e9;
+  }
+
+  /* 档案标签（书本标题栏） */
+  .game-archive-card .archive-title {
+    background: linear-gradient(90deg, #2c7fb8 0%, #3f94c5 100%); /* 深蓝渐变标签 */
+    color: #ffffff;
+    padding: 12px 16px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #1a5f85; /* 标签下边框强化层次 */
+  }
+
+  /* 档案封面图容器 */
+  .game-archive-card .archive-cover {
+    padding: 16px;
+  }
+
+  .game-archive-card .archive-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #b8d8e8; /* 图片边框呼应蓝色系 */
+    box-shadow: 0 2px 4px rgba(44, 127, 184, 0.1);
+  }
+
+  /* 档案内容区 */
+  .game-archive-card .archive-content {
+    padding: 0 16px 16px;
+  }
+
+  .game-archive-card .archive-content-title {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #1a5f85; /* 深蓝文字 */
+    font-weight: 500;
+  }
+
+  /* 档案链接样式 */
+  .game-archive-card .archive-link-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .game-archive-card .archive-link-list a {
+    color: #2c7fb8;
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+    transition: all 0.2s ease;
+  }
+
+  .game-archive-card .archive-link-list a:hover {
+    color: #1a5f85;
+    border-bottom: 1px dashed #1a5f85;
+  }
+
+  /* 模拟书本翻角装饰 */
+  .game-archive-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, transparent 0%, transparent 50%, #a8d8ea 50%, #c4e3f0 100%);
+    border-radius: 0 0 0 8px;
+    box-shadow: -1px 1px 2px rgba(44, 127, 184, 0.1);
+  }
+</style>
+
+<!-- 游戏档案馆容器：统一控制布局 -->
+<div class="game-archive-container">
+
+  <!-- 黑神话：悟空 - 档案卡片 -->
+  <div class="game-archive-card">
+    <h2 class="archive-title">黑神话：悟空</h2>
+    <div class="archive-cover">
+      <img src="/game_cover/黑神话悟空.jpg" alt="黑神话：悟空封面" style="display: block;">
+    </div>
+    <div class="archive-content">
+      <h3 class="archive-content-title">内容一览：</h3>
+      <ul class="archive-link-list">
+        <li>
+          <a href="../game/black-myth-wukong/story">剧情梳理</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 可复用的其他游戏档案卡片模板 -->
+  <!--
+  <div class="game-archive-card">
+    <h2 class="archive-title">其他游戏名称</h2>
+    <div class="archive-cover">
+      <img src="/game_cover/xxx.jpg" alt="游戏封面" style="display: block;">
+    </div>
+    <div class="archive-content">
+      <h3 class="archive-content-title">内容一览：</h3>
+      <ul class="archive-link-list">
+        <li>
+          <a href="../game/xxx/xxx">相关内容</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  -->
+
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>用<a href="https://www.mkdocs.org/">MkDocs</a>建立的文档。</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">搜索</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+            </div>
+            <div class="modal-body">
+                <p>从这里您可以搜索这些文档。在下面输入您需要搜索的内容。</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="搜索..." id="mkdocs-search-query" title="在此输入搜索内容">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="没有搜索到结果"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">键盘热键</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">键</th>
+                    <th>动作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>打开这个帮助</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>下一页面</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>上一页面</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>搜索</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

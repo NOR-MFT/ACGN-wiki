@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>游戏剧场 - ACGN档案馆</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">ACGN档案馆</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">游戏剧场</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../game-file/" class="nav-link">游戏档案</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> 搜索
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> 上一章
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../game-file/" class="nav-link">
+                                    下一章 <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="目录">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style type="text/css">
+  .bs-sidebar,
+  .col-md-3,
+  div[role="navigation"],
+  .nav-sidebar {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .col-md-9,
+  .main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding: 40px 5% !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%) !important;
+    min-height: 100vh;
+  }
+
+  body > div.container > div.row > div:first-child {
+    display: none !important;
+  }
+
+  body {
+    color: #333333 !important;
+    font-family: "Microsoft Yahei", "PingFang SC", sans-serif;
+    background: #f8f9fa !important;
+  }
+
+  .page-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 40px;
+    text-shadow: 0 0 8px rgba(64, 158, 255, 0.2);
+    letter-spacing: 2px;
+  }
+
+  .movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 1400px;
+  }
+
+  /* 核心优化：蓝色系影院风格的卡片样式 */
+  .movie-card {
+    width: 280px;
+    padding: 0;
+    border-radius: 8px 24px 8px 24px; /* 电影票式不规则圆角 */
+    background: #ffffff;
+    border: 2px solid #409eff; /* 天蓝主边框（替换鎏金） */
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 8px rgba(64, 158, 255, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    /* 胶片纹理背景（保留，适配蓝色系） */
+    background-image: 
+      linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+    background-size: 10px 10px;
+  }
+
+  /* 蓝色系影院幕布式hover效果（替换金色光晕） */
+  .movie-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: #87ceeb; /* 浅天青边框（替换亮金） */
+    /* 模拟影院蓝色灯光扫过效果（替换金色） */
+    box-shadow: 0 0 20px rgba(64, 158, 255, 0.3), 0 16px 48px rgba(0, 0, 0, 0.15);
+  }
+
+  /* 卡片标题：电影票头样式（蓝色渐变替换红金） */
+  .movie-card h2 {
+    padding: 16px 20px;
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(90deg, #005a9c 0%, #0077cc 100%); /* 深海蓝→宝蓝渐变 */
+    border-bottom: 2px solid #87ceeb; /* 浅天青底框（替换亮金） */
+    letter-spacing: 1px;
+    position: relative;
+  }
+  /* 电影票撕边效果（蓝色替换金色） */
+  .movie-card h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #87ceeb 0%, transparent 5%, transparent 10%, #87ceeb 10%, transparent 15%, transparent 20%, #87ceeb 20%, transparent 25%, transparent 30%, #87ceeb 30%, transparent 35%, transparent 40%, #87ceeb 40%, transparent 45%, transparent 50%, #87ceeb 50%, transparent 55%, transparent 60%, #87ceeb 60%, transparent 65%, transparent 70%, #87ceeb 70%, transparent 75%, transparent 80%, #87ceeb 80%, transparent 85%, transparent 90%, #87ceeb 90%, transparent 95%, #87ceeb 95%);
+    background-size: 20px 4px;
+  }
+
+  /* 海报区域：影院放映框效果（保留黑边，优化光束为蓝色） */
+  .movie-poster {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: all 0.4s ease;
+    border: 8px solid #000; /* 放映框黑边（保留经典影院感） */
+    box-sizing: border-box;
+    position: relative;
+  }
+  /* 模拟影院蓝色放映光束（替换金色） */
+  .movie-poster::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(64,158,255,0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .movie-card:hover .movie-poster {
+    filter: brightness(1.15) contrast(1.05);
+    transform: scale(1.02);
+  }
+  .movie-card:hover .movie-poster::after {
+    opacity: 1;
+  }
+
+  /* 状态区域：蓝色系影院信息栏样式 */
+  .movie-status {
+    padding: 16px 20px;
+    background: linear-gradient(180deg, #e8f4fb 0%, #ffffff 100%); /* 浅蓝底渐变（替换金黄底） */
+  }
+
+  .movie-status h3 {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    color: #005a9c; /* 深海蓝文字（替换金色） */
+    font-weight: 600;
+    display: inline-block;
+    padding: 2px 8px;
+    border: 1px dashed #0077cc; /* 宝蓝虚线边框（替换金色） */
+    border-radius: 4px;
+  }
+
+  .movie-status ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.8;
+    list-style-type: "🎬 "; /* 胶片图标保留，适配蓝色系 */
+  }
+
+  .movie-link {
+    text-decoration: none;
+    display: block;
+  }
+
+  /* 卡片底部胶片装饰（保留黑色，经典影院元素） */
+  .movie-card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #000 0%, #000 4px, transparent 4px, transparent 8px, #000 8px, #000 12px, transparent 12px, transparent 16px, #000 16px, #000 20px, transparent 20px);
+    background-size: 20px 6px;
+    opacity: 0.8;
+  }
+
+  .page-note {
+    text-align: center;
+    color: #888888;
+    font-size: 14px;
+    margin-top: 60px;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<p style="text-align: center; color: #666666; margin-bottom: 30px;">点击图片跳转至视频播放页面</p>
+
+<div class="movie-container">
+
+  <div class="movie-card">
+    <h2>最终幻想7重制系列</h2>
+    <a href="https://www.bilibili.com/video/BV1wAk5Y4Eza/?vd_source=86a999bdbb94e8fb56a4db34faccf22a" target="_blank" class="movie-link">
+      <img src="/video_cover/最终幻想7.png" class="movie-poster" alt="最终幻想7重制系列视频封面">
+    </a>
+    <div class="movie-status">
+      <h3>更新状态</h3>
+      <ul>
+        <li>最终幻想7：remake（已完结）</li>
+        <li>最终幻想7：rebuild（待更新）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="movie-card">
+    <h2>漫威蜘蛛侠系列</h2>
+    <a href="https://www.bilibili.com/video/BV1ovKTe9EbS/?vd_source=86a999bdbb94e8fb56a4db34faccf22a" target="_blank" class="movie-link">
+      <img src="/video_cover/漫威蜘蛛侠.jpg" class="movie-poster" alt="漫威蜘蛛侠系列视频封面">
+    </a>
+    <div class="movie-status">
+      <h3>更新状态</h3>
+      <ul>
+        <li>漫威蜘蛛侠（已完结）</li>
+        <li>漫威蜘蛛侠：莫拉莱斯（已完结）</li>
+        <li>漫威蜘蛛侠2（待更新）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="movie-card">
+    <h2>轨迹系列</h2>
+    <a href="https://www.bilibili.com/video/BV1geYdzVEJq/?vd_source=86a999bdbb94e8fb56a4db34faccf22a" target="_blank" class="movie-link">
+      <img src="/video_cover/轨迹.jpg" class="movie-poster" alt="轨迹系列视频封面">
+    </a>
+    <div class="movie-status">
+      <h3>更新状态</h3>
+      <ul>
+        <li>空之轨迹1st（更新中）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="movie-card">
+    <h2>逆转裁判系列</h2>
+    <a href="https://www.bilibili.com/video/BV1DcBKB8ENy?vd_source=86a999bdbb94e8fb56a4db34faccf22a&spm_id_from=333.788.videopod.sections" target="_blank" class="movie-link">
+      <img src="/video_cover/逆转裁判.jpg" class="movie-poster" alt="逆转裁判系列视频封面">
+    </a>
+    <div class="movie-status">
+      <h3>更新状态</h3>
+      <ul>
+        <li>大逆转裁判（更新中）</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="page-note">本页为本人录制剪辑的游戏剧情汇总，仅记录游戏主线剧情</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>用<a href="https://www.mkdocs.org/">MkDocs</a>建立的文档。</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">搜索</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+            </div>
+            <div class="modal-body">
+                <p>从这里您可以搜索这些文档。在下面输入您需要搜索的内容。</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="搜索..." id="mkdocs-search-query" title="在此输入搜索内容">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="没有搜索到结果"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">键盘热键</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">键</th>
+                    <th>动作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>打开这个帮助</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>下一页面</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>上一页面</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>搜索</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
