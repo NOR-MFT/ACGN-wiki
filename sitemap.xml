@@ -2,22 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nor-mft.github.io/ACGN-wiki/</loc>
-         <lastmod>2026-01-31</lastmod>
+         <lastmod>2026-02-08</lastmod>
     </url>
     <url>
          <loc>https://nor-mft.github.io/ACGN-wiki/game-file/</loc>
-         <lastmod>2026-01-31</lastmod>
+         <lastmod>2026-02-08</lastmod>
     </url>
     <url>
          <loc>https://nor-mft.github.io/ACGN-wiki/video/</loc>
-         <lastmod>2026-01-31</lastmod>
+         <lastmod>2026-02-08</lastmod>
     </url>
     <url>
          <loc>https://nor-mft.github.io/ACGN-wiki/game/black-myth-wukong/story/</loc>
-         <lastmod>2026-01-31</lastmod>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://nor-mft.github.io/ACGN-wiki/game/black-myth-wukong/story/%E5%B0%8F%E8%A5%BF%E5%A4%A9/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://nor-mft.github.io/ACGN-wiki/game/black-myth-wukong/story/%E7%81%AB%E7%84%B0%E5%B1%B1/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://nor-mft.github.io/ACGN-wiki/game/black-myth-wukong/story/%E7%9B%98%E4%B8%9D%E5%B2%AD/</loc>
+         <lastmod>2026-02-08</lastmod>
     </url>
     <url>
          <loc>https://nor-mft.github.io/ACGN-wiki/game/black-myth-wukong/story/%E8%8A%B1%E6%9E%9C%E5%B1%B1/</loc>
-         <lastmod>2026-01-31</lastmod>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://nor-mft.github.io/ACGN-wiki/game/black-myth-wukong/story/%E9%BB%84%E9%A3%8E%E5%B2%AD/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://nor-mft.github.io/ACGN-wiki/game/black-myth-wukong/story/%E9%BB%91%E9%A3%8E%E5%B1%B1/</loc>
+         <lastmod>2026-02-08</lastmod>
     </url>
 </urlset>

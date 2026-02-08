@@ -46,11 +46,6 @@
                         </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> 搜索
-                            </a>
-                        </li>
                             <li class="nav-item">
                                 <a rel="prev" href=".." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> 上一章
@@ -84,6 +79,7 @@
                     <div class="col-md-9" role="main">
 
 <style type="text/css">
+  /* 原有样式保持不变 */
   .bs-sidebar,
   .col-md-3,
   div[role="navigation"],
@@ -115,6 +111,77 @@
     background: #f8f9fa !important;
   }
 
+  /* 强化版：游戏剧场主标题样式（影院风格+蓝色系） */
+  .main-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    color: #005a9c;
+    margin: 0 auto 60px;
+    padding: 30px 0;
+    letter-spacing: 8px;
+    text-shadow: 0 4px 12px rgba(64, 158, 255, 0.35), 0 0 25px rgba(0, 88, 156, 0.2);
+    position: relative;
+    max-width: 900px;
+    background: linear-gradient(180deg, #ffffff 0%, #e8f4fb 100%);
+    border-radius: 12px;
+    border: 3px solid #409eff;
+    box-shadow: 0 12px 36px rgba(64, 158, 255, 0.15);
+  }
+
+  /* 标题顶部影院幕布装饰线 */
+  .main-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px 8px 0 0;
+    background: linear-gradient(90deg, #005a9c 0%, #409eff 50%, #005a9c 100%);
+    box-shadow: 0 2px 8px rgba(64, 158, 255, 0.3);
+  }
+
+  /* 标题底部胶片齿状装饰 */
+  .main-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #000 0%, #000 4px, transparent 4px, transparent 8px, #000 8px, #000 12px, transparent 12px, transparent 16px, #000 16px, #000 20px, transparent 20px);
+    background-size: 20px 6px;
+    opacity: 0.8;
+  }
+
+  /* 标题两侧影院放映灯装饰 */
+  .main-title span:first-child {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #409eff;
+    box-shadow: 0 0 15px rgba(64, 158, 255, 0.8), 0 0 25px rgba(64, 158, 255, 0.5);
+    z-index: 1;
+  }
+
+  .main-title span:last-child {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #409eff;
+    box-shadow: 0 0 15px rgba(64, 158, 255, 0.8), 0 0 25px rgba(64, 158, 255, 0.5);
+    z-index: 1;
+  }
+
   .page-title {
     text-align: center;
     font-size: 28px;
@@ -134,44 +201,39 @@
     max-width: 1400px;
   }
 
-  /* 核心优化：蓝色系影院风格的卡片样式 */
   .movie-card {
     width: 280px;
     padding: 0;
-    border-radius: 8px 24px 8px 24px; /* 电影票式不规则圆角 */
+    border-radius: 8px 24px 8px 24px;
     background: #ffffff;
-    border: 2px solid #409eff; /* 天蓝主边框（替换鎏金） */
+    border: 2px solid #409eff;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 8px rgba(64, 158, 255, 0.2);
     transition: all 0.4s ease;
     position: relative;
-    /* 胶片纹理背景（保留，适配蓝色系） */
     background-image: 
       linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
       linear-gradient(180deg, rgba(0,0,0,0.02) 1px, transparent 1px);
     background-size: 10px 10px;
   }
 
-  /* 蓝色系影院幕布式hover效果（替换金色光晕） */
   .movie-card:hover {
     transform: translateY(-10px) scale(1.03);
-    border-color: #87ceeb; /* 浅天青边框（替换亮金） */
-    /* 模拟影院蓝色灯光扫过效果（替换金色） */
+    border-color: #87ceeb;
     box-shadow: 0 0 20px rgba(64, 158, 255, 0.3), 0 16px 48px rgba(0, 0, 0, 0.15);
   }
 
-  /* 卡片标题：电影票头样式（蓝色渐变替换红金） */
   .movie-card h2 {
     padding: 16px 20px;
     margin: 0;
     font-size: 18px;
     color: #fff;
-    background: linear-gradient(90deg, #005a9c 0%, #0077cc 100%); /* 深海蓝→宝蓝渐变 */
-    border-bottom: 2px solid #87ceeb; /* 浅天青底框（替换亮金） */
+    background: linear-gradient(90deg, #005a9c 0%, #0077cc 100%);
+    border-bottom: 2px solid #87ceeb;
     letter-spacing: 1px;
     position: relative;
   }
-  /* 电影票撕边效果（蓝色替换金色） */
+
   .movie-card h2::after {
     content: "";
     position: absolute;
@@ -183,18 +245,17 @@
     background-size: 20px 4px;
   }
 
-  /* 海报区域：影院放映框效果（保留黑边，优化光束为蓝色） */
   .movie-poster {
     width: 100%;
     height: 160px;
     object-fit: cover;
     display: block;
     transition: all 0.4s ease;
-    border: 8px solid #000; /* 放映框黑边（保留经典影院感） */
+    border: 8px solid #000;
     box-sizing: border-box;
     position: relative;
   }
-  /* 模拟影院蓝色放映光束（替换金色） */
+
   .movie-poster::after {
     content: "";
     position: absolute;
@@ -207,28 +268,29 @@
     transition: opacity 0.4s ease;
     pointer-events: none;
   }
+
   .movie-card:hover .movie-poster {
     filter: brightness(1.15) contrast(1.05);
     transform: scale(1.02);
   }
+
   .movie-card:hover .movie-poster::after {
     opacity: 1;
   }
 
-  /* 状态区域：蓝色系影院信息栏样式 */
   .movie-status {
     padding: 16px 20px;
-    background: linear-gradient(180deg, #e8f4fb 0%, #ffffff 100%); /* 浅蓝底渐变（替换金黄底） */
+    background: linear-gradient(180deg, #e8f4fb 0%, #ffffff 100%);
   }
 
   .movie-status h3 {
     margin: 0 0 12px 0;
     font-size: 14px;
-    color: #005a9c; /* 深海蓝文字（替换金色） */
+    color: #005a9c;
     font-weight: 600;
     display: inline-block;
     padding: 2px 8px;
-    border: 1px dashed #0077cc; /* 宝蓝虚线边框（替换金色） */
+    border: 1px dashed #0077cc;
     border-radius: 4px;
   }
 
@@ -238,7 +300,7 @@
     color: #555555;
     font-size: 14px;
     line-height: 1.8;
-    list-style-type: "🎬 "; /* 胶片图标保留，适配蓝色系 */
+    list-style-type: "🎬 ";
   }
 
   .movie-link {
@@ -246,7 +308,6 @@
     display: block;
   }
 
-  /* 卡片底部胶片装饰（保留黑色，经典影院元素） */
   .movie-card::before {
     content: "";
     position: absolute;
@@ -272,10 +333,17 @@
   }
 </style>
 
+<!-- 优化后的游戏剧场标题（带影院装饰元素） -->
+<h1 class="main-title">
+  <span></span>
+  游戏剧场
+  <span></span>
+</h1>
+
 <p style="text-align: center; color: #666666; margin-bottom: 30px;">点击图片跳转至视频播放页面</p>
 
 <div class="movie-container">
-
+  <!-- 原有卡片内容保持不变 -->
   <div class="movie-card">
     <h2>最终幻想7重制系列</h2>
     <a href="https://www.bilibili.com/video/BV1wAk5Y4Eza/?vd_source=86a999bdbb94e8fb56a4db34faccf22a" target="_blank" class="movie-link">
@@ -330,7 +398,6 @@
       </ul>
     </div>
   </div>
-
 </div>
 
 <div class="page-note">本页为本人录制剪辑的游戏剧情汇总，仅记录游戏主线剧情</div></div>
@@ -347,29 +414,8 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../js/base.js"></script>
-        <script src="../search/main.js"></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">搜索</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
-            </div>
-            <div class="modal-body">
-                <p>从这里您可以搜索这些文档。在下面输入您需要搜索的内容。</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="搜索..." id="mkdocs-search-query" title="在此输入搜索内容">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="没有搜索到结果"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

@@ -46,11 +46,6 @@
                         </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> 搜索
-                            </a>
-                        </li>
                             <li class="nav-item">
                                 <a rel="prev" href="../video/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> 上一章
@@ -108,6 +103,41 @@
 
   body > div.container > div.row > div:first-child {
     display: none !important;
+  }
+
+  /* 新增：游戏档案主标题样式 */
+  .game-archive-main-title {
+    text-align: center;
+    color: #1a5f85; /* 匹配档案深蓝系文字色 */
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0 40px 0;
+    padding-bottom: 16px;
+    border-bottom: 3px double #2c7fb8; /* 双线条边框模拟档案标题栏 */
+    position: relative;
+    letter-spacing: 2px; /* 字间距增强档案标题质感 */
+  }
+
+  /* 标题装饰伪元素（呼应书本翻角/蓝色系） */
+  .game-archive-main-title::before,
+  .game-archive-main-title::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 40px;
+    height: 12px;
+    background: #a8d8ea; /* 匹配卡片翻角色 */
+    border-radius: 4px;
+  }
+
+  .game-archive-main-title::before {
+    left: 50%;
+    transform: translateX(-120px);
+  }
+
+  .game-archive-main-title::after {
+    right: 50%;
+    transform: translateX(120px);
   }
 
   /* 档案馆容器样式 - 整体布局 */
@@ -215,6 +245,9 @@
   }
 </style>
 
+<!-- 新增：游戏档案主标题 -->
+<h1 class="game-archive-main-title">游戏档案</h1>
+
 <!-- 游戏档案馆容器：统一控制布局 -->
 <div class="game-archive-container">
 
@@ -232,27 +265,7 @@
         </li>
       </ul>
     </div>
-  </div>
-
-  <!-- 可复用的其他游戏档案卡片模板 -->
-  <!--
-  <div class="game-archive-card">
-    <h2 class="archive-title">其他游戏名称</h2>
-    <div class="archive-cover">
-      <img src="/game_cover/xxx.jpg" alt="游戏封面" style="display: block;">
-    </div>
-    <div class="archive-content">
-      <h3 class="archive-content-title">内容一览：</h3>
-      <ul class="archive-link-list">
-        <li>
-          <a href="../game/xxx/xxx">相关内容</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  -->
-
-</div></div>
+  </div></div>
             </div>
         </div>
 
@@ -266,29 +279,8 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../js/base.js"></script>
-        <script src="../search/main.js"></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">搜索</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
-            </div>
-            <div class="modal-body">
-                <p>从这里您可以搜索这些文档。在下面输入您需要搜索的内容。</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="搜索..." id="mkdocs-search-query" title="在此输入搜索内容">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="没有搜索到结果"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
