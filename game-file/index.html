@@ -419,13 +419,14 @@
     padding: 16px;
   }
 
-  .game-archive-card .archive-cover img {
+.game-archive-card .archive-cover img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #b8d8e8; /* 图片边框呼应蓝色系 */
+    height: 150px;          /* 设置你想要的统一高度 */
+    object-fit: cover;      /* 图片不变形，自动裁切填满 */
+    border-radius: 8px;     /* 保持之前的圆角，可选 */
+    border: 1px solid #b8d8e8; /* 保持之前的边框 */
     box-shadow: 0 2px 4px rgba(44, 127, 184, 0.1);
-  }
+}
 
   /* 档案内容区 */
   .game-archive-card .archive-content {
@@ -438,6 +439,7 @@
     color: #1a5f85; /* 深蓝文字 */
     font-weight: 500;
   }
+
 
   /* 档案链接样式 */
   .game-archive-card .archive-link-list {
@@ -484,8 +486,9 @@
   <div class="game-archive-card">
     <h2 class="archive-title">黑神话：悟空</h2>
     <div class="archive-cover">
-    <a href="https://store.steampowered.com/app/2358720/_/" target="_blank" class="movie-link">
-      <img src="https://raw.githubusercontent.com/NOR-MFT/ACGN-wiki/main/game_cover/黑神话悟空.jpg" alt="黑神话：悟空封面" style="display: block;">
+      <a href="https://store.steampowered.com/app/2358720/_/" target="_blank" class="movie-link">
+        <img src="../game_cover/黑神话悟空.jpg" alt="黑神话：悟空封面" style="display: block;">
+      </a>
     </div>
     <div class="archive-content">
       <h3 class="archive-content-title">内容一览：</h3>
@@ -495,6 +498,27 @@
         </li>
         <li>
           <a href="../game/black-myth-wukong/archive">影神图</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 锈湖 - 档案卡片 -->
+  <div class="game-archive-card">
+    <h2 class="archive-title">锈湖</h2>
+    <div class="archive-cover">
+      <a href="https://store.steampowered.com/franchise/rustylake/" target="_blank" class="movie-link">
+        <img src="../game_cover/锈湖.jpg" alt="锈湖封面" style="display: block;">
+      </a>
+    </div>
+    <div class="archive-content">
+      <h3 class="archive-content-title">内容一览：</h3>
+      <ul class="archive-link-list">
+        <li>
+          <a href="../game/rusty-lake/timeline">时间线</a>
+        </li>
+        <li>
+          <a href="../game/rusty-lake/family-tree">族谱</a>
         </li>
       </ul>
     </div>
