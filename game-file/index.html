@@ -327,14 +327,14 @@
   /* 新增：游戏档案主标题样式 */
   .game-archive-main-title {
     text-align: center;
-    color: #1a5f85; /* 匹配档案深蓝系文字色 */
+    color: #1a5f85;
     font-size: 36px;
     font-weight: 700;
     margin: 20px 0 40px 0;
     padding-bottom: 16px;
-    border-bottom: 3px double #2c7fb8; /* 双线条边框模拟档案标题栏 */
+    border-bottom: 3px double #2c7fb8;
     position: relative;
-    letter-spacing: 2px; /* 字间距增强档案标题质感 */
+    letter-spacing: 2px;
   }
 
   /* 标题装饰伪元素（呼应书本翻角/蓝色系） */
@@ -345,7 +345,7 @@
     bottom: -3px;
     width: 40px;
     height: 12px;
-    background: #a8d8ea; /* 匹配卡片翻角色 */
+    background: #a8d8ea;
     border-radius: 4px;
   }
 
@@ -359,26 +359,25 @@
     transform: translateX(120px);
   }
 
-  /* 档案馆容器样式 - 整体布局 */
+  /* 档案馆容器样式 - 改为三列网格 */
   .game-archive-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 一行三列，等宽 */
     gap: 32px;
     margin: 32px 0;
-    justify-content: flex-start;
   }
 
   /* 档案卡片（书本风格）核心样式 */
   .game-archive-card {
-    width: 300px;
+    width: 100%;                         /* 改为自适应网格列宽 */
     padding: 0;
-    border-radius: 12px 4px 12px 12px; /* 模拟书本翻角效果 */
-    background: linear-gradient(135deg, #e8f4f8 0%, #f0f8fb 100%); /* 浅蓝渐变纸张质感 */
-    border: 2px solid #2c7fb8; /* 深蓝边框模拟档案夹 */
+    border-radius: 12px 4px 12px 12px;
+    background: linear-gradient(135deg, #e8f4f8 0%, #f0f8fb 100%);
+    border: 2px solid #2c7fb8;
     box-shadow: 
-      0 8px 16px rgba(44, 127, 184, 0.15), /* 立体阴影 */
-      inset 0 1px 0 #ffffff, /* 内高光模拟纸张 */
-      3px 3px 0 #a8d8ea; /* 侧边投影强化书本感 */
+      0 8px 16px rgba(44, 127, 184, 0.15),
+      inset 0 1px 0 #ffffff,
+      3px 3px 0 #a8d8ea;
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -395,13 +394,13 @@
 
   /* 档案标签（书本标题栏） */
   .game-archive-card .archive-title {
-    background: linear-gradient(90deg, #2c7fb8 0%, #3f94c5 100%); /* 深蓝渐变标签 */
+    background: linear-gradient(90deg, #2c7fb8 0%, #3f94c5 100%);
     color: #ffffff;
     padding: 12px 16px;
     margin: 0;
     font-size: 18px;
     font-weight: 600;
-    border-bottom: 1px solid #1a5f85; /* 标签下边框强化层次 */
+    border-bottom: 1px solid #1a5f85;
   }
 
   /* 档案封面图容器 */
@@ -409,14 +408,14 @@
     padding: 16px;
   }
 
-.game-archive-card .archive-cover img {
+  .game-archive-card .archive-cover img {
     width: 100%;
-    height: 150px;          /* 设置你想要的统一高度 */
-    object-fit: cover;      /* 图片不变形，自动裁切填满 */
-    border-radius: 8px;     /* 保持之前的圆角，可选 */
-    border: 1px solid #b8d8e8; /* 保持之前的边框 */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #b8d8e8;
     box-shadow: 0 2px 4px rgba(44, 127, 184, 0.1);
-}
+  }
 
   /* 档案内容区 */
   .game-archive-card .archive-content {
@@ -426,10 +425,9 @@
   .game-archive-card .archive-content-title {
     margin: 0 0 8px 0;
     font-size: 14px;
-    color: #1a5f85; /* 深蓝文字 */
+    color: #1a5f85;
     font-weight: 500;
   }
-
 
   /* 档案链接样式 */
   .game-archive-card .archive-link-list {
@@ -464,6 +462,27 @@
     border-radius: 0 0 0 8px;
     box-shadow: -1px 1px 2px rgba(44, 127, 184, 0.1);
   }
+
+  /* ========== 移动端适配 ========== */
+  @media (max-width: 900px) {
+    .game-archive-container {
+      grid-template-columns: repeat(2, 1fr);  /* 平板/小屏：两列 */
+      gap: 24px;
+    }
+    .game-archive-main-title {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .game-archive-container {
+      grid-template-columns: 1fr;              /* 手机：单列 */
+      gap: 20px;
+    }
+    .game-archive-main-title {
+      font-size: 24px;
+    }
+  }
 </style>
 
 <!-- 新增：游戏档案主标题 -->
@@ -494,6 +513,7 @@
   </div>
 
   <!-- 锈湖 - 档案卡片 -->
+<!--
   <div class="game-archive-card">
     <h2 class="archive-title" id="rusty-lake">锈湖</h2>
     <div class="archive-cover">
@@ -513,6 +533,27 @@
       </ul>
     </div>
   </div>
+-->
+
+  <!-- 原神 - 档案卡片 -->
+<!--
+  <div class="game-archive-card">
+    <h2 class="archive-title" id="genshin">原神</h2>
+    <div class="archive-cover">
+      <a href="https://ys.mihoyo.com/main/?from_fab=1" target="_blank" class="movie-link">
+        <img src="../game_cover/原神.png" alt="原神封面" style="display: block;">
+      </a>
+    </div>
+    <div class="archive-content">
+      <h3 class="archive-content-title">内容一览：</h3>
+      <ul class="archive-link-list">
+        <li>
+          <a href="../game/genshin/archive">提瓦特档案馆</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+-->
 
 
 
