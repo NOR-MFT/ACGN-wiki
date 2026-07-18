@@ -312,6 +312,105 @@
 
   <h1>艾兰德家族</h1>
 
+<style>
+/* ========== 锈湖·时间线正文样式 ========== */
+/* 仅作用于页面正文，不影响网站全局 UI */
+
+/* 正文区域背景与字体 */
+.md-content {
+  /* 模拟旧纸与锈迹的深色背景 */
+  background-color: #1e1510;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(120, 80, 50, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(80, 60, 40, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(60, 30, 20, 0.5) 0%, transparent 50%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.01) 2px,
+      rgba(255, 255, 255, 0.01) 4px
+    );
+  /* 内边距增加呼吸感 */
+  padding: 2rem !important;
+  border-radius: 4px;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.6);
+  /* 全局字体：衬线体，复古感 */
+  font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', '宋体', serif;
+  color: #d4c5b2;  /* 暖灰褐色，类似褪色墨水 */
+}
+
+/* 年份标题（h2/h3）的颜色 */
+.md-content h2,
+.md-content h3 {
+  color: #e6d5b3 !important;       /* 金褐色，突出显示 */
+  border-bottom: 1px solid #5a4a3a;
+  padding-bottom: 4px;
+  margin-top: 1.5em;
+  font-family: inherit;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* 段落文字 */
+.md-content p {
+  color: #d4c5b2;
+  line-height: 1.8;
+}
+
+/* 时间标签（保持字号，改为锈红色） */
+.tl {
+  font-size: 0.85em !important;
+  color: #c47f5a !important;   /* 铜锈红 */
+}
+
+/* 带文字的分隔线（保持布局，改为暗铜色） */
+.hr-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #b09b8c;              /* 浅褐色文字 */
+  font-size: 15px;
+  margin: 20px 0;
+}
+.hr-text::before,
+.hr-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #5a4a3a;  /* 暗铜色线条，如锈蚀金属丝 */
+}
+.hr-text::before {
+  margin-right: 15px;
+}
+.hr-text::after {
+  margin-left: 15px;
+}
+
+/* 链接颜色 */
+.md-content a {
+  color: #c47f5a;
+  text-decoration: none;
+  border-bottom: 1px dotted #5a4a3a;
+}
+.md-content a:hover {
+  color: #e08e6e;
+  border-bottom: 1px solid #c47f5a;
+}
+
+/* 调整列表样式 */
+.md-content ul,
+.md-content ol {
+  color: #d4c5b2;
+}
+
+/* 可选：如果你包裹了容器 .timeline-wrapper，也可同时定义 */
+.timeline-wrapper {
+  background-color: rgba(30, 21, 16, 0.9);
+  padding: 20px;
+  border: 1px solid #5a4a3a;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+</style>
+
 <p><img alt="" src="../../%E9%85%8D%E5%9B%BE/%E8%89%BE%E5%85%B0%E5%BE%B7%E5%AE%B6%E6%97%8F.png" /></p>
 
 
