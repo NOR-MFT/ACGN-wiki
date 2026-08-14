@@ -262,6 +262,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../fiction-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    小说资料
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../search/" class="md-nav__link">
         
   
@@ -366,6 +393,28 @@
     <span class="md-ellipsis">
       
         1799
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1838" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1838年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1839" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1839
       
     </span>
   </a>
@@ -808,20 +857,17 @@
 
 
 <style>
-/* ========== 锈湖·时间线正文样式（符号增强版） ========== */
+/* ========== 锈湖·时间线正文样式（符号增强版，分隔线保持原布局） ========== */
 /* 仅作用于页面正文，不影响网站全局 UI */
 
 .md-content {
   background-color: #1e1510;
   background-image:
-    /* 1. 细线网格 - 旧纸纤维 */
     linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
-    /* 2. 锈色斑块 */
     radial-gradient(ellipse at 20% 30%, rgba(100, 60, 30, 0.4) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 70%, rgba(120, 80, 50, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgba(60, 30, 20, 0.5) 0%, transparent 50%),
-    /* 3. 角落的大方块符号（方块是锈湖核心元素） */
     linear-gradient(135deg, rgba(150, 120, 80, 0.08) 25%, transparent 25%),
     linear-gradient(225deg, rgba(150, 120, 80, 0.08) 25%, transparent 25%);
   background-size:
@@ -832,14 +878,6 @@
     100% 100%,
     60px 60px,
     60px 60px;
-  background-position:
-    0 0,
-    0 0,
-    0 0,
-    0 0,
-    0 0,
-    0 0,
-    0 0;
   padding: 2.5rem !important;
   border-radius: 2px;
   box-shadow: inset 0 0 40px rgba(0,0,0,0.7);
@@ -849,7 +887,7 @@
   overflow: hidden;
 }
 
-/* 四角 L 形线（旧相册包角） */
+/* 四角 L 形线 */
 .md-content::before,
 .md-content::after {
   content: "";
@@ -872,7 +910,7 @@
   border-width: 0 1px 1px 0;
 }
 
-/* 右上角小眼睛符号（锈湖经典） */
+/* 右上角眼睛符号 */
 .md-content .md-typeset::before {
   content: "⊙";
   position: absolute;
@@ -883,9 +921,9 @@
   z-index: 1;
 }
 
-/* 左下角乌鸦符号（锈湖重要意象） */
+/* 左下角乌鸦符号 */
 .md-content .md-typeset::after {
-  content: "⬥";           /* 近似乌鸦或渡鸦 */
+  content: "⬥";
   position: absolute;
   bottom: 15px;
   left: 20px;
@@ -913,9 +951,9 @@
   opacity: 0.8;
 }
 
-/* 三级标题（h3）前使用钥匙符号 */
+/* 三级标题（h3）钥匙符号 */
 .md-content h3::before {
-  content: "⚷";           /* 类似钥匙 */
+  content: "⚷";
   color: #c47f5a;
   margin-right: 6px;
   font-size: 0.9em;
@@ -933,7 +971,7 @@
   color: #c47f5a !important;
 }
 
-/* 带文字分隔线（两侧加上时钟小符号） */
+/* 带文字分隔线（保持原有布局，不添加沙漏符号） */
 .hr-text {
   display: flex;
   align-items: center;
@@ -949,27 +987,17 @@
   border-bottom: 1px solid #5a4a3a;
 }
 .hr-text::before {
-  margin-right: 12px;
+  margin-right: 15px;
 }
 .hr-text::after {
-  margin-left: 12px;
-}
-/* 在分隔线两侧增加时钟符号（时间流逝） */
-.hr-text::before {
-  content: "⌛";           /* 沙漏符号 */
-  font-size: 14px;
-  color: #c47f5a;
-  flex: 0;
-  margin-right: 10px;
-  border-bottom: none;
+  margin-left: 15px;
 }
 
-/* 列表样式：使用黑方块代替默认圆点 */
+/* 列表 */
 .md-content ul {
   list-style: none;
   padding-left: 1.2em;
 }
-.md-content ul li::marker,
 .md-content ul li::before {
   content: "■";
   color: #c47f5a;
@@ -1032,143 +1060,187 @@
 <ul>
 <li><span class="tl">某日</span><br />
   雅各布的弟弟大卫被虫子缠绕成巨大的蛹<sup id="fnref12:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  名为哈维的鹦鹉出现在天堂岛<sup id="fnref13:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  雅各布在母亲的画像后找到第三个黑方块，记录了全家人其乐融融的场景<sup id="fnref14:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  方块献上，虱灾结束<sup id="fnref15:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+  雅各布在母亲的画像后找到第三个黑方块，记录了全家人其乐融融的场景<sup id="fnref13:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  方块献上，虱灾结束<sup id="fnref14:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
 <div class="hr-text">蝇灾</div>
 <ul>
 <li><span class="tl">某日</span><br />
-  大卫化作巨大的苍蝇开始四处杀戮<sup id="fnref16:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  奶奶玛格丽特躲进了锅，妹妹伊丽莎白蜷缩在木箱里<sup id="fnref17:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  雅各布又见到了黑影卡洛琳，她警告儿子不要让他们使用自己的记忆<sup id="fnref18:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  雅各布在山中的密室发现了一本笔记，上面的内容包括了记忆的提取，长生不老药的制作，被选之人以及黑影——饿鬼道<sup id="fnref19:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  大卫袭击怀抱黑方块的尼古拉斯后失踪，雅各布拿走第四个黑方块，记录了小时候尼古拉斯教导他的场景<sup id="fnref20:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  方块献上，蝇灾结束<sup id="fnref21:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+  大卫化作巨大的苍蝇开始四处杀戮<sup id="fnref15:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  奶奶玛格丽特躲进了锅，妹妹伊丽莎白蜷缩在木箱里<sup id="fnref16:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  雅各布又见到了黑影卡洛琳，她警告儿子不要让他们使用自己的记忆<sup id="fnref17:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  雅各布在山中的密室发现了一本笔记，上面的内容包括了记忆的提取，长生不老药的制作，被选之人以及黑影——饿鬼道<sup id="fnref18:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  大卫袭击怀抱黑方块的尼古拉斯后失踪，雅各布拿走第四个黑方块，记录了小时候尼古拉斯教导他的场景<sup id="fnref19:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  方块献上，蝇灾结束<sup id="fnref20:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
 <div class="hr-text">畜疫之灾</div>
 <ul>
 <li><span class="tl">某日</span><br />
-  岛上的动物悉数染病<sup id="fnref22:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  尼古拉斯头部受伤但保住性命，叔叔杰拉德食用不干净的肉后倒地不起<sup id="fnref23:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  第五个黑方块在厕所被找到，记录了卡洛琳在山洞里研究长生不老药配方的场景<sup id="fnref24:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  方块献上，畜疫之灾结束<sup id="fnref25:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+  岛上的动物悉数染病<sup id="fnref21:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  尼古拉斯头部受伤但保住性命，叔叔杰拉德食用不干净的肉后倒地不起<sup id="fnref22:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  第五个黑方块在厕所被找到，记录了卡洛琳在山洞里研究长生不老药配方的场景<sup id="fnref23:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  方块献上，畜疫之灾结束<sup id="fnref24:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
 <div class="hr-text">疮灾</div>
 <ul>
 <li><span class="tl">某日</span><br />
-  杰拉德卧病在床，雅各布在外来医生的指点下对杰拉德进行救治，得知密室里保险箱的密码<sup id="fnref26:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  保险箱里是第六个黑方块，记录了头戴鹿面具的尼古拉斯想要献祭小时候的雅各布的场景<sup id="fnref27:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  方块献上，疮灾结束<sup id="fnref28:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+  杰拉德卧病在床，雅各布在外来医生的指点下对杰拉德进行救治，得知密室里保险箱的密码<sup id="fnref25:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  保险箱里是第六个黑方块，记录了头戴鹿面具的尼古拉斯想要献祭小时候的雅各布的场景<sup id="fnref26:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  方块献上，疮灾结束<sup id="fnref27:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
 <div class="hr-text">雹灾</div>
 <ul>
 <li><span class="tl">某日</span><br />
-  天堂岛被大雪覆盖。冰封中恢复人形的大卫从湖底浮起<sup id="fnref29:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  雅各布找到能控制冰雹的水晶球，将大卫从冰中释放，又解救了困在雪人中的玛格丽特<sup id="fnref30:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  湖边的教堂被冰雹摧毁，在教堂的废墟中出现第七个黑方块，记录了卡洛琳阻止尼古拉斯的献祭并成为替代的场景<sup id="fnref31:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  方块献上，雹灾结束<sup id="fnref32:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+  天堂岛被大雪覆盖。冰封中恢复人形的大卫从湖底浮起<sup id="fnref28:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  雅各布找到能控制冰雹的水晶球，将大卫从冰中释放，又解救了困在雪人中的玛格丽特<sup id="fnref29:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  湖边的教堂被冰雹摧毁，在教堂的废墟中出现第七个黑方块，记录了卡洛琳阻止尼古拉斯的献祭并成为替代的场景<sup id="fnref30:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  方块献上，雹灾结束<sup id="fnref31:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
 <div class="hr-text">蝗灾</div>
 <ul>
 <li><span class="tl">某日</span><br />
-  巨大的螳螂从蛹中出现<sup id="fnref33:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  雅各布自雾气中再次看到黑影卡洛琳并得到母亲的告诫<sup id="fnref34:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  雅各布把雾之号角交给奶奶，使其被螳螂带走<sup id="fnref35:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  小船里留下第八个黑方块，记录了卡洛琳送雅各布离开天堂岛的场景<sup id="fnref36:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  方块献上，蝗灾结束<sup id="fnref37:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+  巨大的螳螂从蛹中出现<sup id="fnref32:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  雅各布自雾气中再次看到黑影卡洛琳并得到母亲的告诫<sup id="fnref33:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  雅各布把雾之号角交给奶奶，使其被螳螂带走<sup id="fnref34:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  小船里留下第八个黑方块，记录了卡洛琳送雅各布离开天堂岛的场景<sup id="fnref35:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  方块献上，蝗灾结束<sup id="fnref36:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
 <div class="hr-text">黑暗之灾</div>
 <ul>
 <li><span class="tl">某日</span><br />
-  全家人聚在篝火旁，尼古拉斯提醒雅各布为新一次献祭做好准备<sup id="fnref38:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  血月凌空，锈湖的光辉之日即将到来<sup id="fnref39:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  巨大的猫头鹰木架漂到湖边，雅各布在木箱中找到母亲的骸骨<sup id="fnref40:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  当骨粉投入篝火，第九个黑方块自灰烬中出现，记录了家人们把母亲送上火刑架的场景，十个黑方块在火光中诞生，于是有了十灾<sup id="fnref41:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  方块献上，黑暗之灾结束<sup id="fnref42:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+  全家人聚在篝火旁，尼古拉斯提醒雅各布为新一次献祭做好准备<sup id="fnref37:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  血月凌空，锈湖的光辉之日即将到来<sup id="fnref38:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  巨大的猫头鹰木架漂到湖边，雅各布在木箱中找到母亲的骸骨<sup id="fnref39:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  当骨粉投入篝火，第九个黑方块自灰烬中出现，记录了家人们把母亲送上火刑架的场景，十个黑方块在火光中诞生，于是有了十灾<sup id="fnref40:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  方块献上，黑暗之灾结束<sup id="fnref41:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
 <div class="hr-text">长子及头生牲畜必死之灾</div>
 <ul>
 <li><span class="tl">某日</span><br />
-  尼古拉斯说今夜锈湖将显露真容，大卫希望自己不要死，伊丽莎白认为大家迟早会显露本性<sup id="fnref43:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  在井下的洞穴，雅各布找到了仪式所需的五张面具——白兔、野鸡、鹿、鸽子、野猪<sup id="fnref44:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  黑影卡洛琳出现在在洞穴深处，雅各布明白了长生不老药配方中缺少的东西是卡洛琳最后的记忆<sup id="fnref45:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  猫头鹰雕像下摆放着最后一个黑方块，记录了卡洛琳戴着猫头鹰面具的场景，雅各布从暗格中获得了这张面具<sup id="fnref46:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  黑影让雅各布进入锈湖深处，先前献上的黑方块都在那里<sup id="fnref47:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  回到天堂岛，把五张面具依次交给家人们，雅各布踏上了被献祭之路<sup id="fnref48:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  当最后一个黑方块沉入湖底，雅各布被家人送入燃烧的牢笼，他戴上猫头鹰面具，在火光中看到了劳拉和戴尔的模样<sup id="fnref49:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
-  雅各布的家人们如愿以偿晋升阿修罗道，成为半人半兽的长生者。雅各布也进入了阿修罗道，成为猫头鹰先生<sup id="fnref50:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
+  尼古拉斯说今夜锈湖将显露真容，大卫希望自己不要死，伊丽莎白认为大家迟早会显露本性<sup id="fnref42:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  在井下的洞穴，雅各布找到了仪式所需的五张面具——白兔、野鸡、鹿、鸽子、野猪<sup id="fnref43:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  黑影卡洛琳出现在在洞穴深处，雅各布明白了长生不老药配方中缺少的东西是卡洛琳最后的记忆<sup id="fnref44:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  猫头鹰雕像下摆放着最后一个黑方块，记录了卡洛琳戴着猫头鹰面具的场景，雅各布从暗格中获得了这张面具<sup id="fnref45:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  黑影让雅各布进入锈湖深处，先前献上的黑方块都在那里<sup id="fnref46:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  回到天堂岛，把五张面具依次交给家人们，雅各布踏上了被献祭之路<sup id="fnref47:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  当最后一个黑方块沉入湖底，雅各布被家人送入燃烧的牢笼，他戴上猫头鹰面具，在火光中看到了劳拉和戴尔的模样<sup id="fnref48:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
+  雅各布的家人们如愿以偿晋升阿修罗道，成为半人半兽的长生者。雅各布也进入了阿修罗道，成为猫头鹰先生<sup id="fnref49:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 </ul>
 <h3 id="1799">1799</h3>
 <ul>
 <li><span class="tl">冬</span><br />
   奥德斯·范德布姆出生<sup id="fnref3:12"><a class="footnote-ref" href="#fn:12">12</a></sup></li>
 </ul>
+<h3 id="1838">1838年</h3>
+<ul>
+<li><span class="tl">8月14日</span><br />
+  凯特的哥哥察觉亚历山德拉·范德布姆的异常<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  亚历山德拉带凯特的哥哥前往山上的废墟进行求子仪式<sup id="fnref2:16"><a class="footnote-ref" href="#fn:16">16</a></sup></li>
+<li><span class="tl">某日</span><br />
+  凯特的哥哥被囚禁在山上的废墟<sup id="fnref3:16"><a class="footnote-ref" href="#fn:16">16</a></sup></li>
+</ul>
+<h3 id="1839">1839</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  詹姆斯·范德布姆出生[^17]</li>
+</ul>
+<div class="hr-text">三个月后</div>
+<ul>
+<li><span class="tl">某日</span><br />
+  哈维来到<a href="../family-tree/%E8%8C%83%E5%BE%B7%E5%B8%83%E5%A7%86%E5%AE%B6%E6%97%8F/">范德布姆家族</a>担任仆人，在那里他见到了女仆凯特<sup id="fnref4:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+<a href="../family-tree/%E8%8C%83%E5%BE%B7%E5%B8%83%E5%A7%86%E5%AE%B6%E6%97%8F/">范德布姆家族</a>举办家族聚会，弟弟威廉，妹妹亚历山德拉以及外甥詹姆斯来拜访奥德斯<sup id="fnref5:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  威廉要求哈维从阁楼给他拿出一张卷轴<sup id="fnref6:16"><a class="footnote-ref" href="#fn:16">16</a></sup></li>
+</ul>
+<div class="hr-text">一天后</div>
+<ul>
+<li><span class="tl">某日</span><br />
+  威廉从卷轴中得知长生不老药配方藏在卡洛琳修建的地下洞穴。为了得到配方，威廉要求哈维帮他找到奥德斯和亚历山德拉的两块怀表<sup id="fnref7:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  哈维在奥德斯处理猎获时取得了银怀表<sup id="fnref8:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  哈维在亚历山德拉洗澡时取得了铜怀表<sup id="fnref9:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  哈维按照威廉的指示用怀表打开暗门进入地下洞穴，从中取出了长生不老药配方。但奥德斯跟踪了哈维，将配方夺走<sup id="fnref10:16"><a class="footnote-ref" href="#fn:16">16</a></sup></li>
+</ul>
+<div class="hr-text">一天后</div>
+<ul>
+<li><span class="tl">某日</span><br />
+  哈维帮助奥德斯完成了长生不老药初级配方的配制<sup id="fnref11:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  愤怒的威廉开始在屋内大搞破坏，并要求哈维往晚餐的汤中添加毒蘑菇<sup id="fnref12:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  趁奥德斯和哈维中毒昏迷，威廉偷走了奥德斯身上的长生不老药<sup id="fnref13:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  晚宴上，奥德斯与威廉拔枪对峙，哈维破坏灯光引发混乱。最终奥德斯与威廉双双负伤<sup id="fnref14:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  血月之夜，亚历山德拉将奥德斯、威廉、哈维三人囚禁在地下洞穴，自己则带詹姆斯进行长生不老仪式<sup id="fnref15:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  奥德斯与威廉冰释前嫌，二人请求哈维从亚历山德拉手中救出詹姆斯<sup id="fnref16:16"><a class="footnote-ref" href="#fn:16">16</a></sup> <br />
+  亚历山德拉服下长生不老药，但在给詹姆斯服药的前一刻被凯特打晕<sup id="fnref17:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  凯拉和哈维在洞穴坍塌前带走了詹姆斯，亚历山德拉死去堕入饿鬼道<sup id="fnref18:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  为救其性命，凯拉让哈维服下长生不老药，自己被困在洞穴之中<sup id="fnref19:16"><a class="footnote-ref" href="#fn:16">16</a></sup>  </li>
+</ul>
+<div class="hr-text">一天后</div>
+<ul>
+<li><span class="tl">某日</span><br />
+  晋升阿修罗道的哈维带着詹姆斯逃出洞穴<sup id="fnref20:16"><a class="footnote-ref" href="#fn:16">16</a></sup></li>
+</ul>
 <h3 id="1859">1859</h3>
 <ul>
 <li><span class="tl">春</span><br />
-  锈湖旁生活着<a href="../family-tree/%E8%8C%83%E5%BE%B7%E5%B8%83%E5%A7%86%E5%AE%B6%E6%97%8F/">范德布姆家族</a>的一对兄弟——威廉和奥德斯<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  范德布姆兄弟对长生不老药的研究进入最后阶段，获得药物并服用<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  威廉晋升饿鬼道变成黑影，在他的尸体上留下了一颗种子。奥德斯晋升阿修罗道，成为乌鸦先生，之后前去寻找雅各布<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  奥德斯和威廉对长生不老药的研究进入最后阶段，获得药物并服用<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  威廉堕入饿鬼道变成黑影，在他的尸体上留下了一颗种子。奥德斯晋升阿修罗道，成为乌鸦先生，之后前去寻找雅各布<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1860">1860</h3>
 <ul>
 <li><span class="tl">春</span><br />
-  詹姆斯·范德布姆收到信得知叔叔威廉去世，作为唯一的继承人，他带着一条狗回到锈湖<sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  詹姆斯按照信里的嘱托种下威廉所留的种子。在奥德斯的帮助下詹姆斯进入大宅<sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  詹姆斯收到信得知舅舅威廉去世，作为唯一的继承人，他带着一条狗回到锈湖<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  詹姆斯按照信里的嘱托种下威廉所留的种子。在奥德斯的帮助下詹姆斯进入大宅<sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 <li><span class="tl">夏</span><br />
-  詹姆斯在家中找到金怀表和威廉的尸体，威廉的心脏成为祭品<sup id="fnref6:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  詹姆斯在家中找到金怀表和威廉的尸体，威廉的心脏成为祭品<sup id="fnref5:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1865">1865</h3>
 <ul>
 <li><span class="tl">夏</span><br />
-  詹姆斯在花园向玛丽求婚<sup id="fnref7:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  詹姆斯在花园向玛丽求婚<sup id="fnref6:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1866">1866</h3>
 <ul>
 <li><span class="tl">冬</span><br />
-  艾达出生<sup id="fnref8:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref4:12"><a class="footnote-ref" href="#fn:12">12</a></sup></li>
+  艾达出生<sup id="fnref7:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref4:12"><a class="footnote-ref" href="#fn:12">12</a></sup></li>
 </ul>
 <h3 id="1867">1867</h3>
 <ul>
 <li><span class="tl">4月26日</span><br />
-  詹姆斯和玛丽的三个孩子——艾玛、塞缪尔和阿尔伯特出生<sup id="fnref9:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  詹姆斯和玛丽的三个孩子——艾玛、塞缪尔和阿尔伯特出生<sup id="fnref8:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1870">1870</h3>
 <ul>
 <li><span class="tl">7月25日</span><br />
-  雅各布和奥德斯在天堂岛经营锈湖旅馆<sup id="fnref10:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  当年雅各布的家人们变成的野猪、兔、鹿、鸽子、野鸡被困在锈湖底的树林<sup id="fnref11:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  詹姆斯发现地下室和长生不老药的配方。狗服药后无事发生，詹姆斯喝下后却一命呜呼。按照锈湖的规则，狗获得了永生<sup id="fnref12:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  詹姆斯的舌头成为祭品<sup id="fnref13:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  雅各布和奥德斯在天堂岛经营锈湖旅馆<sup id="fnref9:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  当年雅各布的家人们变成的野猪、兔、鹿、鸽子、野鸡被困在锈湖底的树林<sup id="fnref10:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  詹姆斯发现地下室和长生不老药的配方。狗服药后无事发生，詹姆斯喝下后却一命呜呼。按照一生一死的规则，狗获得了永生<sup id="fnref11:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  詹姆斯的舌头成为祭品<sup id="fnref12:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1876">1876</h3>
 <ul>
 <li><span class="tl">春</span><br />
-  塞缪尔和艾玛欺负阿尔伯特导致其毁容。看见这一幕的奥德斯对孩子们的人生做出预言<sup id="fnref14:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  塞缪尔和艾玛欺负阿尔伯特导致其毁容。看见这一幕的奥德斯对孩子们的人生做出预言<sup id="fnref13:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1884">1884</h3>
 <ul>
 <li><span class="tl">春</span><br />
-  艾玛怀孕<sup id="fnref15:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  艾玛怀孕<sup id="fnref14:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1885">1885</h3>
 <ul>
 <li><span class="tl">春</span><br />
-  阿尔伯特开始用面具遮盖自己的面容，并展现出虐待动物的爱好<sup id="fnref16:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  阿尔伯特开始用面具遮盖自己的面容，并展现出虐待动物的爱好<sup id="fnref15:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1889">1889</h3>
 <ul>
 <li><span class="tl">春</span><br />
-  占卜师艾达来到锈湖，途径大宅时和塞缪尔相遇<sup id="fnref17:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  占卜师艾达来到锈湖，途径大宅时和塞缪尔相遇<sup id="fnref16:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 <li><span class="tl">夏</span><br />
-  艾达在大宅的花园支起占卜摊，她看到了<a href="../family-tree/%E8%8C%83%E5%BE%B7%E5%B8%83%E5%A7%86%E5%AE%B6%E6%97%8F/">范德布姆家族</a>的未来<sup id="fnref18:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  艾达在大宅的花园支起占卜摊，她看到了<a href="../family-tree/%E8%8C%83%E5%BE%B7%E5%B8%83%E5%A7%86%E5%AE%B6%E6%97%8F/">范德布姆家族</a>的未来<sup id="fnref17:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1891">1891</h3>
 <ul>
 <li><span class="tl">秋</span><br />
-  艾玛的儿子弗兰克在花园荡秋千时受阿尔伯特影响落入枯井<sup id="fnref19:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  艾玛寻子不得，写信托付给路过的鹦鹉哈维<sup id="fnref20:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  艾玛的儿子弗兰克在花园荡秋千时受阿尔伯特影响落入枯井<sup id="fnref18:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  艾玛寻子不得，写信托付给路过的鹦鹉哈维<sup id="fnref19:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1893">1893</h3>
 <ul>
@@ -1187,75 +1259,75 @@
 <h3 id="1895">1895</h3>
 <ul>
 <li><span class="tl">冬</span><br />
-  塞缪尔和艾达成婚，育有一子伦纳德<sup id="fnref21:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-<a href="../family-tree/%E8%8C%83%E5%BE%B7%E5%B8%83%E5%A7%86%E5%AE%B6%E6%97%8F/">范德布姆家族</a>拍摄全家福<sup id="fnref22:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  塞缪尔和艾达成婚，育有一子伦纳德<sup id="fnref20:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+<a href="../family-tree/%E8%8C%83%E5%BE%B7%E5%B8%83%E5%A7%86%E5%AE%B6%E6%97%8F/">范德布姆家族</a>拍摄全家福<sup id="fnref21:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1896">1896</h3>
 <ul>
 <li><span class="tl">夏</span><br />
-  艾玛在花园上吊自杀，她的眼泪成为祭品<sup id="fnref23:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-<mark>受蓝方块影响，艾玛死亡时间变更为10月16日</mark><sup id="fnref24:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  艾玛在花园上吊自杀，她的眼泪成为祭品<sup id="fnref22:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+<mark>受蓝方块影响，艾玛死亡时间变更为10月16日</mark><sup id="fnref23:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 <li><span class="tl">冬</span><br />
-  锈湖旅馆意外以及艾玛身亡的消息见报<sup id="fnref25:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  玛丽，塞缪尔，艾达，阿尔伯特在大宅玩撒谎游戏。游戏中，阿尔伯特暴露出自己暗恋嫂子艾达<sup id="fnref26:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  锈湖旅馆意外以及艾玛身亡的消息见报<sup id="fnref24:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  玛丽，塞缪尔，艾达，阿尔伯特在大宅玩撒谎游戏。游戏中，阿尔伯特暴露出自己暗恋嫂子艾达<sup id="fnref25:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1904">1904</h3>
 <ul>
 <li><span class="tl">5月1日</span><br />
-  塞缪尔，艾达，伦纳德和阿尔伯特组建家庭乐队，阿尔伯特用巫术杀死塞缪尔和艾达。玛丽被吓死，塞缪尔和艾达的眼睛、玛丽的牙齿成为祭品<sup id="fnref27:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-<mark>受蓝方块影响，塞缪尔、艾达死亡时间变更为12月30日</mark><sup id="fnref28:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  塞缪尔，艾达，伦纳德和阿尔伯特组建家庭乐队，阿尔伯特用巫术杀死塞缪尔和艾达。玛丽被吓死，塞缪尔和艾达的眼睛、玛丽的牙齿成为祭品<sup id="fnref26:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+<mark>受蓝方块影响，塞缪尔、艾达死亡时间变更为12月30日</mark><sup id="fnref27:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1909">1909</h3>
 <ul>
 <li><span class="tl">夏</span><br />
-  阿尔伯特利用炼金术制造出女儿萝丝<sup id="fnref29:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  阿尔伯特利用炼金术制造出女儿萝丝<sup id="fnref28:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1914">1914</h3>
 <ul>
 <li><span class="tl">春</span><br />
-  第一次世界大战爆发，伦纳德参军<sup id="fnref30:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  赛缪尔、艾达的死讯见报<sup id="fnref31:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  第一次世界大战爆发，伦纳德参军<sup id="fnref29:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  赛缪尔、艾达的死讯见报<sup id="fnref30:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1918">1918</h3>
 <ul>
 <li><span class="tl">冬</span><br />
-  奥德斯请求黑影状态的威廉拯救伦纳德，以便找到宝藏<sup id="fnref32:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  伦纳德伤重归家，他的脚成为祭品<sup id="fnref33:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  奥德斯请求黑影状态的威廉拯救伦纳德，以便找到宝藏<sup id="fnref31:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  伦纳德伤重归家，他的脚成为祭品<sup id="fnref32:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1919">1919</h3>
 <ul>
 <li><span class="tl">秋</span><br />
-  萝丝经由通灵板与威廉取得联系，答应帮助对方重生<sup id="fnref34:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  萝丝经由通灵板与威廉取得联系，答应帮助对方重生<sup id="fnref33:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1924">1924</h3>
 <ul>
 <li><span class="tl">秋</span><br />
-  在井下活了三十多年的弗兰克已经丧失行走能力，长期忍受阿尔伯特的恶作剧<sup id="fnref35:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-  弗兰克依靠纸飞机和井外的萝丝取得了联系，从而逃出生天<sup id="fnref36:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  在井下活了三十多年的弗兰克已经丧失行走能力，长期忍受阿尔伯特的恶作剧<sup id="fnref34:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  弗兰克依靠纸飞机和井外的萝丝取得了联系，从而逃出生天<sup id="fnref35:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1926">1926</h3>
 <ul>
 <li><span class="tl">1月</span><br />
   阿尔伯特留下给萝丝的信，提及自己研究出的时间装置<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup></li>
 <li><span class="tl">秋</span><br />
-  对彼此心怀杀意的弗兰克和阿尔伯特在大宅下棋，弗兰克杀死了自己的叔叔，阿尔伯特的大脑成为祭品<sup id="fnref37:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
-<mark>受蓝方块影响，阿尔伯特最终死亡时间为2月3日</mark><sup id="fnref38:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+  对彼此心怀杀意的弗兰克和阿尔伯特在大宅下棋，弗兰克杀死了自己的叔叔，阿尔伯特的大脑成为祭品<sup id="fnref36:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
+<mark>受蓝方块影响，阿尔伯特最终死亡时间为2月3日</mark><sup id="fnref37:2"><a class="footnote-ref" href="#fn:2">2</a></sup><br />
   萝丝找到阿尔伯特留下的信和时间装置，她将阿尔伯特的骨肉血传送至1984年，和未来的自己合作复活了父亲</li>
 </ul>
 <h3 id="1927">1927</h3>
 <ul>
 <li><span class="tl">冬</span><br />
-  彻底自由的弗兰克洗上了热水澡，他剪下的头发成为祭品<sup id="fnref39:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  彻底自由的弗兰克洗上了热水澡，他剪下的头发成为祭品<sup id="fnref38:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1929">1929</h3>
 <ul>
 <li><span class="tl">秋</span><br />
-  伦纳德得到藏宝图，在花园挖出铜怀表<sup id="fnref40:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  伦纳德得到藏宝图，在花园挖出铜怀表<sup id="fnref39:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1930">1930</h3>
 <ul>
 <li><span class="tl">冬</span><br />
-  弗兰克从哈维处收到母亲送出的信。在母亲的留言以及威廉的帮助下，弗兰克得到银怀表<sup id="fnref41:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  弗兰克从哈维处收到母亲送出的信。在母亲的留言以及威廉的帮助下，弗兰克得到银怀表<sup id="fnref40:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 <li><span class="tl">12月18日</span><br />
   戴尔·范德米尔出生<sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup><sup id="fnref5:12"><a class="footnote-ref" href="#fn:12">12</a></sup></li>
 </ul>
@@ -1267,17 +1339,17 @@
 <h3 id="1932">1932</h3>
 <ul>
 <li><span class="tl">秋</span><br />
-  萝丝从家族墓地内拿到金怀表<sup id="fnref42:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  萝丝从家族墓地内拿到金怀表<sup id="fnref41:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1933">1933</h3>
 <ul>
 <li><span class="tl">春</span><br />
-  弗兰克和萝丝在大宅里起舞，萝丝的血成为最后一样祭品<sup id="fnref43:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  弗兰克和萝丝在大宅里起舞，萝丝的血成为最后一样祭品<sup id="fnref42:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1935">1935</h3>
 <ul>
 <li><span class="tl">春</span><br />
-  伦纳德，弗兰克，萝丝带着各自找到的怀表来到地下室，通过献祭所有祭品，威廉转世重生成为女婴劳拉，由唯一幸存者萝丝抚养<sup id="fnref44:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+  伦纳德，弗兰克，萝丝带着各自找到的怀表来到地下室，通过献祭所有祭品，威廉转世重生成为女婴劳拉，由唯一幸存者萝丝抚养<sup id="fnref43:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 <h3 id="1939">1939</h3>
 <ul>
@@ -1405,10 +1477,10 @@
 <hr />
 <ol>
 <li id="fn:1">
-<p><a href="https://store.steampowered.com/app/744190/Rusty_Lake_Paradise/">锈湖：天堂岛</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref26:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref27:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref28:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref29:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref30:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref31:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref32:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref33:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref34:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref35:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref36:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref37:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref38:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref39:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref40:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref41:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref42:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref43:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref44:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref45:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref46:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref47:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref48:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref49:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref50:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><a href="https://store.steampowered.com/app/744190/Rusty_Lake_Paradise/">锈湖：天堂岛</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref26:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref27:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref28:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref29:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref30:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref31:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref32:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref33:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref34:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref35:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref36:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref37:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref38:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref39:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref40:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref41:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref42:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref43:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref44:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref45:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref46:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref47:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref48:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref49:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p><a href="https://store.steampowered.com/app/532110/Rusty_Lake_Roots/">锈湖：根源</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref26:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref27:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref28:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref29:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref30:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref31:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref32:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref33:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref34:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref35:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref36:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref37:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref38:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref39:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref40:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref41:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref42:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref43:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref44:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p><a href="https://store.steampowered.com/app/532110/Rusty_Lake_Roots/">锈湖：根源</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref26:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref27:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref28:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref29:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref30:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref31:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref32:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref33:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref34:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref35:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref36:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref37:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref38:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref39:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref40:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref41:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref42:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref43:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p><a href="https://store.steampowered.com/app/435120/Rusty_Lake_Hotel/">锈湖：旅馆</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
@@ -1448,6 +1520,9 @@
 </li>
 <li id="fn:15">
 <p><a href="https://store.steampowered.com/app/2291850/Underground_Blossom/">地铁繁花</a>&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p><a href="https://store.steampowered.com/app/3636770/Servant_of_the_Lake/">湖之仆从</a>&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
