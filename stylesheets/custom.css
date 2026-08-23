@@ -161,6 +161,10 @@ body {
         pointer-events: auto !important;
     }
 
+    #md-back-button {
+        display: none !important;
+    }
+
     /* 标题缩小 */
     .md-typeset h1 { font-size: 1.8rem !important; margin-bottom: 12px; }
     .md-typeset h2 { font-size: 1.4rem !important; margin-top: 24px; margin-bottom: 8px; }
