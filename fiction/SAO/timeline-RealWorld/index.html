@@ -936,6 +936,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12月
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -962,6 +973,17 @@
   
     <nav class="md-nav" aria-label="2023年">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1月
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
@@ -1041,7 +1063,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
+  <a href="#12_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         12月
@@ -1069,7 +1091,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         1月
@@ -1168,7 +1190,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12_1" class="md-nav__link">
+  <a href="#12_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         12月
@@ -1196,7 +1218,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
+  <a href="#1_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         1月
@@ -1317,7 +1339,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12_2" class="md-nav__link">
+  <a href="#12_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         12月
@@ -1345,7 +1367,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_2" class="md-nav__link">
+  <a href="#1_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         1月
@@ -1694,7 +1716,7 @@ body {
   color: #d0d6dc !important;
   font-weight: 700;
   border-bottom: none !important;                 /* 去掉默认下边框 */
-  box-shadow: none !important;                    /* 去掉滚动时产生的阴影 */
+  box-shadow: none !important;                    /* 去掉滚动时产生的阴影 */ 
   margin: 0 !important;
   padding: 8px 16px !important;
   position: sticky !important;
@@ -1737,7 +1759,7 @@ body {
   background-color: transparent !important;
 }
 
-/* ========== 移动端适配：深色侧边栏 + 遮罩层隐藏 ========== */
+/* ========== 移动端适配：深色侧边栏 + 遮罩层隐藏 + 正文扩大 ========== */
 @media (max-width: 768px) {
   /* 强制隐藏遮罩层，避免屏幕变暗和遮挡点击 */
   .md-overlay {
@@ -1783,6 +1805,117 @@ body {
   /* 提高侧边栏层级 */
   .md-sidebar {
     z-index: 1200 !important;
+  }
+
+  /* ===== 以下是正文横向扩大优化 ===== */
+
+  /* 正文容器：大幅缩减左右内边距，让内容占据更多横向空间 */
+  .md-content {
+    padding: 1rem 8px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;      /* 移除圆角，贴边显示 */
+    box-shadow: none !important;      /* 去掉阴影，避免视觉收缩 */
+    background-color: rgba(15, 22, 33, 0.92) !important;
+  }
+
+  /* 标题：减小字号和左右边距 */
+  .md-content h1 {
+    font-size: 1.6em !important;
+    margin: 0.8em 0 0.6em !important;
+    padding-left: 8px !important;
+    border-left-width: 4px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .md-content h3 {
+    font-size: 1.4em !important;
+    margin: 1.4em 0 0.6em 0 !important;
+    padding-left: 6px !important;
+    border-left-width: 4px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .md-content h4 {
+    font-size: 1.1em !important;
+    margin: 1em 0 0.4em 0 !important;
+    padding-left: 6px !important;
+    border-left-width: 3px !important;
+  }
+
+  /* 段落：减小左右边距，让文字更宽 */
+  .md-content p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    font-size: 0.95em !important;
+    line-height: 1.7 !important;
+  }
+
+  /* 列表：减少左侧缩进，让列表项占满更多宽度 */
+  .md-content ul {
+    padding-left: 1em !important;      /* 原来可能更大，现在缩减 */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .md-content ul li {
+    padding-left: 0 !important;        /* 移除额外内边距 */
+    margin-bottom: 6px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* 列表项目符号：让符号与文字之间更紧凑 */
+  .md-content ul li::before {
+    left: -1em !important;
+    font-size: 0.9em !important;
+  }
+
+  /* 时间标签：让它更紧凑，减少横向占用 */
+  .md-content .tl {
+    font-size: 0.8em !important;
+    padding: 1px 6px !important;
+    margin-right: 4px !important;
+    border-radius: 8px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 分割线（带文字） */
+  .md-content .hr-text {
+    font-size: 13px !important;
+    margin: 20px 0 !important;
+    letter-spacing: 1px !important;
+  }
+
+  .md-content .hr-text::before {
+    margin-right: 8px !important;
+  }
+  .md-content .hr-text::after {
+    margin-left: 8px !important;
+  }
+
+  /* 代码块/缩进说明区 */
+  .md-content pre {
+    padding: 10px 8px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 3px !important;
+    font-size: 0.85em !important;
+    overflow-x: auto !important;       /* 允许横向滚动，防止溢出 */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .md-content pre code {
+    font-size: 0.9em !important;
+    white-space: pre-wrap !important;  /* 自动换行，避免横向滚动 */
+    word-break: break-word !important;
+  }
+
+  /* 表格或其他可能溢出的元素 */
+  .md-content table {
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 }
 </style>
@@ -1958,13 +2091,127 @@ body {
   SAO开始正式运营<sup id="fnref8:1"><a class="footnote-ref" href="#fn:1">1</a></sup><br />
 <mark>桐人结识克莱因<sup id="fnref9:1"><a class="footnote-ref" href="#fn:1">1</a></sup></mark><br />
 <mark>茅场晶彦宣布死亡游戏开始<sup id="fnref10:1"><a class="footnote-ref" href="#fn:1">1</a></sup></mark><br />
-<mark>桐人在完成“森林的秘药”任务过程中遭柯贝尔背叛，柯贝尔死亡<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></mark><br />
+<mark>桐人在完成“森林的秘药”任务过程中遭柯贝尔背叛，柯贝尔死亡。桐人获得锻炼之刃<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></mark><br />
   SAO事件对策本部成立<sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
 <li><span class="tl">7日</span><sup id="fnref3:23"><a class="footnote-ref" href="#fn:23">23</a></sup><br />
 <mark>阿尔戈找到桐人，确认其封测玩家身份并打听任务情报<sup id="fnref4:23"><a class="footnote-ref" href="#fn:23">23</a></sup></mark><br />
 <mark>桐人与阿尔戈合作完成任务“逆袭的母牛”<sup id="fnref5:23"><a class="footnote-ref" href="#fn:23">23</a></sup></mark></li>
 <li><span class="tl">21日</span><sup id="fnref:22"><a class="footnote-ref" href="#fn:22">22</a></sup><br />
-  瓦沙克为完成刺杀任务，用盗窃得到的NERvGear创建角色“PoH”，进入SAO<sup id="fnref4:17"><a class="footnote-ref" href="#fn:17">17</a></sup><sup id="fnref2:22"><a class="footnote-ref" href="#fn:22">22</a></sup></li>
+  瓦沙克为完成刺杀任务，用盗窃得到的NERvGear创建角色PoH，进入SAO<sup id="fnref4:17"><a class="footnote-ref" href="#fn:17">17</a></sup><sup id="fnref2:22"><a class="footnote-ref" href="#fn:22">22</a></sup></li>
+</ul>
+<h4 id="12">12月</h4>
+<ul>
+<li><span class="tl">2日</span><sup id="fnref:34"><a class="footnote-ref" href="#fn:34">34</a></sup><br />
+<mark>桐人在第一层迷宫区与亚丝娜相遇，并在亚丝娜昏迷后将其带出<sup id="fnref2:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>亚丝娜从桐人口中得知在托尔巴纳镇召开的攻略会议<sup id="fnref3:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>阿尔戈找桐人沟通交易锻炼之刃一事，被桐人拒绝<sup id="fnref4:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人与亚丝娜结伴参加攻略会议。牙王、迪亚贝尔、艾基尔就封测玩家事宜展开辩论<sup id="fnref5:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark>  </li>
+<li><span class="tl">3日</span><sup id="fnref6:34"><a class="footnote-ref" href="#fn:34">34</a></sup><br />
+<mark>迪亚贝尔所在小队发现第一层头目房间<sup id="fnref7:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人与亚丝娜组成临时小队<sup id="fnref8:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>亚丝娜前往桐人租住的农舍借用浴室<sup id="fnref9:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>阿尔戈再次找桐人购买锻炼之刃，意外撞见亚丝娜<sup id="fnref10:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark>  </li>
+<li><span class="tl">4日</span><sup id="fnref11:34"><a class="footnote-ref" href="#fn:34">34</a></sup><br />
+<mark>桐人发觉迪亚贝尔是交易请求的真正发起者<sup id="fnref12:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>迪亚贝尔在第一层楼层头目攻略战中死亡<sup id="fnref13:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark>
+  <mark>攻略组击败第一层楼层头目狗头人领主伊尔方，桐人开始自称封弊者<sup id="fnref14:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人抵达第二层主城乌尔巴斯，开启传送门<sup id="fnref15:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>阿尔戈被人追击，桐人帮助解围，从阿尔戈处得到体术技能的获取情报<sup id="fnref16:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人开始进行体术技能获取任务<sup id="fnref17:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>涅兹哈开始在乌尔巴斯经营锻造店<sup id="fnref18:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark></li>
+<li><span class="tl">6日</span><sup id="fnref19:34"><a class="footnote-ref" href="#fn:34">34</a></sup><br />
+<mark>桐人在马洛美村与亚丝娜偶遇<sup id="fnref20:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark></li>
+<li><span class="tl">7日</span><sup id="fnref21:34"><a class="footnote-ref" href="#fn:34">34</a></sup><br />
+<mark>桐人完成体术技能获取任务<sup id="fnref22:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark></li>
+<li><span class="tl">8日</span><sup id="fnref23:34"><a class="footnote-ref" href="#fn:34">34</a></sup><br />
+<mark>桐人、亚丝娜在乌尔巴斯目击涅兹哈引发的强化失败事件<sup id="fnref24:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人帮助亚丝娜收集武器强化素材<sup id="fnref25:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人请亚丝娜品尝震颤水果酥饼<sup id="fnref26:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>亚丝娜拜托涅兹哈进行武器强化，疾风轻剑被涅兹哈盗走<sup id="fnref27:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人跟踪涅兹哈，发现小队“传说中的勇者们”的异常行为<sup id="fnref28:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人向亚丝娜讲解强化失败事件的真相，帮助她找回疾风轻剑<sup id="fnref29:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark>  </li>
+<li><span class="tl">9日</span><sup id="fnref30:34"><a class="footnote-ref" href="#fn:34">34</a></sup><br />
+<mark>牙王队、林德队以及“传说中的勇者们”小队合作击败野外头目乌尔巴斯·暴<sup id="fnref31:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>涅兹哈将锻造店搬迁至最靠近迷宫区的塔兰村<sup id="fnref32:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人、亚丝娜与阿尔戈见面，获取“传说中的勇者们”小队成员资料<sup id="fnref33:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark>  </li>
+<li><span class="tl">11日</span><sup id="fnref34:34"><a class="footnote-ref" href="#fn:34">34</a></sup><br />
+<mark>桐人揭穿涅兹哈的欺诈手法，涅兹哈向桐人、亚丝娜坦白自己的动机以及欺诈方法的指导者PoH<sup id="fnref35:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人告知涅兹哈体术技能以及武器圆月轮的获取方法，涅兹哈选择放弃锻造技能<sup id="fnref36:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark>  </li>
+<li><span class="tl">14日</span><sup id="fnref37:34"><a class="footnote-ref" href="#fn:34">34</a></sup><br />
+<mark>涅兹哈完成技能获取，和阿尔戈一起加入第二层头目攻略战<sup id="fnref38:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>攻略组击败第二层楼层头目金牛国王亚斯特留斯<sup id="fnref39:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>“传说中的勇者们”小队向众人认罪<sup id="fnref40:34"><a class="footnote-ref" href="#fn:34">34</a></sup></mark><br />
+<mark>桐人、亚丝娜组队前往第三层接取精灵战争阵营任务，与NPC绮兹梅尔组队前往黑暗精灵营地<sup id="fnref:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark>  </li>
+<li><span class="tl">15日</span><sup id="fnref2:35"><a class="footnote-ref" href="#fn:35">35</a></sup><mark><br />
+  ==摩尔特依靠伪装加入林德小队和牙王小队<sup id="fnref3:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>桐人得知绮兹梅尔死去的妹妹蒂涅尔的故事<sup id="fnref4:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>桐人、亚丝娜、绮兹梅尔完成任务“讨伐毒蜘蛛”，途中偶遇进行“公会建立任务”的牙王小队，击败追击牙王小队的人面蛛女王<sup id="fnref5:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>亚丝娜在黑暗精灵营地锻造获得骑士轻剑，二人结识黑暗精灵锻造师兰德伦<sup id="fnref6:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>桐人、亚丝娜出发返回城镇，偶遇加入森林精灵一方进行精灵战争阵营任务的林德小队<sup id="fnref7:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>桐人、亚丝娜进入第三层主城兹姆福特<sup id="fnref8:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>林德领导的公会“龙骑士团”和牙王领导的公会“艾恩格朗特解放队”成立<sup id="fnref9:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>第三层首次攻略集团全体会议召开。桐人在会议后发现绮兹梅尔暗中潜入城镇寻找两人<sup id="fnref10:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>桐人、亚丝娜、绮兹梅尔返回黑暗精灵营地<sup id="fnref11:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark>  </li>
+<li><span class="tl">18日</span><sup id="fnref12:35"><a class="footnote-ref" href="#fn:35">35</a></sup><br />
+<mark>攻略组击败第三层野外头目<sup id="fnref13:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>桐人与阿尔戈见面，获取林德小队成员摩尔特的情报<sup id="fnref14:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark>  </li>
+<li><span class="tl">19日</span><sup id="fnref15:35"><a class="footnote-ref" href="#fn:35">35</a></sup><br />
+<mark>桐人决定独自前往森林精灵营地完成窃取情报的任务“潜入”<sup id="fnref16:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>摩尔特埋伏桐人，在决斗中失败后撤离<sup id="fnref17:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>“龙骑士团”与“艾恩格朗特解放队”在森林精灵营地附近对峙，桐人现身将矛头引至自身<sup id="fnref18:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>“艾恩格朗特解放队”成员阿丈试图激化矛盾，亚丝娜、绮兹梅尔现身声援桐人。三方最终决定将阵营任务交由桐人小队进行<sup id="fnref19:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark>  </li>
+<li><span class="tl">20日</span><sup id="fnref20:35"><a class="footnote-ref" href="#fn:35">35</a></sup><br />
+<mark>桐人小队完成精灵战争阵营任务的第三层部分，绮兹梅尔脱离小队运送“翡翠秘钥”去第四层的黑暗精灵堡垒<sup id="fnref21:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>桐人、亚丝娜从黑暗精灵营地司令官口中得到有关第三层头目的情报<sup id="fnref22:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>第三层第二次攻略会议召开<sup id="fnref23:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark>  </li>
+<li><span class="tl">21日</span><sup id="fnref24:35"><a class="footnote-ref" href="#fn:35">35</a></sup><br />
+<mark>攻略组击败第三层楼层头目恶魔树精涅利乌斯<sup id="fnref25:35"><a class="footnote-ref" href="#fn:35">35</a></sup></mark><br />
+<mark>桐人、亚丝娜抵达第四层主城洛比亚，开启传送门<sup id="fnref:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>桐人向阿尔戈购买洛比亚的地图和情报，找到正式版新增任务<sup id="fnref2:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>桐人、亚丝娜接取任务《昔日的船匠》<sup id="fnref3:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>桐人、亚丝娜击败巨震地懒并集齐任务所需的全部素材<sup id="fnref4:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark></li>
+<li><span class="tl">22日</span><sup id="fnref5:36"><a class="footnote-ref" href="#fn:36">36</a></sup><br />
+<mark>桐人、亚丝娜得到凤尾舟“蒂涅尔号”<sup id="fnref6:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>桐人、亚丝娜为推进《昔日的船匠》，跟踪洛比亚城的大型船只进入迷宫区域<sup id="fnref7:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark>  </li>
+<li><span class="tl">23日</span><sup id="fnref8:36"><a class="footnote-ref" href="#fn:36">36</a></sup><br />
+<mark>桐人、亚丝娜在迷宫区域内发现与洛比亚城水运公会交易的堕落精灵，得知堕落精灵将军诺尔扎的作战计划<sup id="fnref9:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark>  </li>
+<li><span class="tl">24日</span><sup id="fnref10:36"><a class="footnote-ref" href="#fn:36">36</a></sup><br />
+<mark>攻略组击败第四层野外头目双头古巨龟<sup id="fnref11:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>阿尔戈和桐人、亚丝娜结伴抵达乌斯克村<sup id="fnref12:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>“龙骑士团”与“艾恩格朗特解放队”在洛比亚联合举办圣诞壮行会<sup id="fnref13:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>桐人带亚丝娜抵达黑暗精灵的堡垒尤菲尔城，与绮兹梅尔重逢<sup id="fnref14:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>亚丝娜赠送桐人自制的泳裤作为圣诞礼物<sup id="fnref15:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>桐人、亚丝娜将堕落精灵的作战计划告知绮兹梅尔和黑暗精灵子爵尤菲里斯<sup id="fnref16:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark>  </li>
+<li><span class="tl">26日</span><sup id="fnref17:36"><a class="footnote-ref" href="#fn:36">36</a></sup><br />
+<mark>桐人小队取得“琉璃秘钥”，返回尤菲尔城<sup id="fnref18:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>桐人、亚丝娜决定在离开第四层时将“蒂涅尔号”托付给绮兹梅尔<sup id="fnref19:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark>  </li>
+<li><span class="tl">27日</span><sup id="fnref20:36"><a class="footnote-ref" href="#fn:36">36</a></sup><br />
+<mark>森林精灵依靠堕落精灵提供的船只袭击尤菲尔城。桐人说服尤菲里斯子爵指挥战斗，并击败森林精灵指挥官<sup id="fnref21:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>桐人、亚丝娜获得尤菲里斯提供的第四层楼层头目情报，与绮兹梅尔、尤菲里斯子爵、阿尔戈一起赶往楼层头目房间参加攻略战<sup id="fnref22:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark><br />
+<mark>攻略组战胜第四层楼层头目海马维斯格<sup id="fnref23:36"><a class="footnote-ref" href="#fn:36">36</a></sup></mark>  </li>
+<li><span class="tl">28日</span><sup id="fnref:37"><a class="footnote-ref" href="#fn:37">37</a></sup><br />
+<mark>亚丝娜拜托桐人进行PvP教学<sup id="fnref2:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人、亚丝娜在第五层主城卡尔鲁因体验遗物搜集<sup id="fnref3:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人、亚丝娜返回第四层，借用艾基尔小队的凤尾舟前往尤菲尔城，得知绮兹梅尔已护送两枚秘钥前往第五层的黑暗精灵要塞。桐人获得日暮之剑<sup id="fnref4:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>“艾恩格朗特解放队”在阿丈以楼层头目掉落物情报的煽动下决定单独攻略第五层楼层头目<sup id="fnref5:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark></li>
+<li><span class="tl">29日</span><sup id="fnref6:37"><a class="footnote-ref" href="#fn:37">37</a></sup><br />
+<mark>桐人、亚丝娜将卡尔鲁因附近地下墓地内的任务全部清理<sup id="fnref7:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人为寻找阿尔戈独自进入地下墓地，亚丝娜发现并追赶，落入地下三层并丢失骑士轻剑<sup id="fnref8:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>亚丝娜发现一张写有时间地点的字条，发现摩尔特和阿丈私下密谋煽动“龙骑士团”与“艾恩格朗特解放队”争斗<sup id="fnref9:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>亚丝娜的骑士轻剑被捡走，桐人现身与摩尔特和阿丈交涉。亚丝娜趁机拿回武器，桐人引怪为二人觅得抽身机会<sup id="fnref10:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人、亚丝娜找到正在调查野外头目的阿尔戈<sup id="fnref11:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark>  </li>
+<li><span class="tl">30日</span><sup id="fnref12:37"><a class="footnote-ref" href="#fn:37">37</a></sup><br />
+<mark>攻略组击败第五层野外头目<sup id="fnref13:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人、亚丝娜前往黑暗精灵的希雅亚村，和绮兹梅尔一起完成精灵战争阵营任务的第五层部分，随后绮兹梅尔前往第六层<sup id="fnref14:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark></li>
+<li><span class="tl">31日</span><sup id="fnref15:37"><a class="footnote-ref" href="#fn:37">37</a></sup><br />
+<mark>桐人、亚丝娜、阿尔戈在希雅亚村逗留<sup id="fnref16:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人、亚丝娜前往玛娜娜雷娜村打探“艾恩格朗特解放队”和“龙骑士团”的动向<sup id="fnref17:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人、亚丝娜、“龙骑士团”干部斯瓦塔、“艾恩格朗特解放队”成员丽特恩进行会谈<sup id="fnref18:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人、亚丝娜将最新情报同步给阿尔戈，三人商议后决定自行组织队伍攻略楼层头目<sup id="fnref19:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人、亚丝娜、斯瓦塔、“龙骑士团”副会长哈夫纳、丽特恩、“艾恩格朗特解放队”干部欧可坦、涅兹哈、阿尔戈、艾基尔小队击败第五层楼层头目虚无巨像福斯库斯<sup id="fnref20:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>欧可坦承认自己试图私藏头目掉落物英勇之旗，获得众人谅解。英勇之旗交由桐人保管<sup id="fnref21:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人向“艾恩格朗特解放队”说明情况，阿丈再次试图煽动玩家情绪，最终牙王同意由桐人持有英勇之旗<sup id="fnref22:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>玩家们在卡尔鲁因举办新年倒计时仪式<sup id="fnref23:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark></li>
 </ul>
 <h4 id="_11">未知时间</h4>
 <ul>
@@ -1972,6 +2219,78 @@ body {
   直叶得知桐人与自己的真实关系<sup id="fnref4:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
 </ul>
 <h3 id="2023">2023年</h3>
+<h4 id="1">1月</h4>
+<ul>
+<li><span class="tl">1日</span><sup id="fnref24:37"><a class="footnote-ref" href="#fn:37">37</a></sup><br />
+<mark>PoH袭击独自前去补充食材的桐人失败后撤离<sup id="fnref25:37"><a class="footnote-ref" href="#fn:37">37</a></sup></mark><br />
+<mark>桐人、亚丝娜抵达第六层主城斯塔奇翁<sup id="fnref:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark><br />
+<mark>桐人、亚丝娜返回第三层黑暗精灵营地进行PvP训练<sup id="fnref2:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark><br />
+<mark>桐人、亚丝娜在斯塔奇翁约见林德、斯瓦塔、哈夫纳，“龙骑士团”认可由桐人暂时保管英勇之旗<sup id="fnref3:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark><br />
+<mark>桐人、亚丝娜接受任务《斯塔奇翁的诅咒》<sup id="fnref4:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark><br />
+<mark>桐人、亚丝娜抵达第六层的斯里巴斯镇，与阿尔戈相遇<sup id="fnref5:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark><br />
+<mark>桐人、亚丝娜为推进《斯塔奇翁的诅咒》进入派萨格鲁斯别墅调查，被斯塔奇翁的领主赛隆绑架<sup id="fnref6:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark><br />
+<mark>摩尔特、阿丈为杀死桐人袭击赛隆，桐人、亚丝娜脱困后重创摩尔特，阿丈带摩尔特撤离<sup id="fnref7:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark>  </li>
+<li><span class="tl">2日</span><sup id="fnref8:38"><a class="footnote-ref" href="#fn:38">38</a></sup><br />
+<mark>在清点战利品的过程中，桐人、亚丝娜发现摩尔特等人与精灵勾结<sup id="fnref9:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark><br />
+<mark>攻略组击败第六层野外头目，进入第六层西北区<sup id="fnref10:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark><br />
+<mark>桐人、亚丝娜抵达黑暗精灵所属的加雷城，与绮兹梅尔会合<sup id="fnref11:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark><br />
+<mark>经绮兹梅尔确认，桐人、亚丝娜确认与摩尔特等人合作的精灵为堕落精灵阵营<sup id="fnref12:38"><a class="footnote-ref" href="#fn:38">38</a></sup></mark>  </li>
+<li><span class="tl">3日</span><sup id="fnref:39"><a class="footnote-ref" href="#fn:39">39</a></sup><br />
+<mark>桐人小队出发前往第六层南区完成精灵战争阵营任务之《玛瑙秘钥》<sup id="fnref2:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>桐人小队将“玛瑙秘钥”交付给黑暗精灵伯爵加雷翁<sup id="fnref3:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>“丘扎古”公会成员拉兹莉、特姆欧、海斯顿、银舵抵达加雷城，与桐人和亚丝娜交流自己的经历<sup id="fnref4:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark>  </li>
+<li><span class="tl">4日</span><sup id="fnref5:39"><a class="footnote-ref" href="#fn:39">39</a></sup><br />
+<mark>桐人暗中探查“丘扎古”公会的底细，意外与加雷城的黑暗精灵贤者布弗鲁姆相遇，习得“冥想”技能树的专精“觉醒”<sup id="fnref6:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>"丘扎古"公会前去推进《玛瑙秘钥》，遭遇PoH引怪袭击，与“丘扎古”同行的黑暗精灵护卫战死。PoH给“丘扎古”成员下毒，威胁银舵帮助堕落精灵<sup id="fnref7:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>桐人、亚丝娜带绮兹梅尔进入斯塔奇翁，三人遇到《斯塔奇翁的诅咒》相关NPC、赛隆的女儿米娅。在与米娅交谈过程中，堕落精灵对几人发起袭击<sup id="fnref8:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>米娅暂时加入桐人小队，几人开始继续调查《斯塔奇翁的诅咒》相关内容<sup id="fnref9:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>应米娅的请求，桐人小队返回加雷城分析现状，决定向布弗鲁姆咨询<sup id="fnref10:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>亚丝娜、绮兹梅尔、米娅开始向布弗鲁姆学习“冥想”技能<sup id="fnref11:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>堕落精灵向加雷城发起进攻，桐人小队参战，阻止堕落精灵破坏加雷城中的灵树的企图，同时从银舵口中得知“丘扎古”公会的遭遇<sup id="fnref12:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>为解救被PoH下毒绑架的“丘扎古”成员，桐人小队向布弗鲁姆借出存放在加雷城的秘钥，跟随银舵前往与PoH约定的地点<sup id="fnref13:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>堕落精灵凯撒拉以“丘扎古”成员为人质，从桐人小队手中劫走秘钥和《斯塔奇翁的诅咒》相关道具<sup id="fnref14:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>“丘扎古”公会四人返回第五层，桐人从阿尔戈处得知米娅的母亲瑟雅诺介入了攻略组与野外头目的战斗<sup id="fnref15:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>绮兹梅尔离队，桐人、亚丝娜、米娅前往第六层东区寻找瑟雅诺<sup id="fnref16:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>桐人小队抵达第六层东区的穆尔茨奇村，与阿尔戈相遇，得知瑟雅诺已经前往第六层迷宫塔<sup id="fnref17:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>桐人小队、阿尔戈与瑟雅诺会合，得知第六层楼层头目信息，桐人将信息同步给随后赶到的“艾恩格朗特解放队”和“龙骑士团”<sup id="fnref18:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>攻略组在瑟雅诺和米娅的帮助下与第六层楼层头目无理魔方开战<sup id="fnref19:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>头目攻略战过程中，摩尔特等人的同伙布克森姆趁众人不备，利用从凯萨拉手中得到的道具限制所有人的行动。桐人依靠“觉醒”技能突破限制，重创布克森姆并击败无理魔方。一名攻略组成员在事件中死亡<sup id="fnref20:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark>  </li>
+<li><span class="tl">5日</span><sup id="fnref21:39"><a class="footnote-ref" href="#fn:39">39</a></sup><br />
+<mark>桐人、亚丝娜完成《斯塔奇翁的诅咒》，瑟雅诺和米娅离开<sup id="fnref22:39"><a class="footnote-ref" href="#fn:39">39</a></sup></mark><br />
+<mark>“艾恩格朗特解放队”和“龙骑士团”从NPC手中得到怪物斗技场情报，出发赌博<sup id="fnref:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>桐人、亚丝娜抵达第七层主城莱克西奥<sup id="fnref2:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>在穿越威尔迪亚草原过程中，桐人、亚丝娜得到怪物掉落的回复水晶<sup id="fnref3:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>为了获得进入第七层海滩区域的通行证，桐人、亚丝娜决定前往沃尔普塔娱乐城赌博<sup id="fnref4:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>阿尔戈委托桐人、亚丝娜帮她调查在怪物斗技场出千的对决者以完成任务<sup id="fnref5:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>桐人、亚丝娜跟随阿尔戈见到发出任务的NPC——纳克托伊家主妮露妮尔和女仆奇欧，了解了怪物斗技场的历史以及暗中实施作弊的科尔罗伊家主巴丹<sup id="fnref6:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>桐人、亚丝娜、阿尔戈接受妮露妮尔发出的采集委托<sup id="fnref7:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>丽特恩向桐人三人说明两支公会在怪物斗技场流连的原因以及布克森姆的情况<sup id="fnref8:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>艾恩格朗特解放队”和“龙骑士团”输光筹码<sup id="fnref9:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark>  </li>
+<li><span class="tl">6日</span><sup id="fnref10:40"><a class="footnote-ref" href="#fn:40">40</a></sup><br />
+<mark>桐人、亚丝娜穿越摇岩之森抵达第七层的黑暗精灵据点哈林树宫，被当做和绮兹梅尔一起勾结堕落精灵的罪犯关押<sup id="fnref11:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>桐人、亚丝娜在越狱途中发现被关押的黑暗精灵白檀骑士团前团长拉维克，得知拉维克是兰德伦的哥哥。拉维克帮助桐人、亚丝娜救出绮兹梅尔<sup id="fnref12:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>绮兹梅尔、拉维克帮助桐人、亚丝娜搜集妮露妮尔所要求的物品，离开摇岩之森后拉维克独自离开<sup id="fnref13:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>桐人小队和阿尔戈再次与妮露妮尔见面，开始制作破解出千手法要用的脱色剂<sup id="fnref14:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>桐人发现哈夫纳，得知贩卖斗技情报的NPC会在沃尔普塔娱乐城出现<sup id="fnref15:40"><a class="footnote-ref" href="#fn:40">40</a></sup></mark><br />
+<mark>桐人独自调查怪物斗技场的厩舍，从科尔罗伊家驯兽师手中救出用于作弊的暴风杂色狼，随后与亚丝娜取得联系<sup id="fnref:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>阿尔戈、奇欧接应桐人，暴风杂色狼被治愈后离去<sup id="fnref2:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>桐人、阿尔戈跟随奇欧经暗道返回妮露妮尔的住处，桐人向众人说明情况<sup id="fnref3:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>桐人、亚丝娜、阿尔戈、绮兹梅尔聚餐<sup id="fnref4:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>巴丹同意妮露妮尔调查厩舍的请求，桐人、奇欧、奇欧的弟弟法佐、驯兽师伦泽同行<sup id="fnref5:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>妮露妮尔被巴丹投放的白银毒蛇袭击后中毒昏迷<sup id="fnref6:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>桐人、亚丝娜从绮兹梅尔处得知妮露妮尔的种族为吸血鬼，同时了解到必须用第七层楼层头目火龙阿基艾拉的血才能治疗妮露妮尔<sup id="fnref7:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>奇欧提供了巴丹与堕落精灵合作的情报，众人决定盗走巴丹用于和堕落精灵联系的道具以拿回秘钥洗清绮兹梅尔的罪名<sup id="fnref8:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>为引出巴丹，桐人、亚丝娜参加怪物斗技场的下注，阿尔戈和绮兹梅尔趁机取得联络道具<sup id="fnref9:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>桐人等人与堕落精灵约定了见面的时间地点，并以娱乐城头奖沃尔普塔之剑以及英勇之旗为条件说服攻略组的两支公会进行楼层头目战<sup id="fnref10:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark></li>
+<li><span class="tl">7日</span><sup id="fnref11:41"><a class="footnote-ref" href="#fn:41">41</a></sup><br />
+<mark>桐人、亚丝娜、阿尔戈、绮兹梅尔、奇欧带妮露妮尔跟踪堕落精灵抵达第七层迷宫塔后失去其踪迹<sup id="fnref12:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark>  </li>
+<li><span class="tl">8日</span><sup id="fnref13:41"><a class="footnote-ref" href="#fn:41">41</a></sup><br />
+<mark>桐人小队与艾基尔小队在迷宫塔相遇，桐人将妮露妮尔相关的任务信息分享给艾基尔小队<sup id="fnref14:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>攻略组在奇欧和妮露妮尔的帮助下击败第七层楼层头目火龙阿基艾拉，在此过程中，桐人被妮露妮尔转化为吸血鬼<sup id="fnref15:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>妮露妮尔被治愈，牙王和林德商议后决定暂时放弃决定剑和旗帜的归属<sup id="fnref16:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>桐人等人发现堕落精灵设置在迷宫塔中的楼层传送装置<sup id="fnref17:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark><br />
+<mark>艾基尔小队护送桐人小队返回沃尔普塔，妮露妮尔向众人讲述纳克托伊家族和科尔罗伊家族的真实历史<sup id="fnref18:41"><a class="footnote-ref" href="#fn:41">41</a></sup></mark></li>
+</ul>
 <h4 id="2">2月</h4>
 <ul>
 <li><span class="tl">某日</span><br />
@@ -2028,7 +2347,7 @@ body {
 <li><span class="tl">某日</span><br />
   直叶在同学长田的介绍下开始游玩ALO<sup id="fnref6:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
 </ul>
-<h4 id="12">12月</h4>
+<h4 id="12_1">12月</h4>
 <ul>
 <li><span class="tl">某日</span><br />
   有纪的父母去世<sup id="fnref6:27"><a class="footnote-ref" href="#fn:27">27</a></sup></li>
@@ -2036,10 +2355,10 @@ body {
 <mark>桐人战胜叛教者尼古拉斯，获得还魂之圣晶石并赠与克莱因<sup id="fnref10:2"><a class="footnote-ref" href="#fn:2">2</a></sup></mark><br />
 <mark>桐人收到幸留下的定时语音消息<sup id="fnref11:2"><a class="footnote-ref" href="#fn:2">2</a></sup></mark></li>
 <li><span class="tl">31日</span><sup id="fnref3:5"><a class="footnote-ref" href="#fn:5">5</a></sup><br />
-<mark>“PoH”带队袭击小型公会<sup id="fnref4:5"><a class="footnote-ref" href="#fn:5">5</a></sup></mark></li>
+<mark>PoH带队袭击小型公会<sup id="fnref4:5"><a class="footnote-ref" href="#fn:5">5</a></sup></mark></li>
 </ul>
 <h3 id="2024">2024年</h3>
-<h4 id="1">1月</h4>
+<h4 id="1_1">1月</h4>
 <ul>
 <li><span class="tl">1日</span><sup id="fnref5:5"><a class="footnote-ref" href="#fn:5">5</a></sup><br />
 <mark>“微笑棺木”成立<sup id="fnref6:5"><a class="footnote-ref" href="#fn:5">5</a></sup></mark></li>
@@ -2077,7 +2396,7 @@ body {
 <mark>桐人、亚丝娜、修密特、夜子四人会谈，夜子“死亡” <sup id="fnref12:8"><a class="footnote-ref" href="#fn:8">8</a></sup></mark><br />
 <mark>桐人识破事件真相<sup id="fnref13:8"><a class="footnote-ref" href="#fn:8">8</a></sup></mark><br />
 <mark>修密特前往“金苹果”公会会长葛莉塞达墓前忏悔<sup id="fnref14:8"><a class="footnote-ref" href="#fn:8">8</a></sup></mark><br />
-<mark>“PoH”、新川昌一、金本敦对修密特等人发动袭击，桐人营救<sup id="fnref15:8"><a class="footnote-ref" href="#fn:8">8</a></sup></mark><br />
+<mark>PoH、新川昌一、金本敦对修密特等人发动袭击，桐人营救<sup id="fnref15:8"><a class="footnote-ref" href="#fn:8">8</a></sup></mark><br />
 <mark>戒指事件及“圈内事件”的真相揭开<sup id="fnref16:8"><a class="footnote-ref" href="#fn:8">8</a></sup></mark></li>
 </ul>
 <h4 id="5_4">5月</h4>
@@ -2104,7 +2423,7 @@ body {
 <h4 id="8_2">8月</h4>
 <ul>
 <li><span class="tl">某日</span><br />
-<mark>“PoH”煽动攻略组与“微笑棺木”对决，“微笑棺木”覆灭<sup id="fnref13:1"><a class="footnote-ref" href="#fn:1">1</a></sup><sup id="fnref7:5"><a class="footnote-ref" href="#fn:5">5</a></sup><sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup></mark></li>
+<mark>PoH煽动攻略组与“微笑棺木”对决，“微笑棺木”覆灭<sup id="fnref13:1"><a class="footnote-ref" href="#fn:1">1</a></sup><sup id="fnref7:5"><a class="footnote-ref" href="#fn:5">5</a></sup><sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup></mark></li>
 </ul>
 <h4 id="10_3">10月</h4>
 <ul>
@@ -2149,13 +2468,13 @@ body {
   菊冈诚二郎向桐人说明情况<sup id="fnref7:3"><a class="footnote-ref" href="#fn:3">3</a></sup><br />
   亚丝娜等三百余名玩家被转移至ALO<sup id="fnref8:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
 </ul>
-<h4 id="12_1">12月</h4>
+<h4 id="12_2">12月</h4>
 <ul>
 <li><span class="tl">某日</span><br />
   桐人与艾基尔线下见面<sup id="fnref9:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
 </ul>
 <h3 id="2025">2025年</h3>
-<h4 id="1_1">1月</h4>
+<h4 id="1_2">1月</h4>
 <ul>
 <li><span class="tl">19日</span><sup id="fnref23:21"><a class="footnote-ref" href="#fn:21">21</a></sup><br />
   桐人与直叶切磋，决定重拾剑道<sup id="fnref10:3"><a class="footnote-ref" href="#fn:3">3</a></sup><br />
@@ -2273,7 +2592,7 @@ body {
 <li><span class="tl">28日</span><sup id="fnref17:5"><a class="footnote-ref" href="#fn:5">5</a></sup><br />
   “薄盐鳕鱼子”尸体被发现<sup id="fnref18:5"><a class="footnote-ref" href="#fn:5">5</a></sup></li>
 </ul>
-<h4 id="12_2">12月</h4>
+<h4 id="12_3">12月</h4>
 <ul>
 <li><span class="tl">7日</span><sup id="fnref19:5"><a class="footnote-ref" href="#fn:5">5</a></sup><br />
   桐人接受菊冈诚二郎委托开始调查“死枪事件”<sup id="fnref20:5"><a class="footnote-ref" href="#fn:5">5</a></sup><br />
@@ -2308,7 +2627,7 @@ body {
 <mark>“绝剑”在ALO中现身<sup id="fnref8:7"><a class="footnote-ref" href="#fn:7">7</a></sup></mark></li>
 </ul>
 <h3 id="2026">2026年</h3>
-<h4 id="1_2">1月</h4>
+<h4 id="1_3">1月</h4>
 <ul>
 <li><span class="tl">6日</span><sup id="fnref9:7"><a class="footnote-ref" href="#fn:7">7</a></sup><br />
 <mark>亚丝娜听说“绝剑”<sup id="fnref10:7"><a class="footnote-ref" href="#fn:7">7</a></sup></mark><br />
@@ -2454,7 +2773,7 @@ body {
   结衣向克莱因等人介绍现状<sup id="fnref6:15"><a class="footnote-ref" href="#fn:15">15</a></sup><br />
   克莱因等人召集日本玩家<sup id="fnref2:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
   美国玩家登录账号“暗黑骑士”<sup id="fnref3:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
-  瓦沙克苏醒，用账号“PoH”再次登陆Under World<sup id="fnref4:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
+  瓦沙克苏醒，用账号PoH再次登陆Under World<sup id="fnref4:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
   诗乃登录超级账号“太阳神索鲁斯”<sup id="fnref5:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
   直叶登录超级账号“地神提拉利亚”<sup id="fnref6:16"><a class="footnote-ref" href="#fn:16">16</a></sup>  
   日本玩家通过“The Seed”将账号转移至Under World<sup id="fnref7:16"><a class="footnote-ref" href="#fn:16">16</a></sup><br />
@@ -2687,6 +3006,30 @@ body {
 </li>
 <li id="fn:33">
 <p>《刀剑神域028：Unital Ring VII》&#160;<a class="footnote-backref" href="#fnref:33" title="Jump back to footnote 33 in the text">&#8617;</a></p>
+</li>
+<li id="fn:34">
+<p>《刀剑神域进击篇：001》&#160;<a class="footnote-backref" href="#fnref:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref26:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref27:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref28:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref29:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref30:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref31:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref32:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref33:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref34:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref35:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref36:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref37:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref38:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref39:34" title="Jump back to footnote 34 in the text">&#8617;</a><a class="footnote-backref" href="#fnref40:34" title="Jump back to footnote 34 in the text">&#8617;</a></p>
+</li>
+<li id="fn:35">
+<p>《刀剑神域进击篇：002》&#160;<a class="footnote-backref" href="#fnref:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:35" title="Jump back to footnote 35 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:35" title="Jump back to footnote 35 in the text">&#8617;</a></p>
+</li>
+<li id="fn:36">
+<p>《刀剑神域进击篇：003》&#160;<a class="footnote-backref" href="#fnref:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:36" title="Jump back to footnote 36 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:36" title="Jump back to footnote 36 in the text">&#8617;</a></p>
+</li>
+<li id="fn:37">
+<p>《刀剑神域进击篇：004》&#160;<a class="footnote-backref" href="#fnref:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:37" title="Jump back to footnote 37 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:37" title="Jump back to footnote 37 in the text">&#8617;</a></p>
+</li>
+<li id="fn:38">
+<p>《刀剑神域进击篇：005》&#160;<a class="footnote-backref" href="#fnref:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:38" title="Jump back to footnote 38 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:38" title="Jump back to footnote 38 in the text">&#8617;</a></p>
+</li>
+<li id="fn:39">
+<p>《刀剑神域进击篇：006》&#160;<a class="footnote-backref" href="#fnref:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:39" title="Jump back to footnote 39 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:39" title="Jump back to footnote 39 in the text">&#8617;</a></p>
+</li>
+<li id="fn:40">
+<p>《刀剑神域进击篇：007》&#160;<a class="footnote-backref" href="#fnref:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:40" title="Jump back to footnote 40 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:40" title="Jump back to footnote 40 in the text">&#8617;</a></p>
+</li>
+<li id="fn:41">
+<p>《刀剑神域进击篇：008》&#160;<a class="footnote-backref" href="#fnref:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:41" title="Jump back to footnote 41 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:41" title="Jump back to footnote 41 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

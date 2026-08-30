@@ -1156,7 +1156,7 @@ body {
   background-color: transparent !important;
 }
 
-/* ========== 移动端适配：深色侧边栏 + 遮罩层隐藏 ========== */
+/* ========== 移动端适配：深色侧边栏 + 遮罩层隐藏 + 正文扩大 ========== */
 @media (max-width: 768px) {
   /* 强制隐藏遮罩层，避免屏幕变暗和遮挡点击 */
   .md-overlay {
@@ -1202,6 +1202,117 @@ body {
   /* 提高侧边栏层级 */
   .md-sidebar {
     z-index: 1200 !important;
+  }
+
+  /* ===== 以下是正文横向扩大优化 ===== */
+
+  /* 正文容器：大幅缩减左右内边距，让内容占据更多横向空间 */
+  .md-content {
+    padding: 1rem 8px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;      /* 移除圆角，贴边显示 */
+    box-shadow: none !important;      /* 去掉阴影，避免视觉收缩 */
+    background-color: rgba(15, 22, 33, 0.92) !important;
+  }
+
+  /* 标题：减小字号和左右边距 */
+  .md-content h1 {
+    font-size: 1.6em !important;
+    margin: 0.8em 0 0.6em !important;
+    padding-left: 8px !important;
+    border-left-width: 4px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .md-content h3 {
+    font-size: 1.4em !important;
+    margin: 1.4em 0 0.6em 0 !important;
+    padding-left: 6px !important;
+    border-left-width: 4px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .md-content h4 {
+    font-size: 1.1em !important;
+    margin: 1em 0 0.4em 0 !important;
+    padding-left: 6px !important;
+    border-left-width: 3px !important;
+  }
+
+  /* 段落：减小左右边距，让文字更宽 */
+  .md-content p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    font-size: 0.95em !important;
+    line-height: 1.7 !important;
+  }
+
+  /* 列表：减少左侧缩进，让列表项占满更多宽度 */
+  .md-content ul {
+    padding-left: 1em !important;      /* 原来可能更大，现在缩减 */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .md-content ul li {
+    padding-left: 0 !important;        /* 移除额外内边距 */
+    margin-bottom: 6px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* 列表项目符号：让符号与文字之间更紧凑 */
+  .md-content ul li::before {
+    left: -1em !important;
+    font-size: 0.9em !important;
+  }
+
+  /* 时间标签：让它更紧凑，减少横向占用 */
+  .md-content .tl {
+    font-size: 0.8em !important;
+    padding: 1px 6px !important;
+    margin-right: 4px !important;
+    border-radius: 8px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 分割线（带文字） */
+  .md-content .hr-text {
+    font-size: 13px !important;
+    margin: 20px 0 !important;
+    letter-spacing: 1px !important;
+  }
+
+  .md-content .hr-text::before {
+    margin-right: 8px !important;
+  }
+  .md-content .hr-text::after {
+    margin-left: 8px !important;
+  }
+
+  /* 代码块/缩进说明区 */
+  .md-content pre {
+    padding: 10px 8px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 3px !important;
+    font-size: 0.85em !important;
+    overflow-x: auto !important;       /* 允许横向滚动，防止溢出 */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .md-content pre code {
+    font-size: 0.9em !important;
+    white-space: pre-wrap !important;  /* 自动换行，避免横向滚动 */
+    word-break: break-word !important;
+  }
+
+  /* 表格或其他可能溢出的元素 */
+  .md-content table {
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 }
 </style>

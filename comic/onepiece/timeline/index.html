@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3500" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -361,6 +361,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        太古时代
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3500" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -405,10 +416,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#720" class="md-nav__link">
+  <a href="#800" class="md-nav__link">
     <span class="md-ellipsis">
       
-        720年
+        800年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1020年
       
     </span>
   </a>
@@ -493,6 +515,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1320年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1362" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -526,10 +559,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1432" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1432年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1449" class="md-nav__link">
     <span class="md-ellipsis">
       
         1449年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        年份未知
       
     </span>
   </a>
@@ -548,10 +603,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1471" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1471年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1480" class="md-nav__link">
     <span class="md-ellipsis">
       
         1480年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1481" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1481年
       
     </span>
   </a>
@@ -614,6 +691,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1490" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1490年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1491" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1491年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1492" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -629,6 +728,17 @@
     <span class="md-ellipsis">
       
         1494年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1495" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1495年
       
     </span>
   </a>
@@ -673,6 +783,17 @@
     <span class="md-ellipsis">
       
         1499年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        年份未知
       
     </span>
   </a>
@@ -739,6 +860,28 @@
     <span class="md-ellipsis">
       
         1505年
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        未知时间
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1507" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1507年
       
     </span>
   </a>
@@ -878,7 +1021,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
         信息来源
@@ -1149,6 +1292,7 @@ body {
 
 /* ========== 移动端修正 ========== */
 @media (max-width: 768px) {
+  /* 遮罩层隐藏与侧边栏修复 */
   .md-overlay {
     display: none !important;
     pointer-events: none !important;
@@ -1188,6 +1332,132 @@ body {
   .md-sidebar {
     z-index: 1200 !important;
   }
+
+  /* ===== 正文横向扩大优化 ===== */
+
+  /* 正文容器：缩减左右内边距，让内容占据更多横向空间 */
+  .md-content {
+    padding: 1rem 8px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;      /* 移除圆角，贴边显示 */
+    box-shadow: none !important;      /* 去掉阴影，避免视觉收缩 */
+    background-color: rgba(255, 255, 255, 0.75) !important; /* 保持浅色背景 */
+  }
+
+  /* 标题：减小字号和左右边距 */
+  .md-content h1 {
+    font-size: 1.6em !important;
+    margin: 0.8em 0 0.6em !important;
+    padding-left: 8px !important;
+    border-left-width: 4px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .md-content h3 {
+    font-size: 1.4em !important;
+    margin: 1.4em 0 0.6em 0 !important;
+    padding-left: 6px !important;
+    border-left-width: 4px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .md-content h4 {
+    font-size: 1.1em !important;
+    margin: 1em 0 0.4em 0 !important;
+    padding-left: 6px !important;
+    border-left-width: 3px !important;
+  }
+
+  /* 段落：减小左右边距，让文字更宽 */
+  .md-content p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    font-size: 0.95em !important;
+    line-height: 1.7 !important;
+  }
+
+  /* 列表：减少左侧缩进，让列表项占满更多宽度 */
+  .md-content ul {
+    padding-left: 1em !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .md-content ul li {
+    padding-left: 0 !important;
+    margin-bottom: 6px !important;
+    line-height: 1.6 !important;
+  }
+
+  .md-content ul li::before {
+    left: -1em !important;
+    font-size: 0.9em !important;
+  }
+
+  /* 时间标签：更紧凑 */
+  .md-content .tl {
+    font-size: 0.8em !important;
+    padding: 1px 6px !important;
+    margin-right: 4px !important;
+    border-radius: 8px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 分割线（带文字） */
+  .md-content .hr-text {
+    font-size: 13px !important;
+    margin: 20px 0 !important;
+    letter-spacing: 1px !important;
+  }
+
+  .md-content .hr-text::before {
+    margin-right: 8px !important;
+  }
+  .md-content .hr-text::after {
+    margin-left: 8px !important;
+  }
+
+  /* 重要事件（“空白的一百年”） */
+  .md-content .important-event {
+    font-size: 20px !important;
+    letter-spacing: 3px !important;
+    margin: 30px auto !important;
+    padding: 10px 0 !important;
+  }
+  .md-content .important-event::before {
+    left: 5% !important;
+    font-size: 16px !important;
+  }
+  .md-content .important-event::after {
+    right: 5% !important;
+    font-size: 16px !important;
+  }
+
+  /* 代码块/缩进说明区 */
+  .md-content pre {
+    padding: 10px 8px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 3px !important;
+    font-size: 0.85em !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .md-content pre code {
+    font-size: 0.9em !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+  }
+
+  /* 表格或其他可能溢出的元素 */
+  .md-content table {
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* 去掉脚注区块的顶部边框线 */
@@ -1199,12 +1469,18 @@ body {
 .md-typeset .footnote hr {
   display: none;
 }
-
 </style>
 
-<pre><code>扉页剧场与剧场版主要剧情发生的时间点仅供大致参考
+<pre><code>扉页剧场与剧场版主要剧情发生的时间点仅供大致参考，可能存在与正作内容冲突的部分
+剧场版只收录自《强者天下》开始的《ONE PIECE FILM》系列作品
 为方便定位进行纪年，具体年份仅供参考，时间跨度为确切信息
+只收录主要角色的生日
 </code></pre>
+<h3 id="_1">太古时代</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  月球都市毕鲁卡的居民因资源不足向海贼星球移居<sup id="fnref:374"><a class="footnote-ref" href="#fn:374">374</a></sup></li>
+</ul>
 <h3 id="3500">海元历前约3500年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
@@ -1225,14 +1501,23 @@ body {
 <h3 id="700">700年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
-  世界政府诞生<sup id="fnref:299"><a class="footnote-ref" href="#fn:299">299</a></sup></li>
+  香多拉为了保护历史原文而被覆灭<sup id="fnref2:191"><a class="footnote-ref" href="#fn:191">191</a></sup></li>
+<li><span class="tl">某日</span><br />
+  20位国王组建世界政府，其后裔被称作天龙人<sup id="fnref:405"><a class="footnote-ref" href="#fn:405">405</a></sup></li>
 <li><span class="tl">某日</span><br />
   世界政府颁布禁止解读历史原文的法律<sup id="fnref4:294"><a class="footnote-ref" href="#fn:294">294</a></sup></li>
 </ul>
-<h3 id="720">720年</h3>
+<h3 id="800">800年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
-  香多拉为了保护历史原文而被覆灭<sup id="fnref2:191"><a class="footnote-ref" href="#fn:191">191</a></sup></li>
+  连接各个岛屿的大桥建设工程启动<sup id="fnref:439"><a class="footnote-ref" href="#fn:439">439</a></sup></li>
+</ul>
+<h3 id="1020">1020年</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  奥兹缔造了恶徒之国<sup id="fnref:356"><a class="footnote-ref" href="#fn:356">356</a></sup></li>
+<li><span class="tl">某日</span><br />
+  奥兹在冰之国迷路被冻死<sup id="fnref:380"><a class="footnote-ref" href="#fn:380">380</a></sup></li>
 </ul>
 <h3 id="1062">1062年</h3>
 <ul>
@@ -1291,6 +1576,11 @@ body {
 <li><span class="tl">某日</span><br />
   圣布利斯号自南海的布利斯王国出航，后误入空岛<sup id="fnref:151"><a class="footnote-ref" href="#fn:151">151</a></sup></li>
 </ul>
+<h3 id="1320">1320年</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  世界政府与鱼人岛建交<sup id="fnref:408"><a class="footnote-ref" href="#fn:408">408</a></sup></li>
+</ul>
 <h3 id="1362">1362年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
@@ -1308,24 +1598,62 @@ body {
 <li><span class="tl">某日</span><br />
   东利和布洛基留在小花园开始决斗，活跃一时的巨兵海贼团解散<sup id="fnref:73"><a class="footnote-ref" href="#fn:73">73</a></sup><sup id="fnref:74"><a class="footnote-ref" href="#fn:74">74</a></sup></li>
 </ul>
+<h3 id="1432">1432年</h3>
+<ul>
+<li><span class="tl">4月3日</span><br />
+  布鲁克出生<sup id="fnref:388"><a class="footnote-ref" href="#fn:388">388</a></sup><sup id="fnref3:390"><a class="footnote-ref" href="#fn:390">390</a></sup></li>
+</ul>
 <h3 id="1449">1449年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
   克罗卡斯出生<sup id="fnref:61"><a class="footnote-ref" href="#fn:61">61</a></sup></li>
 </ul>
+<h3 id="_2">年份未知</h3>
+<ul>
+<li><span class="tl">4月6日</span><br />
+  白胡子出生<sup id="fnref:471"><a class="footnote-ref" href="#fn:471">471</a></sup></li>
+</ul>
 <h3 id="1470">1470年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
-  伦巴海贼团在李维斯山将拉布托付给克罗卡斯<sup id="fnref2:61"><a class="footnote-ref" href="#fn:61">61</a></sup></li>
+  伦巴海贼团在西海与离群的小鲸鱼相遇，开始共同行动<sup id="fnref4:390"><a class="footnote-ref" href="#fn:390">390</a></sup></li>
+</ul>
+<div class="hr-text">一天后</div>
+<p><sup id="fnref:390"><a class="footnote-ref" href="#fn:390">390</a></sup></p>
+<ul>
+<li><span class="tl">某日</span><br />
+  伦巴海贼团为小鲸鱼取名拉布<sup id="fnref5:390"><a class="footnote-ref" href="#fn:390">390</a></sup></li>
+<li><span class="tl">某日</span><br />
+  拉布随伦巴海贼团抵达李维斯山<sup id="fnref6:390"><a class="footnote-ref" href="#fn:390">390</a></sup></li>
+</ul>
+<div class="hr-text">三个月</div>
+<p><sup id="fnref2:390"><a class="footnote-ref" href="#fn:390">390</a></sup></p>
+<ul>
+<li><span class="tl">某日</span><br />
+  伦巴海贼团将拉布托付给克罗卡斯<sup id="fnref2:61"><a class="footnote-ref" href="#fn:61">61</a></sup></li>
 <li><span class="tl">某日</span><br />
   卡西和欧伊摩为寻找东利和布洛基离开埃鲁巴夫<sup id="fnref:288"><a class="footnote-ref" href="#fn:288">288</a></sup></li>
 <li><span class="tl">某日</span><br />
   海军抓住卡西和欧伊摩，欺骗他们为世界政府工作100年<sup id="fnref2:288"><a class="footnote-ref" href="#fn:288">288</a></sup></li>
+<li><span class="tl">某日</span><br />
+  伦巴海贼团团灭<sup id="fnref:360"><a class="footnote-ref" href="#fn:360">360</a></sup></li>
+</ul>
+<h3 id="1471">1471年</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  布鲁克依靠果实能力以骷髅的形态复活<sup id="fnref:339"><a class="footnote-ref" href="#fn:339">339</a></sup></li>
 </ul>
 <h3 id="1480">1480年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
   橘子镇开始建设<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></li>
+<li><span class="tl">某日</span><br />
+  芍琪金盆洗手<sup id="fnref:406"><a class="footnote-ref" href="#fn:406">406</a></sup></li>
+</ul>
+<h3 id="1481">1481年</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  斯巴达姆出生<sup id="fnref:347"><a class="footnote-ref" href="#fn:347">347</a></sup></li>
 </ul>
 <h3 id="1482">1482年</h3>
 <ul>
@@ -1336,13 +1664,15 @@ body {
 </ul>
 <h3 id="1483">1483年</h3>
 <ul>
-<li><span class="tl">某日</span><br />
-  香克斯出生<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup></li>
+<li><span class="tl">3月9日</span><br />
+  香克斯出生<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup><sup id="fnref:442"><a class="footnote-ref" href="#fn:442">442</a></sup></li>
 </ul>
 <h3 id="1485">1485年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
   身患绝症的希鲁鲁克在看到樱花后被治愈，开始投身医学<sup id="fnref2:94"><a class="footnote-ref" href="#fn:94">94</a></sup></li>
+<li><span class="tl">某日</span><br />
+  杰布拉出生<sup id="fnref2:347"><a class="footnote-ref" href="#fn:347">347</a></sup></li>
 </ul>
 <h3 id="1486">1486年</h3>
 <ul>
@@ -1350,11 +1680,25 @@ body {
   卡提·弗拉姆（弗兰奇）出生<sup id="fnref2:261"><a class="footnote-ref" href="#fn:261">261</a></sup><sup id="fnref2:315"><a class="footnote-ref" href="#fn:315">315</a></sup></li>
 <li><span class="tl">3月14日</span><br />
   斯莫格出生<sup id="fnref:180"><a class="footnote-ref" href="#fn:180">180</a></sup></li>
+<li><span class="tl">某日</span><br />
+  脸谱出生<sup id="fnref3:347"><a class="footnote-ref" href="#fn:347">347</a></sup></li>
 </ul>
 <h3 id="1488">1488年</h3>
 <ul>
 <li><span class="tl">3月3日</span><br />
   日奈出生<sup id="fnref2:180"><a class="footnote-ref" href="#fn:180">180</a></sup></li>
+</ul>
+<h3 id="1490">1490年</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  布鲁诺出生<sup id="fnref4:347"><a class="footnote-ref" href="#fn:347">347</a></sup></li>
+</ul>
+<h3 id="1491">1491年</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  猫头鹰出生<sup id="fnref5:347"><a class="footnote-ref" href="#fn:347">347</a></sup></li>
+<li><span class="tl">9月2日</span><br />
+  汉库珂出生<sup id="fnref2:442"><a class="footnote-ref" href="#fn:442">442</a></sup></li>
 </ul>
 <h3 id="1492">1492年</h3>
 <ul>
@@ -1367,6 +1711,15 @@ body {
 <ul>
 <li><span class="tl">某日</span><br />
   寻找历史原文的探索队从奥哈拉出发<sup id="fnref:296"><a class="footnote-ref" href="#fn:296">296</a></sup>  </li>
+<li><span class="tl">某日</span><br />
+  罗杰身患不治之症<sup id="fnref:416"><a class="footnote-ref" href="#fn:416">416</a></sup></li>
+<li><span class="tl">某日</span><br />
+  克罗卡斯为寻找伦巴海贼团加入罗杰海贼团<sup id="fnref2:416"><a class="footnote-ref" href="#fn:416">416</a></sup></li>
+</ul>
+<h3 id="1495">1495年</h3>
+<ul>
+<li><span class="tl">4月23日</span><br />
+  佳妮法出生<sup id="fnref4:315"><a class="footnote-ref" href="#fn:315">315</a></sup></li>
 </ul>
 <h3 id="1496">1496年</h3>
 <ul>
@@ -1377,29 +1730,45 @@ body {
 </ul>
 <h3 id="1497">1497年</h3>
 <ul>
-<li><span class="tl">4月23日</span><br />
-  佳妮法出生<sup id="fnref4:315"><a class="footnote-ref" href="#fn:315">315</a></sup></li>
 <li><span class="tl">7月8日</span><br />
   巴利出生<sup id="fnref5:315"><a class="footnote-ref" href="#fn:315">315</a></sup></li>
 <li><span class="tl">8月7日</span><br />
   卡古出生<sup id="fnref:234"><a class="footnote-ref" href="#fn:234">234</a></sup><sup id="fnref6:315"><a class="footnote-ref" href="#fn:315">315</a></sup></li>
+<li><span class="tl">某日</span><br />
+  罗杰海贼团制霸伟大航路，罗杰被称作“海贼王”<sup id="fnref3:416"><a class="footnote-ref" href="#fn:416">416</a></sup></li>
+<li><span class="tl">某日</span><br />
+  罗杰海贼团解散，克罗卡斯返回双子岬<sup id="fnref4:416"><a class="footnote-ref" href="#fn:416">416</a></sup></li>
 </ul>
 <h3 id="1498">1498年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
-  罗杰在罗格镇受刑，“大海贼时代”开始<sup id="fnref:57"><a class="footnote-ref" href="#fn:57">57</a></sup><br />
+  罗杰向世界政府自首<sup id="fnref5:416"><a class="footnote-ref" href="#fn:416">416</a></sup></li>
+<li><span class="tl">某日</span><br />
+  罗杰将露秀和未出生的孩子托付给卡普<sup id="fnref:468"><a class="footnote-ref" href="#fn:468">468</a></sup></li>
+<li><span class="tl">10月某日</span><br />
+  罗杰在罗格镇受刑，“大海贼时代”开始<sup id="fnref:57"><a class="footnote-ref" href="#fn:57">57</a></sup><sup id="fnref:467"><a class="footnote-ref" href="#fn:467">467</a></sup><br />
   香克斯与巴基在罗格镇分道扬镳<sup id="fnref:330"><a class="footnote-ref" href="#fn:330">330</a></sup></li>
 <li><span class="tl">某日</span><br />
   汤姆因制造罗杰海贼团的欧罗杰克逊号而被判处死刑<sup id="fnref3:261"><a class="footnote-ref" href="#fn:261">261</a></sup><br />
   汤姆提出海上列车的构想，法官允许他缓刑十年以完成建设<sup id="fnref2:262"><a class="footnote-ref" href="#fn:262">262</a></sup></li>
+<li><span class="tl">某日</span><br />
+  白胡子宣布庇护鱼人岛<sup id="fnref:445"><a class="footnote-ref" href="#fn:445">445</a></sup></li>
 </ul>
 <h3 id="1499">1499年</h3>
 <ul>
 <li><span class="tl">10月6日</span><br />
   达斯琪出生<sup id="fnref:126"><a class="footnote-ref" href="#fn:126">126</a></sup><sup id="fnref:225"><a class="footnote-ref" href="#fn:225">225</a></sup></li>
 </ul>
+<h3 id="_3">年份未知</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  小八救下在海上遇难的雷利<sup id="fnref6:416"><a class="footnote-ref" href="#fn:416">416</a></sup></li>
+</ul>
 <h3 id="1500">1500年</h3>
 <ul>
+<li><span class="tl">1月1日</span><br />
+  艾斯出生<sup id="fnref:105"><a class="footnote-ref" href="#fn:105">105</a></sup><sup id="fnref:362"><a class="footnote-ref" href="#fn:362">362</a></sup><br />
+  露秀为艾斯取名并交给卡普后去世<sup id="fnref2:467"><a class="footnote-ref" href="#fn:467">467</a></sup><sup id="fnref2:468"><a class="footnote-ref" href="#fn:468">468</a></sup></li>
 <li><span class="tl">某日</span><br />
   盖蒙卡进宝箱，被留在珍兽岛<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></li>
 <li><span class="tl">某日</span><br />
@@ -1423,7 +1792,7 @@ body {
   奥尔比亚向考古学家们发出警告<sup id="fnref2:296"><a class="footnote-ref" href="#fn:296">296</a></sup><br />
   CP9将考古学家们逮捕，并开始驱逐奥哈拉的百姓<sup id="fnref:297"><a class="footnote-ref" href="#fn:297">297</a></sup><br />
   奥尔比亚袭击CP9长官斯巴达因，随后再次被捕<sup id="fnref2:297"><a class="footnote-ref" href="#fn:297">297</a></sup><br />
-  斯巴达因发动屠魔令，海军向奥哈拉发动集中炮击<sup id="fnref2:299"><a class="footnote-ref" href="#fn:299">299</a></sup><br />
+  斯巴达因发动屠魔令，海军向奥哈拉发动集中炮击<sup id="fnref:299"><a class="footnote-ref" href="#fn:299">299</a></sup><br />
   罗宾、奥尔比亚母女相认<sup id="fnref2:301"><a class="footnote-ref" href="#fn:301">301</a></sup><br />
   萨乌罗带走罗宾<sup id="fnref3:301"><a class="footnote-ref" href="#fn:301">301</a></sup><br />
   萨乌罗与时任中将的青雉交战，被其冻结<sup id="fnref:302"><a class="footnote-ref" href="#fn:302">302</a></sup>
@@ -1431,7 +1800,9 @@ body {
 <li><span class="tl">某日</span><br />
   诺琪高出生<sup id="fnref2:45"><a class="footnote-ref" href="#fn:45">45</a></sup></li>
 <li><span class="tl">某日</span><br />
-  艾斯出生<sup id="fnref:105"><a class="footnote-ref" href="#fn:105">105</a></sup></li>
+  史基从因佩尔地狱越狱<sup id="fnref:446"><a class="footnote-ref" href="#fn:446">446</a></sup></li>
+<li><span class="tl">某日</span><br />
+  史基使梅尔维尤岛飘上天空，开始利用SIQ培育改造动物<sup id="fnref3:395"><a class="footnote-ref" href="#fn:395">395</a></sup></li>
 </ul>
 <h3 id="1501">1501年</h3>
 <ul>
@@ -1452,12 +1823,16 @@ body {
 <li><span class="tl">5月5日</span><br />
   路飞出生<sup id="fnref5:15"><a class="footnote-ref" href="#fn:15">15</a></sup><sup id="fnref5:80"><a class="footnote-ref" href="#fn:80">80</a></sup></li>
 <li><span class="tl">某日</span><br />
-  贝鲁梅尔将诺琪高和娜美从战场带回可可椰村<sup id="fnref3:45"><a class="footnote-ref" href="#fn:45">45</a></sup>  </li>
+  贝鲁梅尔将诺琪高和娜美从战场带回可可椰村<sup id="fnref3:45"><a class="footnote-ref" href="#fn:45">45</a></sup></li>
+<li><span class="tl">某日</span><br />
+  汉库珂、桑达索尼娅、玛丽格鲁德三姐妹被人贩子从九蛇海贼团带走，沦为天龙人的奴隶<sup id="fnref2:435"><a class="footnote-ref" href="#fn:435">435</a></sup></li>
 </ul>
 <h3 id="1504">1504年</h3>
 <ul>
 <li><span class="tl">2月2日</span><br />
   薇薇出生<sup id="fnref:92"><a class="footnote-ref" href="#fn:92">92</a></sup><sup id="fnref2:93"><a class="footnote-ref" href="#fn:93">93</a></sup></li>
+<li><span class="tl">11月3日</span> 
+  凯米出生<sup id="fnref:425"><a class="footnote-ref" href="#fn:425">425</a></sup></li>
 </ul>
 <h3 id="1505">1505年</h3>
 <ul>
@@ -1465,6 +1840,20 @@ body {
   路奇为完成任务杀死所有人质<sup id="fnref2:319"><a class="footnote-ref" href="#fn:319">319</a></sup></li>
 <li><span class="tl">12月24日</span><br />
   乔巴出生<sup id="fnref3:114"><a class="footnote-ref" href="#fn:114">114</a></sup><sup id="fnref:237"><a class="footnote-ref" href="#fn:237">237</a></sup></li>
+</ul>
+<h3 id="_4">未知时间</h3>
+<ul>
+<li><span class="tl">5月13日</span><br />
+  可比出生<sup id="fnref6:347"><a class="footnote-ref" href="#fn:347">347</a></sup></li>
+<li><span class="tl">7月16日</span><br />
+  希路麦波出生<sup id="fnref7:347"><a class="footnote-ref" href="#fn:347">347</a></sup></li>
+</ul>
+<h3 id="1507">1507年</h3>
+<ul>
+<li><span class="tl">某日</span><br />
+  费雪·泰格闯入玛丽乔亚，解放所有奴隶。汉库珂三姐妹随后被格洛莉欧莎带回亚马逊·百合<sup id="fnref3:435"><a class="footnote-ref" href="#fn:435">435</a></sup></li>
+<li><span class="tl">某日</span><br />
+  费雪·泰格与部分鱼人奴隶一起成立太阳海贼团<sup id="fnref4:435"><a class="footnote-ref" href="#fn:435">435</a></sup></li>
 </ul>
 <h3 id="1508">1508年</h3>
 <ul>
@@ -1481,6 +1870,10 @@ body {
   寇沙为从绑匪手中保护薇薇而受伤<sup id="fnref:111"><a class="footnote-ref" href="#fn:111">111</a></sup></li>
 <li><span class="tl">某日</span><br />
   寇布拉国王派多多一家前去建设约巴<sup id="fnref2:111"><a class="footnote-ref" href="#fn:111">111</a></sup></li>
+<li><span class="tl">某日</span><br />
+  汉库珂成为九蛇的皇帝和九蛇海贼团船长<sup id="fnref:436"><a class="footnote-ref" href="#fn:436">436</a></sup></li>
+<li><span class="tl">某日</span><br />
+  汉库珂被悬赏8千万贝里，世界政府游说她成为王下七武海<sup id="fnref2:436"><a class="footnote-ref" href="#fn:436">436</a></sup></li>
 </ul>
 <h3 id="1510">1510年</h3>
 <ul>
@@ -1498,6 +1891,14 @@ body {
   蒙布朗·库利凯特抵达加亚岛，开始探寻祖先冒险的真相<sup id="fnref2:160"><a class="footnote-ref" href="#fn:160">160</a></sup></li>
 <li><span class="tl">某日</span><br />
   东吉特被困在高跷上，因此被其他游牧民落下<sup id="fnref:222"><a class="footnote-ref" href="#fn:222">222</a></sup></li>
+<li><span class="tl">某日</span><br />
+  辛德丽死于舞台事故<sup id="fnref:344"><a class="footnote-ref" href="#fn:344">344</a></sup></li>
+<li><span class="tl">某日</span><br />
+  豪格巴克成为莫利亚的部下，用女仆玛尔迦丽塔的影子将辛德丽制作为僵尸<sup id="fnref2:356"><a class="footnote-ref" href="#fn:356">356</a></sup></li>
+<li><span class="tl">某日</span><br />
+  恐怖之船自西海进入伟大航路，在魔鬼三角地带藏身<sup id="fnref:394"><a class="footnote-ref" href="#fn:394">394</a></sup></li>
+<li><span class="tl">某日</span><br />
+  香克斯在香波地群岛偶遇雷利，向他介绍路飞<sup id="fnref7:416"><a class="footnote-ref" href="#fn:416">416</a></sup></li>
 </ul>
 <h3 id="1511">1511年</h3>
 <ul>
@@ -1528,7 +1929,7 @@ body {
 <h3 id="1514">1514年</h3>
 <ul>
 <li><span class="tl">某日</span><br />
-  艾尼路毁灭了自己的家乡——空岛“毕鲁卡”<sup id="fnref:203"><a class="footnote-ref" href="#fn:203">203</a></sup></li>
+  艾尼路毁灭了自己的家乡——空岛毕鲁卡<sup id="fnref:203"><a class="footnote-ref" href="#fn:203">203</a></sup></li>
 <li><span class="tl">某日</span><br />
   艾尼路击败甘·福尔和山迪亚成为空中圣地的新神，随后开始建造方舟<sup id="fnref:181"><a class="footnote-ref" href="#fn:181">181</a></sup><sup id="fnref:187"><a class="footnote-ref" href="#fn:187">187</a></sup></li>
 <li><span class="tl">某日</span><br />
@@ -1560,6 +1961,12 @@ body {
   乔巴开始研究蓝波球<sup id="fnref:98"><a class="footnote-ref" href="#fn:98">98</a></sup>  </li>
 <li><span class="tl">某日</span><br />
   CP9特工潜入七水之都<sup id="fnref:255"><a class="footnote-ref" href="#fn:255">255</a></sup></li>
+<li><span class="tl">某日</span><br />
+  布鲁克被莫利亚夺走影子<sup id="fnref:354"><a class="footnote-ref" href="#fn:354">354</a></sup></li>
+<li><span class="tl">某日</span><br />
+  重返恐怖之船的布鲁克被获得自己影子的僵尸龙马击败，逃走后在魔鬼三角地带漂流<sup id="fnref:359"><a class="footnote-ref" href="#fn:359">359</a></sup></li>
+<li><span class="tl">某日</span><br />
+  罗宾从西海进入伟大航路<sup id="fnref2:394"><a class="footnote-ref" href="#fn:394">394</a></sup></li>
 </ul>
 <h3 id="1516">1516年</h3>
 <ul>
@@ -1579,6 +1986,8 @@ body {
   艾斯出海<sup id="fnref2:105"><a class="footnote-ref" href="#fn:105">105</a></sup></li>
 <li><span class="tl">某日</span><br />
   阿拉巴斯坦陷入连年干旱<sup id="fnref:107"><a class="footnote-ref" href="#fn:107">107</a></sup></li>
+<li><span class="tl">某日</span><br />
+  罗拉率领摇摆海贼团进入魔鬼三角地带，所有人被夺走影子<sup id="fnref:379"><a class="footnote-ref" href="#fn:379">379</a></sup></li>
 </ul>
 <h3 id="1518">1518年</h3>
 <ul>
@@ -1588,6 +1997,8 @@ body {
   跳舞粉出现在阿拉巴斯坦，暴乱开始<sup id="fnref2:107"><a class="footnote-ref" href="#fn:107">107</a></sup></li>
 <li><span class="tl">某日</span><br />
   伊格拉姆和薇薇潜入巴洛克工作室开始调查<sup id="fnref:132"><a class="footnote-ref" href="#fn:132">132</a></sup></li>
+<li><span class="tl">某日</span><br />
+  艾斯出海<sup id="fnref3:468"><a class="footnote-ref" href="#fn:468">468</a></sup></li>
 </ul>
 <h3 id="1519">1519年</h3>
 <ul>
@@ -1801,7 +2212,7 @@ body {
   坠海的冯·克雷被草帽一伙救起<sup id="fnref2:102"><a class="footnote-ref" href="#fn:102">102</a></sup><br />
   草帽一伙在油菜花登陆<sup id="fnref:103"><a class="footnote-ref" href="#fn:103">103</a></sup><br />
   斯莫格开始搜捕路飞<sup id="fnref:104"><a class="footnote-ref" href="#fn:104">104</a></sup><br />
-  艾斯与草帽一伙见面，将生命卡交给路飞<sup id="fnref3:105"><a class="footnote-ref" href="#fn:105">105</a></sup><br />
+  艾斯与草帽一伙见面，将自己的生命卡交给路飞<sup id="fnref3:105"><a class="footnote-ref" href="#fn:105">105</a></sup><br />
   草帽一伙抵达爱鲁玛镇<sup id="fnref3:107"><a class="footnote-ref" href="#fn:107">107</a></sup><br />
   巴洛克工作室高级特工集合前往雨地<sup id="fnref:106"><a class="footnote-ref" href="#fn:106">106</a></sup><br />
   草帽一伙抵达约巴，薇薇与多多相见<sup id="fnref2:109"><a class="footnote-ref" href="#fn:109">109</a></sup></li>
@@ -1884,8 +2295,9 @@ body {
   草帽一伙抵达加亚岛的魔谷镇<sup id="fnref2:153"><a class="footnote-ref" href="#fn:153">153</a></sup><br />
   路飞在酒馆与黑胡子相遇<sup id="fnref:154"><a class="footnote-ref" href="#fn:154">154</a></sup><br />
   贝拉米殴打路飞并嘲讽草帽一伙前往空岛的想法<sup id="fnref:155"><a class="footnote-ref" href="#fn:155">155</a></sup><br />
-  艾斯与巴基海贼团相遇<sup id="fnref:164"><a class="footnote-ref" href="#fn:164">164</a></sup><br />
-  五老星将王下七武海召集至玛丽乔尔与海军开会<sup id="fnref2:164"><a class="footnote-ref" href="#fn:164">164</a></sup><br />
+  巴基海贼团寻找约翰船长的宝藏失败<sup id="fnref:164"><a class="footnote-ref" href="#fn:164">164</a></sup><br />
+  艾斯与巴基海贼团相遇<sup id="fnref2:164"><a class="footnote-ref" href="#fn:164">164</a></sup><br />
+  五老星将王下七武海召集至玛丽乔尔与海军开会<sup id="fnref3:164"><a class="footnote-ref" href="#fn:164">164</a></sup><br />
   拉斐特向海军推荐黑胡子以填补七武海的空缺<sup id="fnref:165"><a class="footnote-ref" href="#fn:165">165</a></sup><br />
   香克斯的使者被白胡子驱赶<sup id="fnref2:165"><a class="footnote-ref" href="#fn:165">165</a></sup><br />
   草帽一伙与猩猩海贼团相遇并战斗<sup id="fnref:156"><a class="footnote-ref" href="#fn:156">156</a></sup><br />
@@ -2099,14 +2511,14 @@ body {
   斯巴达姆手误发动屠魔令<sup id="fnref:309"><a class="footnote-ref" href="#fn:309">309</a></sup><br />
   娜美击败佳妮法<sup id="fnref:311"><a class="footnote-ref" href="#fn:311">311</a></sup><br />
   弗兰奇制止失控的乔巴<sup id="fnref:313"><a class="footnote-ref" href="#fn:313">313</a></sup><br />
-  CP9成员加布拉击败乌索普<sup id="fnref2:313"><a class="footnote-ref" href="#fn:313">313</a></sup><br />
-  山治击败加布拉<sup id="fnref:314"><a class="footnote-ref" href="#fn:314">314</a></sup><br />
+  CP9成员杰布拉击败乌索普<sup id="fnref2:313"><a class="footnote-ref" href="#fn:313">313</a></sup><br />
+  山治击败杰布拉<sup id="fnref:314"><a class="footnote-ref" href="#fn:314">314</a></sup><br />
   索隆击败卡古<sup id="fnref:316"><a class="footnote-ref" href="#fn:316">316</a></sup><br />
   乌索普击中斯巴达姆，成功将手铐钥匙传递给罗宾<sup id="fnref:317"><a class="footnote-ref" href="#fn:317">317</a></sup><br />
   海军开始炮击司法岛<sup id="fnref:318"><a class="footnote-ref" href="#fn:318">318</a></sup><br />
   弗兰奇击败斯巴达姆<sup id="fnref:320"><a class="footnote-ref" href="#fn:320">320</a></sup><br />
   可可罗救出落入海中的草帽一伙<sup id="fnref2:320"><a class="footnote-ref" href="#fn:320">320</a></sup><br />
-  海军向草帽一伙发动进攻，索隆的“雪走”被肖恩折断<sup id="fnref:321"><a class="footnote-ref" href="#fn:321">321</a></sup><br />
+  海军向草帽一伙发动进攻，索隆的“雪走”被肖恩上校折断<sup id="fnref:321"><a class="footnote-ref" href="#fn:321">321</a></sup><br />
   路飞击败路奇<sup id="fnref:322"><a class="footnote-ref" href="#fn:322">322</a></sup><br />
   梅利号出现，救走草帽一伙等人<sup id="fnref:323"><a class="footnote-ref" href="#fn:323">323</a></sup><br />
   草帽一伙、卡雷拉工匠以及弗兰奇一家顺利离开司法岛<sup id="fnref:325"><a class="footnote-ref" href="#fn:325">325</a></sup><br />
@@ -2118,25 +2530,35 @@ body {
   Miss.黄金周一行坠落在度假岛<sup id="fnref:275"><a class="footnote-ref" href="#fn:275">275</a></sup><br />
   正在搜捕Mr.3的日奈发现Miss.黄金周等人<sup id="fnref:283"><a class="footnote-ref" href="#fn:283">283</a></sup><br />
   Miss.情人节被日奈擒获<sup id="fnref:286"><a class="footnote-ref" href="#fn:286">286</a></sup><br />
-  Mr.2拦住想从度假岛逃离的Mr.3<sup id="fnref:289"><a class="footnote-ref" href="#fn:289">289</a></sup><br />
-  Mr.2与日奈交手<sup id="fnref:292"><a class="footnote-ref" href="#fn:292">292</a></sup><br />
+  冯·克雷拦住想从度假岛逃离的Mr.3<sup id="fnref:289"><a class="footnote-ref" href="#fn:289">289</a></sup><br />
+  冯·克雷与日奈交手<sup id="fnref:292"><a class="footnote-ref" href="#fn:292">292</a></sup><br />
   Miss.黄金周、Mr.5趁乱救出Miss.情人节<sup id="fnref:295"><a class="footnote-ref" href="#fn:295">295</a></sup><br />
   Miss.黄金周、Mr.5、Miss.情人节抢夺军舰离开度假岛<sup id="fnref:298"><a class="footnote-ref" href="#fn:298">298</a></sup><br />
   Miss.黄金周一行抵达海军拘留所<sup id="fnref:300"><a class="footnote-ref" href="#fn:300">300</a></sup><br />
   Miss.黄金周、Mr.5、Miss.情人节、Mr.4、Miss.双指、Miss.圣诞节共六人越狱<sup id="fnref:306"><a class="footnote-ref" href="#fn:306">306</a></sup><br />
-  Mr.2、Mr.3被关进海军拘留所<sup id="fnref:310"><a class="footnote-ref" href="#fn:310">310</a></sup><br />
-  克洛克达尔、Mr.1、Mr.2、Mr.3四人被送去因佩尔地狱<sup id="fnref:312"><a class="footnote-ref" href="#fn:312">312</a></sup></p>
+  冯·克雷、Mr.3被关进海军拘留所<sup id="fnref:310"><a class="footnote-ref" href="#fn:310">310</a></sup><br />
+  克洛克达尔、Mr.1、冯·克雷、Mr.3四人被送去因佩尔地狱<sup id="fnref:312"><a class="footnote-ref" href="#fn:312">312</a></sup></p>
 </li>
 <li>
 <p><span class="tl">某日</span><br />
+  月见博士因目睹月球上发生爆炸被噎死<sup id="fnref:348"><a class="footnote-ref" href="#fn:348">348</a></sup><br />
+  月见博士制造的机器人小队前往月球为博士复仇<sup id="fnref:351"><a class="footnote-ref" href="#fn:351">351</a></sup><br />
+  机器人小队被宇宙海盗击败<sup id="fnref:355"><a class="footnote-ref" href="#fn:355">355</a></sup><br />
   艾尼路登上月球<sup id="fnref:324"><a class="footnote-ref" href="#fn:324">324</a></sup><br />
-  艾尼路激活机器人斯佩西中尉<sup id="fnref:331"><a class="footnote-ref" href="#fn:331">331</a></sup></p>
+  艾尼路激活机器人斯佩西中尉<sup id="fnref:331"><a class="footnote-ref" href="#fn:331">331</a></sup><br />
+  艾尼路和宇宙海盗交手<sup id="fnref:337"><a class="footnote-ref" href="#fn:337">337</a></sup><br />
+  艾尼路击败正在挖掘月球遗迹的宇宙海盗<sup id="fnref:358"><a class="footnote-ref" href="#fn:358">358</a></sup><br />
+  艾尼路进入月球的地下都市<sup id="fnref:366"><a class="footnote-ref" href="#fn:366">366</a></sup><br />
+  地下都市里的机器人部队被艾尼路激活<sup id="fnref:369"><a class="footnote-ref" href="#fn:369">369</a></sup><br />
+  艾尼路通过壁画了解了月球文明的历史<sup id="fnref:371"><a class="footnote-ref" href="#fn:371">371</a></sup><br />
+  艾尼路将月见博士制造的机器人小队和月球的机器人部队收入麾下<sup id="fnref:376"><a class="footnote-ref" href="#fn:376">376</a></sup></p>
 </li>
 </ul>
 <div class="hr-text">司法岛事件两天后</div>
 <p><sup id="fnref:327"><a class="footnote-ref" href="#fn:327">327</a></sup></p>
 <ul>
-<li><span class="tl">某日</span><br />
+<li>
+<p><span class="tl">某日</span><br />
   弗兰奇开始为草帽一伙造船<sup id="fnref2:327"><a class="footnote-ref" href="#fn:327">327</a></sup><br />
   卡普的军舰抵达七水之都<sup id="fnref3:327"><a class="footnote-ref" href="#fn:327">327</a></sup><br />
   卡普与路飞相见<sup id="fnref4:327"><a class="footnote-ref" href="#fn:327">327</a></sup><br />
@@ -2144,10 +2566,18 @@ body {
   草帽一伙与七水之都众人举办宴会<sup id="fnref:329"><a class="footnote-ref" href="#fn:329">329</a></sup><br />
   青雉确认了罗宾的情况<sup id="fnref2:329"><a class="footnote-ref" href="#fn:329">329</a></sup><br />
   香克斯与白胡子见面<sup id="fnref3:329"><a class="footnote-ref" href="#fn:329">329</a></sup><br />
-  艾斯找到黑胡子海贼团<sup id="fnref2:330"><a class="footnote-ref" href="#fn:330">330</a></sup><br />
-  艾斯与黑胡子交手<sup id="fnref:336"><a class="footnote-ref" href="#fn:336">336</a></sup></li>
+  艾斯在巴拿罗岛找到黑胡子海贼团<sup id="fnref2:330"><a class="footnote-ref" href="#fn:330">330</a></sup><br />
+  黑胡子击败艾斯<sup id="fnref:336"><a class="footnote-ref" href="#fn:336">336</a></sup></p>
+</li>
+<li>
+<p><span class="tl">某日</span><br />
+  布鲁诺利用能力救出CP9成员<sup id="fnref:398"><a class="footnote-ref" href="#fn:398">398</a></sup><br />
+  为躲避斯巴达姆派来的追兵，CP9逃离司法岛废墟<sup id="fnref:401"><a class="footnote-ref" href="#fn:401">401</a></sup><br />
+  CP9抵达圣·白杨镇<sup id="fnref:403"><a class="footnote-ref" href="#fn:403">403</a></sup><br />
+  CP9打工筹钱为路奇治疗<sup id="fnref:409"><a class="footnote-ref" href="#fn:409">409</a></sup></p>
+</li>
 </ul>
-<div class="hr-text">三天后</div>
+<div class="hr-text">造船工作开始三天后</div>
 <p><sup id="fnref:332"><a class="footnote-ref" href="#fn:332">332</a></sup></p>
 <ul>
 <li><span class="tl">某日</span><br />
@@ -2158,10 +2588,329 @@ body {
   弗兰奇加入草帽一伙<sup id="fnref2:333"><a class="footnote-ref" href="#fn:333">333</a></sup><br />
   乌索普道歉，重回草帽一伙<sup id="fnref:334"><a class="footnote-ref" href="#fn:334">334</a></sup><br />
   草帽一伙为新船取名为千里阳光号<sup id="fnref:335"><a class="footnote-ref" href="#fn:335">335</a></sup><br />
-  草帽一伙从卡普的攻击下逃离<sup id="fnref2:335"><a class="footnote-ref" href="#fn:335">335</a></sup>  </li>
+  草帽一伙从卡普的攻击下逃离<sup id="fnref2:335"><a class="footnote-ref" href="#fn:335">335</a></sup><br />
+  草帽一伙打捞起装有信号弹的漂流桶<sup id="fnref:338"><a class="footnote-ref" href="#fn:338">338</a></sup><br />
+  草帽一伙进入魔鬼三角地带<sup id="fnref2:338"><a class="footnote-ref" href="#fn:338">338</a></sup><br />
+  草帽一伙遇到随船只残骸漂流的布鲁克，路飞向他发出邀请<sup id="fnref3:338"><a class="footnote-ref" href="#fn:338">338</a></sup><br />
+  布鲁克向草帽一伙说明了自己复活以及被夺走影子的经历<sup id="fnref2:339"><a class="footnote-ref" href="#fn:339">339</a></sup><br />
+  千里阳光号被恐怖之船困住，布鲁克前往恐怖之船<sup id="fnref3:339"><a class="footnote-ref" href="#fn:339">339</a></sup><br />
+  前去侦察的乌索普、娜美、乔巴误入恐怖之船<sup id="fnref:340"><a class="footnote-ref" href="#fn:340">340</a></sup><br />
+  阿布萨罗姆隐身骚扰千里阳光号上的众人<sup id="fnref2:340"><a class="footnote-ref" href="#fn:340">340</a></sup><br />
+  豪格巴克邀请乌索普小组前往自己的公馆<sup id="fnref3:340"><a class="footnote-ref" href="#fn:340">340</a></sup><br />
+  乌索普小组被僵尸袭击，不得不躲入豪格巴克公馆<sup id="fnref:341"><a class="footnote-ref" href="#fn:341">341</a></sup><br />
+  辛德丽和豪格巴克接待了娜美三人<sup id="fnref:342"><a class="footnote-ref" href="#fn:342">342</a></sup><br />
+  阿布萨罗姆袭击娜美，被乌索普驱赶<sup id="fnref2:342"><a class="footnote-ref" href="#fn:342">342</a></sup><br />
+  路飞、索隆、山治、罗宾、弗兰奇登上恐怖之船<sup id="fnref3:342"><a class="footnote-ref" href="#fn:342">342</a></sup><br />
+  娜美三人被公馆内的僵尸袭击，逃入豪格巴克的房间<sup id="fnref:343"><a class="footnote-ref" href="#fn:343">343</a></sup><br />
+  路飞一行从僵尸口中打听到乌索普小组的下落，并得知恐怖之船的主人是莫利亚<sup id="fnref2:344"><a class="footnote-ref" href="#fn:344">344</a></sup><br />
+  恐怖之船的夜袭开始<sup id="fnref:345"><a class="footnote-ref" href="#fn:345">345</a></sup>  </li>
+</ul>
+<div class="hr-text">一天后</div>
+<p><sup id="fnref:346"><a class="footnote-ref" href="#fn:346">346</a></sup></p>
+<ul>
+<li><span class="tl">某日</span><br />
+  乌索普小组被僵尸龙马击败<sup id="fnref2:346"><a class="footnote-ref" href="#fn:346">346</a></sup><br />
+  路飞小组闯入豪格巴克的公馆，山治被抓走夺去影子<sup id="fnref3:346"><a class="footnote-ref" href="#fn:346">346</a></sup><br />
+  乌索普小组在被送去佩罗娜住所的途中脱困<sup id="fnref:349"><a class="footnote-ref" href="#fn:349">349</a></sup><br />
+  乌索普小组见到塞入山治影子的僵尸狗企鹅<sup id="fnref2:349"><a class="footnote-ref" href="#fn:349">349</a></sup><br />
+  索隆被抓走夺去影子<sup id="fnref3:349"><a class="footnote-ref" href="#fn:349">349</a></sup><br />
+  路飞小组见到塞入索隆影子的风之治五郎<sup id="fnref:350"><a class="footnote-ref" href="#fn:350">350</a></sup><br />
+  弗兰奇、罗宾从僵尸将军的围攻中脱身，路飞被抓走<sup id="fnref2:350"><a class="footnote-ref" href="#fn:350">350</a></sup><br />
+  塞入罗拉影子的僵尸野猪和阿布萨罗姆对娜美发起攻击，僵尸狗企鹅为阻拦而被打伤<sup id="fnref:352"><a class="footnote-ref" href="#fn:352">352</a></sup><br />
+  弗兰奇、罗宾与布鲁克相遇<sup id="fnref2:352"><a class="footnote-ref" href="#fn:352">352</a></sup><br />
+  僵尸野猪被娜美安抚，转而追赶阿布萨罗姆<sup id="fnref:353"><a class="footnote-ref" href="#fn:353">353</a></sup><br />
+  佩罗娜带部下对千里阳光号进行了搜刮<sup id="fnref2:353"><a class="footnote-ref" href="#fn:353">353</a></sup><br />
+  乌索普小组躲藏进佩罗娜的布偶熊柯玛希体内，跟随佩罗娜行动<sup id="fnref3:353"><a class="footnote-ref" href="#fn:353">353</a></sup><br />
+  布鲁克击败僵尸蜘蛛猴<sup id="fnref4:353"><a class="footnote-ref" href="#fn:353">353</a></sup><br />
+  布鲁克向弗兰奇和罗宾介绍了莫利亚的能力<sup id="fnref2:354"><a class="footnote-ref" href="#fn:354">354</a></sup><br />
+  弗兰奇从布鲁克口中问出伦巴海贼团和拉布的约定<sup id="fnref2:360"><a class="footnote-ref" href="#fn:360">360</a></sup><br />
+  莫利亚召见豪格巴克、佩罗娜、阿布萨罗姆，夺走路飞的影子<sup id="fnref3:354"><a class="footnote-ref" href="#fn:354">354</a></sup><br />
+  僵尸奥兹获得路飞的影子，苏醒后开始大闹<sup id="fnref:357"><a class="footnote-ref" href="#fn:357">357</a></sup><br />
+  乌索普小组暴露，娜美被阿布萨罗姆掳走<sup id="fnref2:357"><a class="footnote-ref" href="#fn:357">357</a></sup><br />
+  弗兰奇、罗宾从僵尸手中救下乌索普和乔巴<sup id="fnref3:357"><a class="footnote-ref" href="#fn:357">357</a></sup><br />
+  乌索普一行回到千里阳光号，唤醒被送回船上的路飞、索隆、山治<sup id="fnref2:359"><a class="footnote-ref" href="#fn:359">359</a></sup><br />
+  弗兰奇将布鲁克的故事告诉草帽一伙<sup id="fnref3:360"><a class="footnote-ref" href="#fn:360">360</a></sup><br />
+  草帽一伙返回恐怖之船<sup id="fnref:361"><a class="footnote-ref" href="#fn:361">361</a></sup><br />
+  索隆、弗兰奇、山治、乌索普被僵尸奥兹拦截<sup id="fnref:363"><a class="footnote-ref" href="#fn:363">363</a></sup><br />
+  布鲁克被僵尸龙马击败<sup id="fnref:364"><a class="footnote-ref" href="#fn:364">364</a></sup><br />
+  山治击败阿布萨罗姆<sup id="fnref:365"><a class="footnote-ref" href="#fn:365">365</a></sup><br />
+  乌索普击败佩罗娜<sup id="fnref:367"><a class="footnote-ref" href="#fn:367">367</a></sup><br />
+  索隆击败僵尸龙马，得到其佩刀“秋水”。布鲁克取回影子<sup id="fnref:368"><a class="footnote-ref" href="#fn:368">368</a></sup><br />
+  豪格巴克被僵尸奥兹踩踏重伤<sup id="fnref:370"><a class="footnote-ref" href="#fn:370">370</a></sup><br />
+  阿布萨罗姆趁僵尸奥兹引发的骚乱再次掳走娜美<sup id="fnref2:370"><a class="footnote-ref" href="#fn:370">370</a></sup><br />
+  索隆、山治、乌索普、弗兰奇、罗宾、乔巴被僵尸奥兹击败<sup id="fnref:372"><a class="footnote-ref" href="#fn:372">372</a></sup><br />
+  僵尸野猪帮助娜美逃走，自己被阿布萨罗姆打伤<sup id="fnref:373"><a class="footnote-ref" href="#fn:373">373</a></sup><br />
+  娜美击败阿布萨罗姆<sup id="fnref2:373"><a class="footnote-ref" href="#fn:373">373</a></sup><br />
+  娜美拦截试图利用千里阳光号逃走的佩罗娜，佩罗娜被来到恐怖之船的大熊打飞<sup id="fnref:375"><a class="footnote-ref" href="#fn:375">375</a></sup><br />
+  僵尸奥兹掌舵导致恐怖之船驶出魔鬼三角地带<sup id="fnref:377"><a class="footnote-ref" href="#fn:377">377</a></sup><br />
+  大熊向莫利亚通知黑胡子加入王下七武海一事<sup id="fnref2:377"><a class="footnote-ref" href="#fn:377">377</a></sup><br />
+  莫利亚开始直接操控僵尸奥兹，布鲁克、娜美加入战斗<sup id="fnref:378"><a class="footnote-ref" href="#fn:378">378</a></sup><br />
+  莫利亚击败弗兰奇<sup id="fnref2:378"><a class="footnote-ref" href="#fn:378">378</a></sup><br />
+  路飞被摇摆海贼团拦下<sup id="fnref3:378"><a class="footnote-ref" href="#fn:378">378</a></sup><br />
+  路飞得到100个影子的力量，成为“噩梦路飞”<sup id="fnref2:379"><a class="footnote-ref" href="#fn:379">379</a></sup><br />
+  莫利亚击败布鲁克<sup id="fnref3:379"><a class="footnote-ref" href="#fn:379">379</a></sup><br />
+  莫利亚击败罗宾、山治、乔巴<sup id="fnref2:380"><a class="footnote-ref" href="#fn:380">380</a></sup><br />
+  莫利亚击败索隆，路飞救下乌索普、娜美<sup id="fnref:381"><a class="footnote-ref" href="#fn:381">381</a></sup><br />
+  摇摆海贼团赶到战场抢救伤员<sup id="fnref:382"><a class="footnote-ref" href="#fn:382">382</a></sup><br />
+  草帽一伙击败僵尸奥兹<sup id="fnref:383"><a class="footnote-ref" href="#fn:383">383</a></sup><br />
+  莫利亚吸收1000个影子，开始发狂<sup id="fnref:384"><a class="footnote-ref" href="#fn:384">384</a></sup><br />
+  路飞击败莫利亚后昏迷，所有影子回归<sup id="fnref:385"><a class="footnote-ref" href="#fn:385">385</a></sup><br />
+  大熊现身，得到世界政府全部抹杀目击者的命令<sup id="fnref2:385"><a class="footnote-ref" href="#fn:385">385</a></sup>  <br />
+  索隆发现大熊的改造人身份，以独自承受路飞全部疲劳和痛苦为代价保全所有人的性命<sup id="fnref:387"><a class="footnote-ref" href="#fn:387">387</a></sup><br />
+  豪格巴克唤醒阿布萨罗姆，二人带莫利亚逃离恐怖之船<sup id="fnref2:389"><a class="footnote-ref" href="#fn:389">389</a></sup><br />
+  艾斯被关进因佩尔地狱<sup id="fnref3:389"><a class="footnote-ref" href="#fn:389">389</a></sup>  </li>
+</ul>
+<div class="hr-text">一天后</div>
+<p><sup id="fnref:389"><a class="footnote-ref" href="#fn:389">389</a></sup>  </p>
+<ul>
+<li>
+<p><span class="tl">某日</span><br />
+  娜美和罗拉相认<sup id="fnref4:389"><a class="footnote-ref" href="#fn:389">389</a></sup><br />
+  路飞从恐怖之船的财宝中得到装有约翰船长宝藏标记的臂环<sup id="fnref5:389"><a class="footnote-ref" href="#fn:389">389</a></sup><br />
+  路飞将拉布的现状告诉布鲁克<sup id="fnref6:389"><a class="footnote-ref" href="#fn:389">389</a></sup><br />
+  布鲁克为拉布录制了众人合唱的《宾克斯的酒》<sup id="fnref:391"><a class="footnote-ref" href="#fn:391">391</a></sup><br />
+  布鲁克加入草帽一伙<sup id="fnref2:392"><a class="footnote-ref" href="#fn:392">392</a></sup>  </p>
+</li>
+<li>
+<p><span class="tl">某日</span><br />
+  路奇出院<sup id="fnref:415"><a class="footnote-ref" href="#fn:415">415</a></sup><br />
+  路奇等人击败袭击圣·白杨的糖果海贼团<sup id="fnref:420"><a class="footnote-ref" href="#fn:420">420</a></sup><br />
+  路奇等人乘坐糖果海贼团的船离开圣·白杨<sup id="fnref:428"><a class="footnote-ref" href="#fn:428">428</a></sup>
+  路奇等人开始在故乡训练新一代<sup id="fnref:431"><a class="footnote-ref" href="#fn:431">431</a></sup><br />
+  贝里古德上校带兵抓捕CP9<sup id="fnref:434"><a class="footnote-ref" href="#fn:434">434</a></sup><br />
+  击败海军后，路奇与斯巴达姆通话<sup id="fnref:438"><a class="footnote-ref" href="#fn:438">438</a></sup></p>
+</li>
+<li>
+<p><span class="tl">某日</span><br />
+  卡西和欧伊摩启程返回埃鲁巴夫<sup id="fnref:393"><a class="footnote-ref" href="#fn:393">393</a></sup></p>
+</li>
+</ul>
+<div class="hr-text">布鲁克加入两天后</div>
+<p><sup id="fnref:392"><a class="footnote-ref" href="#fn:392">392</a></sup></p>
+<ul>
+<li>
+<p><span class="tl">某日</span><br />
+  弗兰奇和乌索普帮助布鲁克将伦巴海贼团埋葬在恐怖之船<sup id="fnref3:392"><a class="footnote-ref" href="#fn:392">392</a></sup><br />
+  罗拉将Big Mom的生命卡送给娜美<sup id="fnref4:392"><a class="footnote-ref" href="#fn:392">392</a></sup><br />
+  路飞从生命卡上发现艾斯奄奄一息<sup id="fnref5:392"><a class="footnote-ref" href="#fn:392">392</a></sup><br />
+  草帽一伙起航离开恐怖之船<sup id="fnref3:394"><a class="footnote-ref" href="#fn:394">394</a></sup><br />
+  大熊向战国报告了草帽一伙逃走之事<sup id="fnref4:394"><a class="footnote-ref" href="#fn:394">394</a></sup>  </p>
+</li>
+<li>
+<p><span class="tl">某日</span><br />
+  史基袭击玛丽乔亚，随后前往东海发动袭击<sup id="fnref6:395"><a class="footnote-ref" href="#fn:395">395</a></sup></p>
+</li>
+</ul>
+<div class="hr-text">一天后</div>
+<p><sup id="fnref:395"><a class="footnote-ref" href="#fn:395">395</a></sup></p>
+<ul>
+<li><span class="tl">某日</span><br />
+  草帽一伙遇到史基的海盗船，娜美向对方发出飓风预警<sup id="fnref4:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  史基使用能力将千里阳光号带至梅尔维尤岛并掳走娜美，草帽一伙分散<sup id="fnref5:395"><a class="footnote-ref" href="#fn:395">395</a></sup>  </li>
+</ul>
+<div class="hr-text">一周后</div>
+<p><sup id="fnref2:395"><a class="footnote-ref" href="#fn:395">395</a></sup></p>
+<ul>
+<li>
+<p><span class="tl">某日</span><br />
+  史基向娜美介绍了自己利用SIQ征服世界的野心，邀请她加入自己麾下<sup id="fnref7:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  山治、乌索普抵达梅尔维尤岛的村庄，得知史基对此地的严苛统治<sup id="fnref8:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  索隆、乔巴救下被改造动物袭击的小女孩夏沃，在其带领下来到村庄<sup id="fnref9:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  山治、乌索普、索隆、乔巴会合<sup id="fnref10:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  众海贼团船长被史基诱骗至梅尔维尤集会<sup id="fnref11:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  娜美在改造动物比利的帮助下从史基的王宫逃走，找到千里阳光号和路飞<sup id="fnref12:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  路飞、娜美、比利来到村庄与众人会合，被史基的监控电话虫发现<sup id="fnref13:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  罗宾、弗兰奇、布鲁克潜入史基举办的集会，得知史基的行动计划<sup id="fnref14:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  史基击败路飞等人，娜美为阻止史基假意加入史基的海贼团<sup id="fnref15:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  史基派改造动物摧毁村庄<sup id="fnref16:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  弗兰奇三人赶到村庄，救出路飞等人并告诉他们东海遇袭的真相<sup id="fnref17:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  娜美摧毁王宫植物屏障的计划被史基发现，被史基关押在王宫之外<sup id="fnref18:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  史基与众船长举行结拜大会以重建金狮子海贼团，草帽一伙闯入王宫<sup id="fnref19:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  比利帮助娜美摧毁植物屏障，乌索普和乔巴救出娜美。改造动物向王宫发起进攻<sup id="fnref20:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  索隆击败印第戈，夺得治疗植物毒素的解药<sup id="fnref21:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  史基麾下的斯卡雷特掳走罗宾，被山治击败<sup id="fnref22:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  娜美、乔巴、乌索普诱骗史基将梅尔维尤移入暴风雨中<sup id="fnref23:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  路飞击败史基，被比利带回飞离梅尔维尤的千里阳光号<sup id="fnref24:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  梅尔维尤坠落，夏沃等村民依靠受SIQ影响长出的翅膀幸存，和失去攻击性的改造动物们继续在梅尔维尤生活<sup id="fnref25:395"><a class="footnote-ref" href="#fn:395">395</a></sup><br />
+  在梅尔维尤集结的海贼们被海军逮捕<sup id="fnref26:395"><a class="footnote-ref" href="#fn:395">395</a></sup></p>
+</li>
+<li>
+<p><span class="tl">某日</span><br />
+  草帽一伙击败海兔，救出被海兔吞食的凯米和帕帕格<sup id="fnref5:394"><a class="footnote-ref" href="#fn:394">394</a></sup><br />
+  凯米得知小八被马库洛一伙和飞鱼骑士团联手抓住，草帽一伙为得到去鱼人岛的方法决定帮忙<sup id="fnref:397"><a class="footnote-ref" href="#fn:397">397</a></sup><br />
+  飞鱼骑士团袭击千里阳光号，并将草帽一伙到来的消息告知迪巴鲁<sup id="fnref2:397"><a class="footnote-ref" href="#fn:397">397</a></sup><br />
+  草帽一伙抵达飞鱼骑士团据点<sup id="fnref:399"><a class="footnote-ref" href="#fn:399">399</a></sup><br />
+  小八被索隆释放，击败马库洛一伙<sup id="fnref:400"><a class="footnote-ref" href="#fn:400">400</a></sup><br />
+  弗兰奇利用狮吼炮击毁飞鱼骑士团据点<sup id="fnref:402"><a class="footnote-ref" href="#fn:402">402</a></sup><br />
+  凯米救出被迪巴鲁沉海的山治<sup id="fnref2:402"><a class="footnote-ref" href="#fn:402">402</a></sup><br />
+  路飞初次释放霸王色霸气，使迪巴鲁的坐骑昏厥<sup id="fnref3:402"><a class="footnote-ref" href="#fn:402">402</a></sup><br />
+  山治为迪巴鲁整容，化解恩怨<sup id="fnref4:402"><a class="footnote-ref" href="#fn:402">402</a></sup><br />
+  小八请草帽一伙享用秘制章鱼烧<sup id="fnref:404"><a class="footnote-ref" href="#fn:404">404</a></sup><br />
+  迪巴鲁将飞鱼骑士团改名为瑰色人生骑士团<sup id="fnref2:404"><a class="footnote-ref" href="#fn:404">404</a></sup><br />
+  草帽一伙抵达香波地群岛，分头行动<sup id="fnref2:405"><a class="footnote-ref" href="#fn:405">405</a></sup><br />
+  路飞等人目睹奴隶迪亚斯因逃走被天龙人夏尔利亚宫杀死<sup id="fnref3:405"><a class="footnote-ref" href="#fn:405">405</a></sup><br />
+  小八、凯米和帕帕格带路飞等人来到芍琪的酒吧寻找雷利<sup id="fnref2:406"><a class="footnote-ref" href="#fn:406">406</a></sup><br />
+  芍琪向路飞等人介绍了近期抵达香波地群岛的超新星们<sup id="fnref3:406"><a class="footnote-ref" href="#fn:406">406</a></sup><br />
+  赏金猎人向人贩子皮特曼提供了凯米的情报<sup id="fnref:407"><a class="footnote-ref" href="#fn:407">407</a></sup><br />
+  路飞、布鲁克、乔巴在小八等人的带领下来到香波地乐园<sup id="fnref2:407"><a class="footnote-ref" href="#fn:407">407</a></sup><br />
+  索隆冒犯了天龙人恰尔罗斯圣，被波尼救下<sup id="fnref3:407"><a class="footnote-ref" href="#fn:407">407</a></sup><br />
+  凯米被皮特曼带人绑架，路飞、小八、帕帕格前去寻找<sup id="fnref4:407"><a class="footnote-ref" href="#fn:407">407</a></sup><br />
+  得到乔巴通知的山治为救凯米联系瑰色人生骑士团<sup id="fnref2:408"><a class="footnote-ref" href="#fn:408">408</a></sup><br />
+  弗兰奇将凯米被绑架的消息告诉娜美、罗宾<sup id="fnref3:408"><a class="footnote-ref" href="#fn:408">408</a></sup><br />
+  凯米、雷利、巨人、江波尔被当作人类拍卖会的拍品<sup id="fnref4:408"><a class="footnote-ref" href="#fn:408">408</a></sup><br />
+  卡普得知雷利被拍卖的消息<sup id="fnref:410"><a class="footnote-ref" href="#fn:410">410</a></sup><br />
+  草帽一伙和瑰色人生骑士团打听到凯米的下落，在拍卖会现场集合<sup id="fnref2:410"><a class="footnote-ref" href="#fn:410">410</a></sup><br />
+  世界政府公布公开处刑艾斯的消息<sup id="fnref3:410"><a class="footnote-ref" href="#fn:410">410</a></sup><br />
+  恰尔罗斯圣买下凯米，并开枪射伤小八。路飞对恰尔罗斯圣大打出手<sup id="fnref:411"><a class="footnote-ref" href="#fn:411">411</a></sup><br />
+  草帽一伙大闹拍卖会，恰尔罗斯圣、夏尔利亚宫、罗兹瓦德圣被打晕<sup id="fnref:412"><a class="footnote-ref" href="#fn:412">412</a></sup><br />
+  黄猿得到消息前往香波地群岛<sup id="fnref:413"><a class="footnote-ref" href="#fn:413">413</a></sup><br />
+  王下七武海接到前往玛丽乔亚的召集令<sup id="fnref2:413"><a class="footnote-ref" href="#fn:413">413</a></sup><br />
+  路飞、罗、基德清剿包围拍卖行的海军<sup id="fnref3:413"><a class="footnote-ref" href="#fn:413">413</a></sup><br />
+  众人四散逃离，江波尔加入红心海贼团<sup id="fnref:414"><a class="footnote-ref" href="#fn:414">414</a></sup><br />
+  和平主义者现身拦截红心海贼团和基德海贼团<sup id="fnref2:414"><a class="footnote-ref" href="#fn:414">414</a></sup><br />
+  草帽一伙在瑰色人生骑士团的帮助下返回芍琪的酒吧<sup id="fnref8:416"><a class="footnote-ref" href="#fn:416">416</a></sup><br />
+  雷利向草帽一伙讲述自己的身份以及罗杰海贼团的故事<sup id="fnref9:416"><a class="footnote-ref" href="#fn:416">416</a></sup><br />
+  黄猿抵达香波地群岛<sup id="fnref10:416"><a class="footnote-ref" href="#fn:416">416</a></sup><br />
+  雷利开始为千里阳光号镀膜，将生命卡交给草帽一伙<sup id="fnref:417"><a class="footnote-ref" href="#fn:417">417</a></sup><br />
+  黄猿、和平主义者同超新星们开战<sup id="fnref:418"><a class="footnote-ref" href="#fn:418">418</a></sup><br />
+  黄猿击败乌鲁基、阿普、德雷克、霍金斯<sup id="fnref:419"><a class="footnote-ref" href="#fn:419">419</a></sup><br />
+  草帽一伙击败和平主义者PX-4<sup id="fnref2:419"><a class="footnote-ref" href="#fn:419">419</a></sup><br />
+  战桃丸、和平主义者PX-1、黄猿现身。草帽一伙四散，约定三天后在千里阳光号会合<sup id="fnref:421"><a class="footnote-ref" href="#fn:421">421</a></sup><br />
+  雷利拦截黄猿，掩护草帽一伙逃跑<sup id="fnref2:421"><a class="footnote-ref" href="#fn:421">421</a></sup><br />
+  大熊现身打飞索隆<sup id="fnref:422"><a class="footnote-ref" href="#fn:422">422</a></sup><br />
+  大熊将草帽一伙全员打飞<sup id="fnref:423"><a class="footnote-ref" href="#fn:423">423</a></sup><br />
+  瑰色人生骑士团开始守护千里阳光号<sup id="fnref3:424"><a class="footnote-ref" href="#fn:424">424</a></sup>  </p>
+</li>
+<li>
+<p><span class="tl">某日</span><br />
+  巴基误把海军驻地当作约翰船长的藏宝地，因此被捕<sup id="fnref3:442"><a class="footnote-ref" href="#fn:442">442</a></sup></p>
+</li>
+</ul>
+<div class="hr-text">草帽一伙被打飞两天后</div>
+<p><sup id="fnref:435"><a class="footnote-ref" href="#fn:435">435</a></sup></p>
+<ul>
+<li><span class="tl">某日</span><br />
+  娜美落到空岛维莎利亚<sup id="fnref:437"><a class="footnote-ref" href="#fn:437">437</a></sup><br />
+  弗兰奇落到机械岛的未来之国巴尔基摩<sup id="fnref2:437"><a class="footnote-ref" href="#fn:437">437</a></sup><br />
+  山治落到桃色岛的卡玛巴卡王国<sup id="fnref3:437"><a class="footnote-ref" href="#fn:437">437</a></sup><br />
+  乌索普落到波音列岛的强盗森林克林斯顿，与海格力斯相遇<sup id="fnref2:439"><a class="footnote-ref" href="#fn:439">439</a></sup><br />
+  布鲁克落到懒汉岛的腹空王国<sup id="fnref3:439"><a class="footnote-ref" href="#fn:439">439</a></sup><br />
+  罗宾落到桥上之国特基拉乌尔夫，被抓做奴隶<sup id="fnref4:439"><a class="footnote-ref" href="#fn:439">439</a></sup><br />
+  乔巴落到鸟之王国<sup id="fnref5:439"><a class="footnote-ref" href="#fn:439">439</a></sup><br />
+  佩罗娜在黑暗岛的阴森王国遗址发现落到此地的索隆<sup id="fnref6:439"><a class="footnote-ref" href="#fn:439">439</a></sup><br />
+  路飞落到亚马逊·百合，误食毒蘑菇昏迷<sup id="fnref:424"><a class="footnote-ref" href="#fn:424">424</a></sup><br />
+  雏菊、阿菲兰朵拉、斯伊特匹将路飞带回<sup id="fnref2:424"><a class="footnote-ref" href="#fn:424">424</a></sup><br />
+  被发现是男人的路飞遭到关押，桔梗下令处死路飞<sup id="fnref:426"><a class="footnote-ref" href="#fn:426">426</a></sup><br />
+  路飞挟持玛格丽特逃走，取回雷利的生命卡<sup id="fnref2:426"><a class="footnote-ref" href="#fn:426">426</a></sup><br />
+  鼯鼠中将向汉库珂发布世界政府的召集令，遭到汉库珂拒绝<sup id="fnref:427"><a class="footnote-ref" href="#fn:427">427</a></sup><br />
+  九蛇海贼团返回亚马逊·百合<sup id="fnref:429"><a class="footnote-ref" href="#fn:429">429</a></sup><br />
+  格洛莉欧莎劝说汉库珂失败<sup id="fnref2:429"><a class="footnote-ref" href="#fn:429">429</a></sup><br />
+  路飞闯入汉库珂的浴室，看到其背上的天翔龙之印<sup id="fnref3:429"><a class="footnote-ref" href="#fn:429">429</a></sup><br />
+  路飞被抓。玛格丽特、阿菲兰朵拉、斯伊特匹承担罪名，被汉库珂石化<sup id="fnref:430"><a class="footnote-ref" href="#fn:430">430</a></sup><br />
+  路飞击败黑豹巴寇拉<sup id="fnref2:430"><a class="footnote-ref" href="#fn:430">430</a></sup><br />
+  桑达索尼娅、玛丽格鲁德对路飞执行极刑。路飞为保护玛格丽特释放霸王色霸气<sup id="fnref:432"><a class="footnote-ref" href="#fn:432">432</a></sup><br />
+  路飞击败桑达索尼娅和玛丽格鲁德，并阻止桑达索尼娅的天翔龙之印暴露<sup id="fnref:433"><a class="footnote-ref" href="#fn:433">433</a></sup><br />
+  路飞拜托汉库珂解除玛格丽特三人的石化<sup id="fnref5:435"><a class="footnote-ref" href="#fn:435">435</a></sup><br />
+  汉库珂将路飞叫入九蛇城，从格洛莉欧莎口中得知路飞的经历，于是向他讲述了天翔龙之蹄的来历<sup id="fnref6:435"><a class="footnote-ref" href="#fn:435">435</a></sup><br />
+  汉库珂决定送路飞返回香波地群岛<sup id="fnref3:436"><a class="footnote-ref" href="#fn:436">436</a></sup><br />
+  九蛇国民与路飞举办宴会<sup id="fnref4:436"><a class="footnote-ref" href="#fn:436">436</a></sup><br />
+  格洛莉欧莎将汉库珂的七武海身份和艾斯将在六天后被处刑的消息告知路飞<sup id="fnref5:436"><a class="footnote-ref" href="#fn:436">436</a></sup><br />
+  汉库珂爱上路飞，患上相思病<sup id="fnref6:436"><a class="footnote-ref" href="#fn:436">436</a></sup><br />
+  路飞拜托汉库珂响应世界政府的召集，以便前往因佩尔地狱<sup id="fnref7:436"><a class="footnote-ref" href="#fn:436">436</a></sup><br />
+  汉库珂向鼯鼠中将提出乘坐海军军舰前往因佩尔地狱，路飞暗中跟随<sup id="fnref4:437"><a class="footnote-ref" href="#fn:437">437</a></sup><br />
+  世界政府失去白胡子海贼团的动向<sup id="fnref5:437"><a class="footnote-ref" href="#fn:437">437</a></sup><br />
+  卡普来到因佩尔地狱和艾斯见面<sup id="fnref6:437"><a class="footnote-ref" href="#fn:437">437</a></sup><br />
+  海军全部战力以及王下七武海中的五人在玛丽乔亚的海军总部集结完毕<sup id="fnref7:437"><a class="footnote-ref" href="#fn:437">437</a></sup><br />
+  鼯鼠中将的军舰与前去因佩尔地狱营救巴基的巴基海贼团偶遇<sup id="fnref2:440"><a class="footnote-ref" href="#fn:440">440</a></sup><br />
+  亚尔丽塔夺取马戏篷号的指挥权，带巴基海贼团改变航向<sup id="fnref3:440"><a class="footnote-ref" href="#fn:440">440</a></sup>  </li>
+</ul>
+<div class="hr-text">四天后</div>
+<p><sup id="fnref:440"><a class="footnote-ref" href="#fn:440">440</a></sup></p>
+<ul>
+<li><span class="tl">某日</span><br />
+  路飞跟随汉库珂潜入因佩尔地狱<sup id="fnref4:440"><a class="footnote-ref" href="#fn:440">440</a></sup><br />
+  巴基越狱，在LEVEL1的走廊里逃窜<sup id="fnref:441"><a class="footnote-ref" href="#fn:441">441</a></sup><br />
+  路飞与巴基相遇<sup id="fnref2:441"><a class="footnote-ref" href="#fn:441">441</a></sup><br />
+  巴基答应帮助路飞寻找艾斯，以此换取路飞的臂环<sup id="fnref:443"><a class="footnote-ref" href="#fn:443">443</a></sup><br />
+  路飞和巴基闯入LEVEL2<sup id="fnref2:443"><a class="footnote-ref" href="#fn:443">443</a></sup><br />
+  汉库珂在副狱长汉尼拔的带领下见到狱长麦哲伦<sup id="fnref:444"><a class="footnote-ref" href="#fn:444">444</a></sup><br />
+  巴基释放LEVEL2的囚犯，趁机越狱的Mr.3提出帮助二人<sup id="fnref2:444"><a class="footnote-ref" href="#fn:444">444</a></sup><br />
+  路飞、巴基、Mr.3在与斯芬克斯搏斗过程中闯入LEVEL3<sup id="fnref2:445"><a class="footnote-ref" href="#fn:445">445</a></sup><br />
+  战国和卡普得知路飞闯入因佩尔地狱<sup id="fnref2:446"><a class="footnote-ref" href="#fn:446">446</a></sup><br />
+  路飞、巴基、Mr.3被看守长侯斯抓获<sup id="fnref3:446"><a class="footnote-ref" href="#fn:446">446</a></sup><br />
+  因斯芬克斯发怒，路飞三人趁机逃脱，巴基、Mr.3和路飞分别<sup id="fnref4:446"><a class="footnote-ref" href="#fn:446">446</a></sup><br />
+  巴基和Mr.3遇到被关押在LEVEL3的冯·克雷<sup id="fnref5:446"><a class="footnote-ref" href="#fn:446">446</a></sup><br />
+  汉库珂向艾斯传递了路飞到来的消息<sup id="fnref:447"><a class="footnote-ref" href="#fn:447">447</a></sup><br />
+  冯·克雷越狱，前去帮助路飞<sup id="fnref2:447"><a class="footnote-ref" href="#fn:447">447</a></sup><br />
+  麦哲伦得知因佩尔地狱的暴乱，前往LEVEL4驻守<sup id="fnref:448"><a class="footnote-ref" href="#fn:448">448</a></sup><br />
+  巴基、Mr.3遭遇人牛兽追击，再次与路飞和冯·克雷相遇<sup id="fnref2:448"><a class="footnote-ref" href="#fn:448">448</a></sup><br />
+  路飞四人合作击败人牛兽<sup id="fnref3:448"><a class="footnote-ref" href="#fn:448">448</a></sup><br />
+  路飞一行落入LEVEL4<sup id="fnref:449"><a class="footnote-ref" href="#fn:449">449</a></sup><br />
+  巴基和Mr.3被汉尼拔击败<sup id="fnref:450"><a class="footnote-ref" href="#fn:450">450</a></sup><br />
+  麦哲伦击败路飞，将其扔入LEVEL5<sup id="fnref2:450"><a class="footnote-ref" href="#fn:450">450</a></sup><br />
+  冯·克雷击败汉尼拔并将其替换，从而救出巴基和Mr.3<sup id="fnref3:450"><a class="footnote-ref" href="#fn:450">450</a></sup><br />
+  冯·克雷带巴基和Mr.3潜入LEVEL5<sup id="fnref:451"><a class="footnote-ref" href="#fn:451">451</a></sup><br />
+  冯·克雷找到路飞，二人被狼群围攻时被闪电发现<sup id="fnref2:451"><a class="footnote-ref" href="#fn:451">451</a></sup><br />
+  伊娃科夫对路飞和冯·克雷进行治疗<sup id="fnref2:452"><a class="footnote-ref" href="#fn:452">452</a></sup></li>
+</ul>
+<div class="hr-text">一天后</div>
+<p><sup id="fnref:452"><a class="footnote-ref" href="#fn:452">452</a></sup></p>
+<ul>
+<li><span class="tl">某日</span><br />
+  冯·克雷在LEVEL5.5苏醒，从伊娃科夫口中得知路飞的现状<sup id="fnref3:452"><a class="footnote-ref" href="#fn:452">452</a></sup><br />
+  路飞从长达20小时的煎熬中恢复神智<sup id="fnref:453"><a class="footnote-ref" href="#fn:453">453</a></sup><br />
+  伊娃科夫得知路飞是龙的儿子，决定帮助他越狱<sup id="fnref:454"><a class="footnote-ref" href="#fn:454">454</a></sup><br />
+  艾斯被麦哲伦从牢房带走<sup id="fnref2:454"><a class="footnote-ref" href="#fn:454">454</a></sup><br />
+  路飞、伊娃科夫、闪电赶到LEVEL6<sup id="fnref:455"><a class="footnote-ref" href="#fn:455">455</a></sup><br />
+  艾斯被移交给海军，送往玛丽乔亚<sup id="fnref2:455"><a class="footnote-ref" href="#fn:455">455</a></sup><br />
+  甚平、克洛克达尔加入路飞一行<sup id="fnref3:455"><a class="footnote-ref" href="#fn:455">455</a></sup><br />
+  路飞一行返回LEVEL5，与LEVEL5.5的众人会合后向上层出发<sup id="fnref:456"><a class="footnote-ref" href="#fn:456">456</a></sup><br />
+  路飞、甚平、克洛克达尔闯入LEVEL4<sup id="fnref2:456"><a class="footnote-ref" href="#fn:456">456</a></sup><br />
+  巴基和Mr.3进入LEVEL2，趁守备空虚将犯人们释放<sup id="fnref3:456"><a class="footnote-ref" href="#fn:456">456</a></sup><br />
+  克洛克达尔放出被关押在LEVEL4的Mr.1，伊娃科夫、Mr.2等人追上路飞四人<sup id="fnref4:456"><a class="footnote-ref" href="#fn:456">456</a></sup><br />
+  黑胡子海贼团依靠抢夺到的军舰入侵因佩尔地狱<sup id="fnref:457"><a class="footnote-ref" href="#fn:457">457</a></sup><br />
+  麦哲伦将LEVEL2的暴动镇压，同时下令释放关押在LEVEL6的看守长希流<sup id="fnref2:457"><a class="footnote-ref" href="#fn:457">457</a></sup><br />
+  路飞、甚平、克洛克达尔击败其余三只狱卒兽<sup id="fnref3:457"><a class="footnote-ref" href="#fn:457">457</a></sup><br />
+  希流来到LEVEL1，加入黑胡子海贼团<sup id="fnref:458"><a class="footnote-ref" href="#fn:458">458</a></sup><br />
+  黑胡子海贼团攻入LEVEL4，与路飞一行相遇。希流切断因佩尔地狱与外部的联络<sup id="fnref2:458"><a class="footnote-ref" href="#fn:458">458</a></sup><br />
+  麦哲伦击败黑胡子海贼团，继续追击路飞一行<sup id="fnref:459"><a class="footnote-ref" href="#fn:459">459</a></sup><br />
+  巴基和Mr.3率众囚犯抵达LEVEL1<sup id="fnref:460"><a class="footnote-ref" href="#fn:460">460</a></sup><br />
+  路飞一行抵达LEVEL3<sup id="fnref2:460"><a class="footnote-ref" href="#fn:460">460</a></sup><br />
+  路飞一行在伊娃科夫和闪电的掩护下登上LEVEL2<sup id="fnref3:460"><a class="footnote-ref" href="#fn:460">460</a></sup><br />
+  伊娃科夫和闪电被麦哲伦击败<sup id="fnref4:460"><a class="footnote-ref" href="#fn:460">460</a></sup><br />
+  路飞一行抵达LEVEL1，与巴基一行相遇<sup id="fnref5:460"><a class="footnote-ref" href="#fn:460">460</a></sup><br />
+  罗宾被革命军救出<sup id="fnref:461"><a class="footnote-ref" href="#fn:461">461</a></sup><br />
+  因佩尔地狱的大门被犯人们打开<sup id="fnref:462"><a class="footnote-ref" href="#fn:462">462</a></sup><br />
+  甚平、克洛克达尔、Mr.1、巴基夺取军舰<sup id="fnref:463"><a class="footnote-ref" href="#fn:463">463</a></sup><br />
+  伊娃科夫、闪电与众人会合<sup id="fnref2:463"><a class="footnote-ref" href="#fn:463">463</a></sup><br />
+  共计241名犯人登上军舰逃离因佩尔地狱<sup id="fnref3:463"><a class="footnote-ref" href="#fn:463">463</a></sup><br />
+  冯·克雷伪装成麦哲伦留在因佩尔地狱，帮助众人打开正义之门<sup id="fnref:464"><a class="footnote-ref" href="#fn:464">464</a></sup><br />
+  弗兰奇发现贝加班克过去的研究所<sup id="fnref:465"><a class="footnote-ref" href="#fn:465">465</a></sup><br />
+  希流帮助黑胡子海贼团解毒<sup id="fnref:466"><a class="footnote-ref" href="#fn:466">466</a></sup><br />
+  路飞和巴基被认定为因佩尔地狱越狱事件的主犯，犯人们得知巴基的过去<sup id="fnref2:466"><a class="footnote-ref" href="#fn:466">466</a></sup><br />
+  战国向全世界公开艾斯的身世<sup id="fnref3:467"><a class="footnote-ref" href="#fn:467">467</a></sup><br />
+  白胡子海贼团及其麾下的43支海贼团抵达海军总部<sup id="fnref4:468"><a class="footnote-ref" href="#fn:468">468</a></sup><br />
+  青雉将湾内冰封，战斗正式打响<sup id="fnref:469"><a class="footnote-ref" href="#fn:469">469</a></sup><br />
+  小奥兹为海贼们打开通往湾内的突破口<sup id="fnref:470"><a class="footnote-ref" href="#fn:470">470</a></sup><br />
+  大熊、多弗朗明哥、莫利亚击倒小奥兹<sup id="fnref2:470"><a class="footnote-ref" href="#fn:470">470</a></sup><br />
+  白胡子击败隆兹中将<sup id="fnref:472"><a class="footnote-ref" href="#fn:472">472</a></sup><br />
+  路飞等人通过海军的联络频道得知处刑时间提前<sup id="fnref:473"><a class="footnote-ref" href="#fn:473">473</a></sup><br />
+  路飞等人乘坐的军舰从空中落入湾内<sup id="fnref2:472"><a class="footnote-ref" href="#fn:472">472</a></sup><br />
+  甚平向战国宣布放弃七武海头衔<sup id="fnref2:473"><a class="footnote-ref" href="#fn:473">473</a></sup><br />
+  路飞将处刑提前的消息告知白胡子<sup id="fnref:474"><a class="footnote-ref" href="#fn:474">474</a></sup><br />
+  战国公开路飞的身世<sup id="fnref2:474"><a class="footnote-ref" href="#fn:474">474</a></sup><br />
+  甚平击败莫利亚<sup id="fnref:475"><a class="footnote-ref" href="#fn:475">475</a></sup><br />
+  汉库珂帮助路飞拦截斯莫格<sup id="fnref2:475"><a class="footnote-ref" href="#fn:475">475</a></sup><br />
+  伊娃科夫从多弗朗明哥处得知大熊接受改造被抹除人格一事<sup id="fnref:476"><a class="footnote-ref" href="#fn:476">476</a></sup><br />
+  乔兹、克洛克达尔、多弗朗明哥混战<sup id="fnref2:476"><a class="footnote-ref" href="#fn:476">476</a></sup><br />
+  比斯塔帮助路飞拦截鹰眼<sup id="fnref:477"><a class="footnote-ref" href="#fn:477">477</a></sup><br />
+  战国下令切断影像电话虫对全世界的直播<sup id="fnref2:477"><a class="footnote-ref" href="#fn:477">477</a></sup><br />
+  战桃丸率领和平主义者部队加入战斗<sup id="fnref3:477"><a class="footnote-ref" href="#fn:477">477</a></sup><br />
+  巴基夺得一只影像电话虫，维持直播进行<sup id="fnref:478"><a class="footnote-ref" href="#fn:478">478</a></sup><br />
+  斯库亚德被多弗朗明哥操纵，击伤白胡子<sup id="fnref2:478"><a class="footnote-ref" href="#fn:478">478</a></sup>  </li>
 </ul>
 <hr />
-<h1 id="_1">信息来源</h1>
+<h1 id="_5">信息来源</h1>
 <div class="footnote">
 <hr />
 <ol>
@@ -2640,7 +3389,7 @@ body {
 <p>卷二十五SBS&#160;<a class="footnote-backref" href="#fnref:158" title="Jump back to footnote 158 in the text">&#8617;</a></p>
 </li>
 <li id="fn:159">
-<p>第228话扉页，小八的海底散步最终话《海上章鱼烧店“章鱼烧8号”开业！》&#160;<a class="footnote-backref" href="#fnref:159" title="Jump back to footnote 159 in the text">&#8617;</a></p>
+<p>第228话扉页，小八的海底散步 最终话《海上章鱼烧店“章鱼烧8号”开业！》&#160;<a class="footnote-backref" href="#fnref:159" title="Jump back to footnote 159 in the text">&#8617;</a></p>
 </li>
 <li id="fn:160">
 <p>第228话，“猿山联合军最终园长”蒙布朗·库利凯特&#160;<a class="footnote-backref" href="#fnref:160" title="Jump back to footnote 160 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:160" title="Jump back to footnote 160 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:160" title="Jump back to footnote 160 in the text">&#8617;</a></p>
@@ -2655,7 +3404,7 @@ body {
 <p>第232话，价值一亿的男人&#160;<a class="footnote-backref" href="#fnref:163" title="Jump back to footnote 163 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:163" title="Jump back to footnote 163 in the text">&#8617;</a></p>
 </li>
 <li id="fn:164">
-<p>第233话，世界最高权力&#160;<a class="footnote-backref" href="#fnref:164" title="Jump back to footnote 164 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:164" title="Jump back to footnote 164 in the text">&#8617;</a></p>
+<p>第233话，世界最高权力&#160;<a class="footnote-backref" href="#fnref:164" title="Jump back to footnote 164 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:164" title="Jump back to footnote 164 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:164" title="Jump back to footnote 164 in the text">&#8617;</a></p>
 </li>
 <li id="fn:165">
 <p>第234话，请牢记&#160;<a class="footnote-backref" href="#fnref:165" title="Jump back to footnote 165 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:165" title="Jump back to footnote 165 in the text">&#8617;</a></p>
@@ -3060,7 +3809,7 @@ body {
 <p>第395话扉页，Miss. 黄金周的作战名“遇见巴洛克” vol.27《用“背叛的黑色”夺得船只》&#160;<a class="footnote-backref" href="#fnref:298" title="Jump back to footnote 298 in the text">&#8617;</a></p>
 </li>
 <li id="fn:299">
-<p>第395话，奥哈拉VS世界政府&#160;<a class="footnote-backref" href="#fnref:299" title="Jump back to footnote 299 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:299" title="Jump back to footnote 299 in the text">&#8617;</a></p>
+<p>第395话，奥哈拉VS世界政府&#160;<a class="footnote-backref" href="#fnref:299" title="Jump back to footnote 299 in the text">&#8617;</a></p>
 </li>
 <li id="fn:300">
 <p>第396话扉页，Miss. 黄金周的作战名“遇见巴洛克” vol.28《前往海军拘留所》&#160;<a class="footnote-backref" href="#fnref:300" title="Jump back to footnote 300 in the text">&#8617;</a></p>
@@ -3171,7 +3920,433 @@ body {
 <p>第439话，第三个人与第七个人&#160;<a class="footnote-backref" href="#fnref:335" title="Jump back to footnote 335 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:335" title="Jump back to footnote 335 in the text">&#8617;</a></p>
 </li>
 <li id="fn:336">
-<p>第440话，火拳VS黑胡子&#160;<a class="footnote-backref" href="#fnref:336" title="Jump back to footnote 336 in the text">&#8617;</a></p>
+<p>第441话，巴拿罗岛的决斗&#160;<a class="footnote-backref" href="#fnref:336" title="Jump back to footnote 336 in the text">&#8617;</a></p>
+</li>
+<li id="fn:337">
+<p>第442话扉页，艾尼路的宇宙大作战 vol.12《给无礼者的神之制裁》&#160;<a class="footnote-backref" href="#fnref:337" title="Jump back to footnote 337 in the text">&#8617;</a></p>
+</li>
+<li id="fn:338">
+<p>第442话，魔鬼海域的冒险&#160;<a class="footnote-backref" href="#fnref:338" title="Jump back to footnote 338 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:338" title="Jump back to footnote 338 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:338" title="Jump back to footnote 338 in the text">&#8617;</a></p>
+</li>
+<li id="fn:339">
+<p>第443话，恐怖之船&#160;<a class="footnote-backref" href="#fnref:339" title="Jump back to footnote 339 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:339" title="Jump back to footnote 339 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:339" title="Jump back to footnote 339 in the text">&#8617;</a></p>
+</li>
+<li id="fn:340">
+<p>第444话，幽灵岛的大冒险&#160;<a class="footnote-backref" href="#fnref:340" title="Jump back to footnote 340 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:340" title="Jump back to footnote 340 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:340" title="Jump back to footnote 340 in the text">&#8617;</a></p>
+</li>
+<li id="fn:341">
+<p>第445话，THE ZOMBIE&#160;<a class="footnote-backref" href="#fnref:341" title="Jump back to footnote 341 in the text">&#8617;</a></p>
+</li>
+<li id="fn:342">
+<p>第446话，豪格巴克医生&#160;<a class="footnote-backref" href="#fnref:342" title="Jump back to footnote 342 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:342" title="Jump back to footnote 342 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:342" title="Jump back to footnote 342 in the text">&#8617;</a></p>
+</li>
+<li id="fn:343">
+<p>第447话，吓人僵尸&#160;<a class="footnote-backref" href="#fnref:343" title="Jump back to footnote 343 in the text">&#8617;</a></p>
+</li>
+<li id="fn:344">
+<p>第448话，莫利亚&#160;<a class="footnote-backref" href="#fnref:344" title="Jump back to footnote 344 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:344" title="Jump back to footnote 344 in the text">&#8617;</a></p>
+</li>
+<li id="fn:345">
+<p>第449话，恐怖之船&#160;<a class="footnote-backref" href="#fnref:345" title="Jump back to footnote 345 in the text">&#8617;</a></p>
+</li>
+<li id="fn:346">
+<p>第450话，将军僵尸night&#160;<a class="footnote-backref" href="#fnref:346" title="Jump back to footnote 346 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:346" title="Jump back to footnote 346 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:346" title="Jump back to footnote 346 in the text">&#8617;</a></p>
+</li>
+<li id="fn:347">
+<p>卷四十七SBS&#160;<a class="footnote-backref" href="#fnref:347" title="Jump back to footnote 347 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:347" title="Jump back to footnote 347 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:347" title="Jump back to footnote 347 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:347" title="Jump back to footnote 347 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:347" title="Jump back to footnote 347 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:347" title="Jump back to footnote 347 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:347" title="Jump back to footnote 347 in the text">&#8617;</a></p>
+</li>
+<li id="fn:348">
+<p>第451话扉页，艾尼路的宇宙大作战 vol.19《赏月时月亮爆炸了》&#160;<a class="footnote-backref" href="#fnref:348" title="Jump back to footnote 348 in the text">&#8617;</a></p>
+</li>
+<li id="fn:349">
+<p>第451话，佩罗娜的不可思议庭院&#160;<a class="footnote-backref" href="#fnref:349" title="Jump back to footnote 349 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:349" title="Jump back to footnote 349 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:349" title="Jump back to footnote 349 in the text">&#8617;</a></p>
+</li>
+<li id="fn:350">
+<p>第452话，风之治五郎&#160;<a class="footnote-backref" href="#fnref:350" title="Jump back to footnote 350 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:350" title="Jump back to footnote 350 in the text">&#8617;</a></p>
+</li>
+<li id="fn:351">
+<p>第453话扉页，艾尼路的宇宙大作战 vol.21《走吧，去月球！！》&#160;<a class="footnote-backref" href="#fnref:351" title="Jump back to footnote 351 in the text">&#8617;</a></p>
+</li>
+<li id="fn:352">
+<p>第453话，多云有时有白骨&#160;<a class="footnote-backref" href="#fnref:352" title="Jump back to footnote 352 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:352" title="Jump back to footnote 352 in the text">&#8617;</a></p>
+</li>
+<li id="fn:353">
+<p>第454话，鼻歌&#160;<a class="footnote-backref" href="#fnref:353" title="Jump back to footnote 353 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:353" title="Jump back to footnote 353 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:353" title="Jump back to footnote 353 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:353" title="Jump back to footnote 353 in the text">&#8617;</a></p>
+</li>
+<li id="fn:354">
+<p>第455话，王下七武海月光·莫利亚&#160;<a class="footnote-backref" href="#fnref:354" title="Jump back to footnote 354 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:354" title="Jump back to footnote 354 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:354" title="Jump back to footnote 354 in the text">&#8617;</a></p>
+</li>
+<li id="fn:355">
+<p>第456话扉页，艾尼路的宇宙大作战 vol.23《不甘心！！宇宙海盗强过头了！！》&#160;<a class="footnote-backref" href="#fnref:355" title="Jump back to footnote 355 in the text">&#8617;</a></p>
+</li>
+<li id="fn:356">
+<p>第456话，来自冰之国的魔人&#160;<a class="footnote-backref" href="#fnref:356" title="Jump back to footnote 356 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:356" title="Jump back to footnote 356 in the text">&#8617;</a></p>
+</li>
+<li id="fn:357">
+<p>第457话，肉！！&#160;<a class="footnote-backref" href="#fnref:357" title="Jump back to footnote 357 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:357" title="Jump back to footnote 357 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:357" title="Jump back to footnote 357 in the text">&#8617;</a></p>
+</li>
+<li id="fn:358">
+<p>第458话扉页，艾尼路的宇宙大作战 vol.24《神之制裁》&#160;<a class="footnote-backref" href="#fnref:358" title="Jump back to footnote 358 in the text">&#8617;</a></p>
+</li>
+<li id="fn:359">
+<p>第458话，唯有爆炸头&#160;<a class="footnote-backref" href="#fnref:359" title="Jump back to footnote 359 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:359" title="Jump back to footnote 359 in the text">&#8617;</a></p>
+</li>
+<li id="fn:360">
+<p>第459话，说句“我们死了，真是抱歉。”就行了吗？！&#160;<a class="footnote-backref" href="#fnref:360" title="Jump back to footnote 360 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:360" title="Jump back to footnote 360 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:360" title="Jump back to footnote 360 in the text">&#8617;</a></p>
+</li>
+<li id="fn:361">
+<p>第460话，天亮之前夺回来！！&#160;<a class="footnote-backref" href="#fnref:361" title="Jump back to footnote 361 in the text">&#8617;</a></p>
+</li>
+<li id="fn:362">
+<p>卷四十八SBS&#160;<a class="footnote-backref" href="#fnref:362" title="Jump back to footnote 362 in the text">&#8617;</a></p>
+</li>
+<li id="fn:363">
+<p>第461话，幽灵克星&#160;<a class="footnote-backref" href="#fnref:363" title="Jump back to footnote 363 in the text">&#8617;</a></p>
+</li>
+<li id="fn:364">
+<p>第462话，奥兹的冒险&#160;<a class="footnote-backref" href="#fnref:364" title="Jump back to footnote 364 in the text">&#8617;</a></p>
+</li>
+<li id="fn:365">
+<p>第464话，山治的梦想&#160;<a class="footnote-backref" href="#fnref:365" title="Jump back to footnote 365 in the text">&#8617;</a></p>
+</li>
+<li id="fn:366">
+<p>第466话扉页，艾尼路的宇宙大作战 vol.31《从黑暗中浮现的地下都市》&#160;<a class="footnote-backref" href="#fnref:366" title="Jump back to footnote 366 in the text">&#8617;</a></p>
+</li>
+<li id="fn:367">
+<p>第466话，决出胜负&#160;<a class="footnote-backref" href="#fnref:367" title="Jump back to footnote 367 in the text">&#8617;</a></p>
+</li>
+<li id="fn:368">
+<p>第467话，海盗索隆VS武士龙马&#160;<a class="footnote-backref" href="#fnref:368" title="Jump back to footnote 368 in the text">&#8617;</a></p>
+</li>
+<li id="fn:369">
+<p>第469话扉页，艾尼路的宇宙大作战 vol.34《充电完毕！向破坏者表示谢意》&#160;<a class="footnote-backref" href="#fnref:369" title="Jump back to footnote 369 in the text">&#8617;</a></p>
+</li>
+<li id="fn:370">
+<p>第469话，滚出来，草帽一伙！！&#160;<a class="footnote-backref" href="#fnref:370" title="Jump back to footnote 370 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:370" title="Jump back to footnote 370 in the text">&#8617;</a></p>
+</li>
+<li id="fn:371">
+<p>第470话扉页，艾尼路的宇宙大作战 vol.35《钻研壁画！太古时代长翅膀的“月球人”》&#160;<a class="footnote-backref" href="#fnref:371" title="Jump back to footnote 371 in the text">&#8617;</a></p>
+</li>
+<li id="fn:372">
+<p>第470话，奥兹VS草帽一伙&#160;<a class="footnote-backref" href="#fnref:372" title="Jump back to footnote 372 in the text">&#8617;</a></p>
+</li>
+<li id="fn:373">
+<p>第471话，MY FRIEND&#160;<a class="footnote-backref" href="#fnref:373" title="Jump back to footnote 373 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:373" title="Jump back to footnote 373 in the text">&#8617;</a></p>
+</li>
+<li id="fn:374">
+<p>第472话扉页，艾尼路的宇宙大作战 vol.36《月球都市的名字也是“毕鲁卡”。因资源不足飞向蓝色星球》&#160;<a class="footnote-backref" href="#fnref:374" title="Jump back to footnote 374 in the text">&#8617;</a></p>
+</li>
+<li id="fn:375">
+<p>第473话，王下七武海巴索罗谬·大熊出现&#160;<a class="footnote-backref" href="#fnref:375" title="Jump back to footnote 375 in the text">&#8617;</a></p>
+</li>
+<li id="fn:376">
+<p>第474话扉页，艾尼路的宇宙大作战 最终章《燃料加满！艾尼路军团东山再起》&#160;<a class="footnote-backref" href="#fnref:376" title="Jump back to footnote 376 in the text">&#8617;</a></p>
+</li>
+<li id="fn:377">
+<p>第474话，只能拼了！！&#160;<a class="footnote-backref" href="#fnref:377" title="Jump back to footnote 377 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:377" title="Jump back to footnote 377 in the text">&#8617;</a></p>
+</li>
+<li id="fn:378">
+<p>第475话，森林海贼团&#160;<a class="footnote-backref" href="#fnref:378" title="Jump back to footnote 378 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:378" title="Jump back to footnote 378 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:378" title="Jump back to footnote 378 in the text">&#8617;</a></p>
+</li>
+<li id="fn:379">
+<p>第476话，噩梦路飞&#160;<a class="footnote-backref" href="#fnref:379" title="Jump back to footnote 379 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:379" title="Jump back to footnote 379 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:379" title="Jump back to footnote 379 in the text">&#8617;</a></p>
+</li>
+<li id="fn:380">
+<p>第477话，3/8&#160;<a class="footnote-backref" href="#fnref:380" title="Jump back to footnote 380 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:380" title="Jump back to footnote 380 in the text">&#8617;</a></p>
+</li>
+<li id="fn:381">
+<p>第478话，路飞VS路飞&#160;<a class="footnote-backref" href="#fnref:381" title="Jump back to footnote 381 in the text">&#8617;</a></p>
+</li>
+<li id="fn:382">
+<p>第479话，希望战士&#160;<a class="footnote-backref" href="#fnref:382" title="Jump back to footnote 382 in the text">&#8617;</a></p>
+</li>
+<li id="fn:383">
+<p>第480话，迎击&#160;<a class="footnote-backref" href="#fnref:383" title="Jump back to footnote 383 in the text">&#8617;</a></p>
+</li>
+<li id="fn:384">
+<p>第481话，影子集合地&#160;<a class="footnote-backref" href="#fnref:384" title="Jump back to footnote 384 in the text">&#8617;</a></p>
+</li>
+<li id="fn:385">
+<p>第483话，梦醒时分&#160;<a class="footnote-backref" href="#fnref:385" title="Jump back to footnote 385 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:385" title="Jump back to footnote 385 in the text">&#8617;</a></p>
+</li>
+<li id="fn:386">
+<p>第484话，软弹&#160;<a class="footnote-backref" href="#fnref:386" title="Jump back to footnote 386 in the text">&#8617;</a></p>
+</li>
+<li id="fn:387">
+<p>第485话，草帽一伙·海贼猎人索隆&#160;<a class="footnote-backref" href="#fnref:387" title="Jump back to footnote 387 in the text">&#8617;</a></p>
+</li>
+<li id="fn:388">
+<p>卷五十SBS&#160;<a class="footnote-backref" href="#fnref:388" title="Jump back to footnote 388 in the text">&#8617;</a></p>
+</li>
+<li id="fn:389">
+<p>第486话，钢琴&#160;<a class="footnote-backref" href="#fnref:389" title="Jump back to footnote 389 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:389" title="Jump back to footnote 389 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:389" title="Jump back to footnote 389 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:389" title="Jump back to footnote 389 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:389" title="Jump back to footnote 389 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:389" title="Jump back to footnote 389 in the text">&#8617;</a></p>
+</li>
+<li id="fn:390">
+<p>第487话，那首歌&#160;<a class="footnote-backref" href="#fnref:390" title="Jump back to footnote 390 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:390" title="Jump back to footnote 390 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:390" title="Jump back to footnote 390 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:390" title="Jump back to footnote 390 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:390" title="Jump back to footnote 390 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:390" title="Jump back to footnote 390 in the text">&#8617;</a></p>
+</li>
+<li id="fn:391">
+<p>第488话，生命之歌&#160;<a class="footnote-backref" href="#fnref:391" title="Jump back to footnote 391 in the text">&#8617;</a></p>
+</li>
+<li id="fn:392">
+<p>第489话，第八个人&#160;<a class="footnote-backref" href="#fnref:392" title="Jump back to footnote 392 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:392" title="Jump back to footnote 392 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:392" title="Jump back to footnote 392 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:392" title="Jump back to footnote 392 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:392" title="Jump back to footnote 392 in the text">&#8617;</a></p>
+</li>
+<li id="fn:393">
+<p>第490话扉页，《那个人的现状》SHOT7 “欧伊摩和卡西、去埃鲁巴夫”&#160;<a class="footnote-backref" href="#fnref:393" title="Jump back to footnote 393 in the text">&#8617;</a></p>
+</li>
+<li id="fn:394">
+<p>第490话，再次到达&#160;<a class="footnote-backref" href="#fnref:394" title="Jump back to footnote 394 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:394" title="Jump back to footnote 394 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:394" title="Jump back to footnote 394 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:394" title="Jump back to footnote 394 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:394" title="Jump back to footnote 394 in the text">&#8617;</a></p>
+</li>
+<li id="fn:395">
+<p>《ONE PIECE FILM STRONG WORLD》&#160;<a class="footnote-backref" href="#fnref:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref11:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref12:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref13:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref14:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref15:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref16:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref17:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref18:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref19:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref20:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref21:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref22:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref23:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref24:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref25:395" title="Jump back to footnote 395 in the text">&#8617;</a><a class="footnote-backref" href="#fnref26:395" title="Jump back to footnote 395 in the text">&#8617;</a></p>
+</li>
+<li id="fn:396">
+<p>卷零&#160;<a class="footnote-backref" href="#fnref:396" title="Jump back to footnote 396 in the text">&#8617;</a></p>
+</li>
+<li id="fn:397">
+<p>第491话，飞鱼骑士团&#160;<a class="footnote-backref" href="#fnref:397" title="Jump back to footnote 397 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:397" title="Jump back to footnote 397 in the text">&#8617;</a></p>
+</li>
+<li id="fn:398">
+<p>第492话扉页，CP9的任务外报告 vol.2《空气开门》&#160;<a class="footnote-backref" href="#fnref:398" title="Jump back to footnote 398 in the text">&#8617;</a></p>
+</li>
+<li id="fn:399">
+<p>第492话，铁面具的迪巴鲁&#160;<a class="footnote-backref" href="#fnref:399" title="Jump back to footnote 399 in the text">&#8617;</a></p>
+</li>
+<li id="fn:400">
+<p>第493话，认识&#160;<a class="footnote-backref" href="#fnref:400" title="Jump back to footnote 400 in the text">&#8617;</a></p>
+</li>
+<li id="fn:401">
+<p>第495话扉页，CP9的任务外报告 vol.5《逃跑路线》&#160;<a class="footnote-backref" href="#fnref:401" title="Jump back to footnote 401 in the text">&#8617;</a></p>
+</li>
+<li id="fn:402">
+<p>第495话，狮吼炮&#160;<a class="footnote-backref" href="#fnref:402" title="Jump back to footnote 402 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:402" title="Jump back to footnote 402 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:402" title="Jump back to footnote 402 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:402" title="Jump back to footnote 402 in the text">&#8617;</a></p>
+</li>
+<li id="fn:403">
+<p>第496话扉页，CP9的任务外报告 vol.6《没有医疗费，“春之女王镇圣·白杨”》&#160;<a class="footnote-backref" href="#fnref:403" title="Jump back to footnote 403 in the text">&#8617;</a></p>
+</li>
+<li id="fn:404">
+<p>第496话，干荆蔓·红树&#160;<a class="footnote-backref" href="#fnref:404" title="Jump back to footnote 404 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:404" title="Jump back to footnote 404 in the text">&#8617;</a></p>
+</li>
+<li id="fn:405">
+<p>第497话，泡泡纷飞的群岛的冒险&#160;<a class="footnote-backref" href="#fnref:405" title="Jump back to footnote 405 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:405" title="Jump back to footnote 405 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:405" title="Jump back to footnote 405 in the text">&#8617;</a></p>
+</li>
+<li id="fn:406">
+<p>第498话，11名超新星&#160;<a class="footnote-backref" href="#fnref:406" title="Jump back to footnote 406 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:406" title="Jump back to footnote 406 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:406" title="Jump back to footnote 406 in the text">&#8617;</a></p>
+</li>
+<li id="fn:407">
+<p>第499话，香波地乐园&#160;<a class="footnote-backref" href="#fnref:407" title="Jump back to footnote 407 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:407" title="Jump back to footnote 407 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:407" title="Jump back to footnote 407 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:407" title="Jump back to footnote 407 in the text">&#8617;</a></p>
+</li>
+<li id="fn:408">
+<p>第500话，历史的残火&#160;<a class="footnote-backref" href="#fnref:408" title="Jump back to footnote 408 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:408" title="Jump back to footnote 408 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:408" title="Jump back to footnote 408 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:408" title="Jump back to footnote 408 in the text">&#8617;</a></p>
+</li>
+<li id="fn:409">
+<p>第501话扉页，CP9的任务外报告 vol.11《这湿漉漉的钱我们就收下了》&#160;<a class="footnote-backref" href="#fnref:409" title="Jump back to footnote 409 in the text">&#8617;</a></p>
+</li>
+<li id="fn:410">
+<p>第501话，风起云涌的世界&#160;<a class="footnote-backref" href="#fnref:410" title="Jump back to footnote 410 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:410" title="Jump back to footnote 410 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:410" title="Jump back to footnote 410 in the text">&#8617;</a></p>
+</li>
+<li id="fn:411">
+<p>第502话，天龙人事件&#160;<a class="footnote-backref" href="#fnref:411" title="Jump back to footnote 411 in the text">&#8617;</a></p>
+</li>
+<li id="fn:412">
+<p>第503话，动荡之岛&#160;<a class="footnote-backref" href="#fnref:412" title="Jump back to footnote 412 in the text">&#8617;</a></p>
+</li>
+<li id="fn:413">
+<p>第504话，海盗前线移动中！！&#160;<a class="footnote-backref" href="#fnref:413" title="Jump back to footnote 413 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:413" title="Jump back to footnote 413 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:413" title="Jump back to footnote 413 in the text">&#8617;</a></p>
+</li>
+<li id="fn:414">
+<p>第505话，大熊&#160;<a class="footnote-backref" href="#fnref:414" title="Jump back to footnote 414 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:414" title="Jump back to footnote 414 in the text">&#8617;</a></p>
+</li>
+<li id="fn:415">
+<p>第506话扉页，CP9的任务外报告 vol.15《出院的日子》&#160;<a class="footnote-backref" href="#fnref:415" title="Jump back to footnote 415 in the text">&#8617;</a></p>
+</li>
+<li id="fn:416">
+<p>第506话，罗杰和雷利&#160;<a class="footnote-backref" href="#fnref:416" title="Jump back to footnote 416 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:416" title="Jump back to footnote 416 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:416" title="Jump back to footnote 416 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:416" title="Jump back to footnote 416 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:416" title="Jump back to footnote 416 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:416" title="Jump back to footnote 416 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:416" title="Jump back to footnote 416 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:416" title="Jump back to footnote 416 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:416" title="Jump back to footnote 416 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:416" title="Jump back to footnote 416 in the text">&#8617;</a></p>
+</li>
+<li id="fn:417">
+<p>第507话，黄猿登陆&#160;<a class="footnote-backref" href="#fnref:417" title="Jump back to footnote 417 in the text">&#8617;</a></p>
+</li>
+<li id="fn:418">
+<p>第508话，修罗之岛&#160;<a class="footnote-backref" href="#fnref:418" title="Jump back to footnote 418 in the text">&#8617;</a></p>
+</li>
+<li id="fn:419">
+<p>第510话，草帽一伙VS战斗兵器&#160;<a class="footnote-backref" href="#fnref:419" title="Jump back to footnote 419 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:419" title="Jump back to footnote 419 in the text">&#8617;</a></p>
+</li>
+<li id="fn:420">
+<p>第511话扉页，CP9的任务外报告 vol.19《正义的使者》&#160;<a class="footnote-backref" href="#fnref:420" title="Jump back to footnote 420 in the text">&#8617;</a></p>
+</li>
+<li id="fn:421">
+<p>第511话，扛战斧的战桃丸&#160;<a class="footnote-backref" href="#fnref:421" title="Jump back to footnote 421 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:421" title="Jump back to footnote 421 in the text">&#8617;</a></p>
+</li>
+<li id="fn:422">
+<p>第512话，索隆，音讯全无&#160;<a class="footnote-backref" href="#fnref:422" title="Jump back to footnote 422 in the text">&#8617;</a></p>
+</li>
+<li id="fn:423">
+<p>第513话，救不了&#160;<a class="footnote-backref" href="#fnref:423" title="Jump back to footnote 423 in the text">&#8617;</a></p>
+</li>
+<li id="fn:424">
+<p>第514话，身上长蘑菇之菇&#160;<a class="footnote-backref" href="#fnref:424" title="Jump back to footnote 424 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:424" title="Jump back to footnote 424 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:424" title="Jump back to footnote 424 in the text">&#8617;</a></p>
+</li>
+<li id="fn:425">
+<p>卷五十三SBS&#160;<a class="footnote-backref" href="#fnref:425" title="Jump back to footnote 425 in the text">&#8617;</a></p>
+</li>
+<li id="fn:426">
+<p>第515话，女儿岛的冒险&#160;<a class="footnote-backref" href="#fnref:426" title="Jump back to footnote 426 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:426" title="Jump back to footnote 426 in the text">&#8617;</a></p>
+</li>
+<li id="fn:427">
+<p>第516话，海贼女帝，波雅·汉库珂&#160;<a class="footnote-backref" href="#fnref:427" title="Jump back to footnote 427 in the text">&#8617;</a></p>
+</li>
+<li id="fn:428">
+<p>第517话扉页，CP9的任务外报告 vol.24《驶出圣·白杨》&#160;<a class="footnote-backref" href="#fnref:428" title="Jump back to footnote 428 in the text">&#8617;</a></p>
+</li>
+<li id="fn:429">
+<p>第517话，入浴&#160;<a class="footnote-backref" href="#fnref:429" title="Jump back to footnote 429 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:429" title="Jump back to footnote 429 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:429" title="Jump back to footnote 429 in the text">&#8617;</a></p>
+</li>
+<li id="fn:430">
+<p>第518话，竞技台&#160;<a class="footnote-backref" href="#fnref:430" title="Jump back to footnote 430 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:430" title="Jump back to footnote 430 in the text">&#8617;</a></p>
+</li>
+<li id="fn:431">
+<p>第519话扉页，CP9的任务外报告 vol.26《CP的次世代在修行中！》&#160;<a class="footnote-backref" href="#fnref:431" title="Jump back to footnote 431 in the text">&#8617;</a></p>
+</li>
+<li id="fn:432">
+<p>第519话，王者资质&#160;<a class="footnote-backref" href="#fnref:432" title="Jump back to footnote 432 in the text">&#8617;</a></p>
+</li>
+<li id="fn:433">
+<p>第520话，戈耳工之眼&#160;<a class="footnote-backref" href="#fnref:433" title="Jump back to footnote 433 in the text">&#8617;</a></p>
+</li>
+<li id="fn:434">
+<p>第521话扉页，CP9的任务外报告 vol.27《追兵登陆  CP9追捕作战》&#160;<a class="footnote-backref" href="#fnref:434" title="Jump back to footnote 434 in the text">&#8617;</a></p>
+</li>
+<li id="fn:435">
+<p>第521话，天翔龙之蹄&#160;<a class="footnote-backref" href="#fnref:435" title="Jump back to footnote 435 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:435" title="Jump back to footnote 435 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:435" title="Jump back to footnote 435 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:435" title="Jump back to footnote 435 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:435" title="Jump back to footnote 435 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:435" title="Jump back to footnote 435 in the text">&#8617;</a></p>
+</li>
+<li id="fn:436">
+<p>第522话，致死之病&#160;<a class="footnote-backref" href="#fnref:436" title="Jump back to footnote 436 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:436" title="Jump back to footnote 436 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:436" title="Jump back to footnote 436 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:436" title="Jump back to footnote 436 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:436" title="Jump back to footnote 436 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:436" title="Jump back to footnote 436 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:436" title="Jump back to footnote 436 in the text">&#8617;</a></p>
+</li>
+<li id="fn:437">
+<p>第523话，地狱&#160;<a class="footnote-backref" href="#fnref:437" title="Jump back to footnote 437 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:437" title="Jump back to footnote 437 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:437" title="Jump back to footnote 437 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:437" title="Jump back to footnote 437 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:437" title="Jump back to footnote 437 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:437" title="Jump back to footnote 437 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:437" title="Jump back to footnote 437 in the text">&#8617;</a></p>
+</li>
+<li id="fn:438">
+<p>第524话扉页，CP9的任务外报告 vol.30《我是原部下罗布·路奇》&#160;<a class="footnote-backref" href="#fnref:438" title="Jump back to footnote 438 in the text">&#8617;</a></p>
+</li>
+<li id="fn:439">
+<p>第524话，无人可以阻止&#160;<a class="footnote-backref" href="#fnref:439" title="Jump back to footnote 439 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:439" title="Jump back to footnote 439 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:439" title="Jump back to footnote 439 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:439" title="Jump back to footnote 439 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:439" title="Jump back to footnote 439 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:439" title="Jump back to footnote 439 in the text">&#8617;</a></p>
+</li>
+<li id="fn:440">
+<p>第525话，海底监狱因佩尔地狱&#160;<a class="footnote-backref" href="#fnref:440" title="Jump back to footnote 440 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:440" title="Jump back to footnote 440 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:440" title="Jump back to footnote 440 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:440" title="Jump back to footnote 440 in the text">&#8617;</a></p>
+</li>
+<li id="fn:441">
+<p>第526话，大监狱的冒险&#160;<a class="footnote-backref" href="#fnref:441" title="Jump back to footnote 441 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:441" title="Jump back to footnote 441 in the text">&#8617;</a></p>
+</li>
+<li id="fn:442">
+<p>卷五十四SBS&#160;<a class="footnote-backref" href="#fnref:442" title="Jump back to footnote 442 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:442" title="Jump back to footnote 442 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:442" title="Jump back to footnote 442 in the text">&#8617;</a></p>
+</li>
+<li id="fn:443">
+<p>第527话，LEVEL1 红莲地狱&#160;<a class="footnote-backref" href="#fnref:443" title="Jump back to footnote 443 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:443" title="Jump back to footnote 443 in the text">&#8617;</a></p>
+</li>
+<li id="fn:444">
+<p>第528话，海侠甚平&#160;<a class="footnote-backref" href="#fnref:444" title="Jump back to footnote 444 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:444" title="Jump back to footnote 444 in the text">&#8617;</a></p>
+</li>
+<li id="fn:445">
+<p>第529话，LEVEL2 猛兽地狱&#160;<a class="footnote-backref" href="#fnref:445" title="Jump back to footnote 445 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:445" title="Jump back to footnote 445 in the text">&#8617;</a></p>
+</li>
+<li id="fn:446">
+<p>第530话，冲向地狱&#160;<a class="footnote-backref" href="#fnref:446" title="Jump back to footnote 446 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:446" title="Jump back to footnote 446 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:446" title="Jump back to footnote 446 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:446" title="Jump back to footnote 446 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:446" title="Jump back to footnote 446 in the text">&#8617;</a></p>
+</li>
+<li id="fn:447">
+<p>第531话，LEVEL3 饥饿地狱&#160;<a class="footnote-backref" href="#fnref:447" title="Jump back to footnote 447 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:447" title="Jump back to footnote 447 in the text">&#8617;</a></p>
+</li>
+<li id="fn:448">
+<p>第532话，狱卒兽人牛怪&#160;<a class="footnote-backref" href="#fnref:448" title="Jump back to footnote 448 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:448" title="Jump back to footnote 448 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:448" title="Jump back to footnote 448 in the text">&#8617;</a></p>
+</li>
+<li id="fn:449">
+<p>第533话，LEVEL4 焦热地狱&#160;<a class="footnote-backref" href="#fnref:449" title="Jump back to footnote 449 in the text">&#8617;</a></p>
+</li>
+<li id="fn:450">
+<p>第535话，朋友&#160;<a class="footnote-backref" href="#fnref:450" title="Jump back to footnote 450 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:450" title="Jump back to footnote 450 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:450" title="Jump back to footnote 450 in the text">&#8617;</a></p>
+</li>
+<li id="fn:451">
+<p>第536话，LEVEL5 极寒地狱&#160;<a class="footnote-backref" href="#fnref:451" title="Jump back to footnote 451 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:451" title="Jump back to footnote 451 in the text">&#8617;</a></p>
+</li>
+<li id="fn:452">
+<p>第537话，地狱逢佛&#160;<a class="footnote-backref" href="#fnref:452" title="Jump back to footnote 452 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:452" title="Jump back to footnote 452 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:452" title="Jump back to footnote 452 in the text">&#8617;</a></p>
+</li>
+<li id="fn:453">
+<p>第538话，LEVEL5.5 新人类乐园&#160;<a class="footnote-backref" href="#fnref:453" title="Jump back to footnote 453 in the text">&#8617;</a></p>
+</li>
+<li id="fn:454">
+<p>第539话，安普里奥·亢奋荷尔蒙&#160;<a class="footnote-backref" href="#fnref:454" title="Jump back to footnote 454 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:454" title="Jump back to footnote 454 in the text">&#8617;</a></p>
+</li>
+<li id="fn:455">
+<p>第540话，LEVEL6 无限地狱&#160;<a class="footnote-backref" href="#fnref:455" title="Jump back to footnote 455 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:455" title="Jump back to footnote 455 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:455" title="Jump back to footnote 455 in the text">&#8617;</a></p>
+</li>
+<li id="fn:456">
+<p>第541话，前所未有&#160;<a class="footnote-backref" href="#fnref:456" title="Jump back to footnote 456 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:456" title="Jump back to footnote 456 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:456" title="Jump back to footnote 456 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:456" title="Jump back to footnote 456 in the text">&#8617;</a></p>
+</li>
+<li id="fn:457">
+<p>第542话，以后才会被提到的另一件事&#160;<a class="footnote-backref" href="#fnref:457" title="Jump back to footnote 457 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:457" title="Jump back to footnote 457 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:457" title="Jump back to footnote 457 in the text">&#8617;</a></p>
+</li>
+<li id="fn:458">
+<p>第543话，草帽和黑胡子&#160;<a class="footnote-backref" href="#fnref:458" title="Jump back to footnote 458 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:458" title="Jump back to footnote 458 in the text">&#8617;</a></p>
+</li>
+<li id="fn:459">
+<p>第544话，地狱之门亦敞开&#160;<a class="footnote-backref" href="#fnref:459" title="Jump back to footnote 459 in the text">&#8617;</a></p>
+</li>
+<li id="fn:460">
+<p>第545话，朝向阳光照耀的自由世界&#160;<a class="footnote-backref" href="#fnref:460" title="Jump back to footnote 460 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:460" title="Jump back to footnote 460 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:460" title="Jump back to footnote 460 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:460" title="Jump back to footnote 460 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:460" title="Jump back to footnote 460 in the text">&#8617;</a></p>
+</li>
+<li id="fn:461">
+<p>第546话扉页，罗宾之“我要做过分的事了”最终章《解救奴隶的力量·革命军登场》&#160;<a class="footnote-backref" href="#fnref:461" title="Jump back to footnote 461 in the text">&#8617;</a></p>
+</li>
+<li id="fn:462">
+<p>第546话，鱼人海贼团船长“七武海”甚平&#160;<a class="footnote-backref" href="#fnref:462" title="Jump back to footnote 462 in the text">&#8617;</a></p>
+</li>
+<li id="fn:463">
+<p>第547话，攻岛&#160;<a class="footnote-backref" href="#fnref:463" title="Jump back to footnote 463 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:463" title="Jump back to footnote 463 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:463" title="Jump back to footnote 463 in the text">&#8617;</a></p>
+</li>
+<li id="fn:464">
+<p>第548话，谢谢&#160;<a class="footnote-backref" href="#fnref:464" title="Jump back to footnote 464 in the text">&#8617;</a></p>
+</li>
+<li id="fn:465">
+<p>第549话扉页，弗兰奇之“这礼拜的我不行了”最终章《Dr. 贝加班克出生的地方》&#160;<a class="footnote-backref" href="#fnref:465" title="Jump back to footnote 465 in the text">&#8617;</a></p>
+</li>
+<li id="fn:466">
+<p>第549话，出击之舰&#160;<a class="footnote-backref" href="#fnref:466" title="Jump back to footnote 466 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:466" title="Jump back to footnote 466 in the text">&#8617;</a></p>
+</li>
+<li id="fn:467">
+<p>第550话，海军总部&#160;<a class="footnote-backref" href="#fnref:467" title="Jump back to footnote 467 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:467" title="Jump back to footnote 467 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:467" title="Jump back to footnote 467 in the text">&#8617;</a></p>
+</li>
+<li id="fn:468">
+<p>第551话，四皇“白胡子”&#160;<a class="footnote-backref" href="#fnref:468" title="Jump back to footnote 468 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:468" title="Jump back to footnote 468 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:468" title="Jump back to footnote 468 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:468" title="Jump back to footnote 468 in the text">&#8617;</a></p>
+</li>
+<li id="fn:469">
+<p>第553话，顶尖决战&#160;<a class="footnote-backref" href="#fnref:469" title="Jump back to footnote 469 in the text">&#8617;</a></p>
+</li>
+<li id="fn:470">
+<p>第555话，奥兹和斗笠&#160;<a class="footnote-backref" href="#fnref:470" title="Jump back to footnote 470 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:470" title="Jump back to footnote 470 in the text">&#8617;</a></p>
+</li>
+<li id="fn:471">
+<p>卷五十七SBS&#160;<a class="footnote-backref" href="#fnref:471" title="Jump back to footnote 471 in the text">&#8617;</a></p>
+</li>
+<li id="fn:472">
+<p>第556话，正义必胜！！&#160;<a class="footnote-backref" href="#fnref:472" title="Jump back to footnote 472 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:472" title="Jump back to footnote 472 in the text">&#8617;</a></p>
+</li>
+<li id="fn:473">
+<p>第557话，路飞和白胡子&#160;<a class="footnote-backref" href="#fnref:473" title="Jump back to footnote 473 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:473" title="Jump back to footnote 473 in the text">&#8617;</a></p>
+</li>
+<li id="fn:474">
+<p>第558话，弟弟&#160;<a class="footnote-backref" href="#fnref:474" title="Jump back to footnote 474 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:474" title="Jump back to footnote 474 in the text">&#8617;</a></p>
+</li>
+<li id="fn:475">
+<p>第559话，天命&#160;<a class="footnote-backref" href="#fnref:475" title="Jump back to footnote 475 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:475" title="Jump back to footnote 475 in the text">&#8617;</a></p>
+</li>
+<li id="fn:476">
+<p>第560话，因佩尔地狱的囚犯们&#160;<a class="footnote-backref" href="#fnref:476" title="Jump back to footnote 476 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:476" title="Jump back to footnote 476 in the text">&#8617;</a></p>
+</li>
+<li id="fn:477">
+<p>第561话，路飞VS米霍克&#160;<a class="footnote-backref" href="#fnref:477" title="Jump back to footnote 477 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:477" title="Jump back to footnote 477 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:477" title="Jump back to footnote 477 in the text">&#8617;</a></p>
+</li>
+<li id="fn:478">
+<p>第562话，海贼大涡蜘蛛斯库亚德&#160;<a class="footnote-backref" href="#fnref:478" title="Jump back to footnote 478 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:478" title="Jump back to footnote 478 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
