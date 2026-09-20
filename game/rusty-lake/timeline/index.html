@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1750" class="md-skip">
           跳转至
         </a>
       
@@ -359,17 +359,6 @@
       目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        未知时间
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#1750" class="md-nav__link">
@@ -856,7 +845,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         信息来源
@@ -1042,12 +1031,28 @@
   color: #e08e6e;
   border-bottom: 1px solid #c47f5a;
 }
+
+.md-content .footnote-backref,
+.md-typeset .footnote-backref {
+  display: none !important;
+}
+
+/* 脚注序号：与锈湖配色统一，增强可见性 */
+.md-content .footnote ol > li::marker,
+.md-typeset .footnote ol > li::marker {
+  color: #c47f5a !important;      /* 铜锈红，与时间标签同色 */
+  font-weight: 700 !important;
+  font-size: 1.05em !important;
+}
+
+/* 兼容部分主题结构：脚注序号也可能是链接 */
+.md-content .footnote ol > li > a:first-child,
+.md-typeset .footnote ol > li > a:first-child {
+  color: #c47f5a !important;
+  font-weight: 700 !important;
+}
 </style>
 
-<h3 id="_1">未知时间</h3>
-<ul>
-<li>锈湖中央的天堂岛生活着<a href="../family-tree/%E8%89%BE%E5%85%B0%E5%BE%B7%E5%AE%B6%E6%97%8F/">艾兰德家族</a>，他们定期献祭长子以获得长生不老药</li>
-</ul>
 <h3 id="1750">1750</h3>
 <ul>
 <li><span class="tl">夏</span><br />
@@ -1494,12 +1499,12 @@
 <h3 id="1984">1984</h3>
 <ul>
 <li><span class="tl">某日</span><br />
-  萝丝用阿尔伯特留下的装置和过去的自己建立了联系<sup id="fnref2:14"><a class="footnote-ref" href="#fn:14">14</a></sup>
+  萝丝用阿尔伯特留下的装置和过去的自己建立了联系<sup id="fnref2:14"><a class="footnote-ref" href="#fn:14">14</a></sup><br />
   通过执行复苏程序，萝丝使阿尔伯特复活。萝丝化为跨越时间的湖底之树，在过去复活了劳拉<sup id="fnref3:14"><a class="footnote-ref" href="#fn:14">14</a></sup></li>
 </ul>
 <hr style="border-top: 2px solid #000000;">
 
-<h1 id="_2">信息来源</h1>
+<h1 id="_1">信息来源</h1>
 <div class="footnote">
 <hr />
 <ol>
