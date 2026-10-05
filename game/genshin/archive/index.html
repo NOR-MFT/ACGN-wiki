@@ -534,6 +534,22 @@
   .ys-library .ys-main-title { font-size: 2.2rem; }
   .ys-library .ys-nation { font-size: 1.6rem; }
   .ys-library .ys-region { font-size: 1.2rem; }
+
+  /* 副标题在移动端缩小并强制单行显示 */
+  .ys-library .ys-subtitle {
+    font-size: 1rem;
+    white-space: nowrap;       /* 禁止换行 */
+    letter-spacing: 0;         /* 减小字间距，节省横向空间 */
+    margin-bottom: 25px;
+  }
+}
+
+/* 更小屏幕进一步缩小 */
+@media (max-width: 480px) {
+  .ys-library .ys-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 0;
+  }
 }
 </style>
 

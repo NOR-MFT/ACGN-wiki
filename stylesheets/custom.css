@@ -110,7 +110,7 @@ body {
 
 .md-sidebar--primary {
     width: 160px !important;
-    flex: 0 0 160px !important;  
+    flex: 0 0 160px !important;
 }
 
 /* 右侧边栏（目录） */
@@ -133,30 +133,36 @@ body {
 }
 
 
-/* ========== 移动端适配（最终修复） ========== */
+/* ========== 移动端适配（正文铺满屏幕） ========== */
 @media (max-width: 768px) {
     html, body { font-size: 15px; }
 
+    /* ===== 正文完全填充屏幕宽度 ===== */
     .md-main__inner {
-        margin: 0 8px;
-        padding: 16px 12px;
-        border-radius: 12px;
-        background-color: rgba(255, 255, 255, 0.4);
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+    }
+
+    .md-content {
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .md-content__inner {
+        margin: 0 !important;
+        padding: 8px 4px !important;   /* 保留极小边距，避免文字贴边；如需完全贴边可改成 8px 0 */
     }
 
     /* 隐藏移动端遮罩层，让侧边栏可点击 */
     .md-overlay {
         display: none !important;
-    } 
-
-    /* 🔥 核心修复：确保侧边栏绝对高于遮罩层并可点击 */
-    .md-overlay {
-        z-index: 1000 !important;        /* 遮罩层调低 */
+        z-index: 1000 !important;
     }
     .md-sidebar {
-        z-index: 1200 !important;        /* 侧边栏远高于遮罩 */
+        z-index: 1200 !important;
     }
-    /* 强制侧边栏内所有元素可接收点击事件 */
     .md-sidebar--open * {
         pointer-events: auto !important;
     }
