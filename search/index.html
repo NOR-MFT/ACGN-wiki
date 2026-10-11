@@ -23,7 +23,7 @@
     
     
       
-        <title>🔍 搜索 - ACGN档案馆</title>
+        <title>全站搜索 - ACGN档案馆</title>
       
     
     
@@ -75,11 +75,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -112,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🔍 搜索
+              全站搜索
             
           </span>
         </div>
@@ -324,8 +319,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -365,8 +358,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -383,20 +374,238 @@
 
 
 
-<h1 id="_1">全站搜索</h1>
-<p><link href="../pagefind/pagefind-ui.css" rel="stylesheet"></p>
-<script src="../pagefind/pagefind-ui.js"></script>
+  <h1>🔍 搜索</h1>
 
-<div id="search"></div>
+<style>
+.orama-search-wrapper {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+#orama-search-input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 2px solid #c4a882;
+  border-radius: 8px;
+  background: #fdfaf3;
+  color: #3e2e1f;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s;
+}
+#orama-search-input:focus {
+  border-color: #8b5a3c;
+  box-shadow: 0 0 0 3px rgba(139, 90, 60, 0.15);
+}
+#orama-search-results { margin-top: 24px; }
+.search-result-item {
+  padding: 14px 20px;
+  margin-bottom: 10px;
+  background: #f9f3e8;
+  border: 1px solid #d4c3a3;
+  border-left: 4px solid #8b5a3c;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.search-result-item:hover {
+  box-shadow: 0 4px 12px rgba(80, 50, 20, 0.12);
+  transform: translateX(2px);
+}
+.search-result-item .result-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4e3620 !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+.search-result-item .result-title:hover { color: #8b5a3c !important; }
+.search-result-item .result-index {
+  font-size: 12px;
+  color: #8b5a3c;
+  margin-left: 8px;
+  font-weight: 500;
+}
+.search-result-item .result-snippet {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #5c432b;
+  line-height: 1.7;
+  text-indent: 0 !important;
+  text-align: left !important;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.search-result-item mark {
+  background: rgba(212, 168, 116, 0.6);
+  color: #3e2e1f;
+  padding: 1px 3px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+.search-status {
+  color: #8b7355;
+  font-style: italic;
+  margin-top: 16px;
+}
+</style>
 
-<script>
-window.addEventListener('DOMContentLoaded', () => {
-    new PagefindUI({
-        element: "#search",
-        showSubResults: true,
-        showImages: false
-    });
-});
+<div class="orama-search-wrapper">
+  <input type="text" id="orama-search-input" placeholder="输入关键词搜索（完全匹配）..." autocomplete="off" />
+  <div id="orama-search-results">
+    <p class="search-status">正在加载索引…</p>
+  </div>
+</div>
+
+<script type="module">
+  let documents = []
+  const input = document.getElementById('orama-search-input')
+  const container = document.getElementById('orama-search-results')
+
+  function getIndexUrl() {
+    const path = window.location.pathname
+    if (path.includes('/ACGN-wiki/')) return '/ACGN-wiki/search-index.json'
+    return '../search-index.json'
+  }
+
+  async function loadIndex() {
+    try {
+      const url = getIndexUrl()
+      const response = await fetch(url)
+      if (!response.ok) throw new Error('索引文件不存在 (' + response.status + ')')
+      documents = await response.json()
+      console.log('✅ 索引已加载，共', documents.length, '条')
+      container.innerHTML = '<p class="search-status">请输入关键词开始搜索（支持完全匹配）。</p>'
+    } catch (err) {
+      console.error('索引加载失败:', err)
+      container.innerHTML = '<p class="search-status">索引加载失败：' + err.message + '</p>'
+    }
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+  }
+
+  function highlight(text, query) {
+    if (!query) return escapeHtml(text)
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    const parts = text.split(new RegExp(`(${escaped})`, 'gi'))
+    return parts.map(part =>
+      part.toLowerCase() === query.toLowerCase()
+        ? `<mark>${escapeHtml(part)}</mark>`
+        : escapeHtml(part)
+    ).join('')
+  }
+
+  // 从指定位置截取上下文
+  function buildSnippetAtPosition(content, position, query, contextChars = 70) {
+    if (position < 0) {
+      return highlight(content.substring(0, 140), query)
+    }
+    const start = Math.max(0, position - contextChars)
+    const end = Math.min(content.length, position + query.length + contextChars)
+    let snippet = content.substring(start, end)
+    if (start > 0) snippet = '…' + snippet
+    if (end < content.length) snippet = snippet + '…'
+    return highlight(snippet, query)
+  }
+
+  // ✅ 核心：每个匹配位置都生成一条结果
+  function searchDocuments(query) {
+    if (!query.trim()) return []
+    const lowerQuery = query.toLowerCase()
+    const results = []
+
+    for (const doc of documents) {
+      const lowerContent = doc.content.toLowerCase()
+      const lowerTitle = doc.title.toLowerCase()
+      const titleMatch = lowerTitle.includes(lowerQuery)
+
+      // 找出正文中所有匹配位置
+      const positions = []
+      let pos = 0
+      while ((pos = lowerContent.indexOf(lowerQuery, pos)) !== -1) {
+        positions.push(pos)
+        pos += lowerQuery.length
+      }
+
+      if (positions.length === 0 && !titleMatch) continue
+
+      // 每个匹配位置生成一条结果
+      if (positions.length > 0) {
+        positions.forEach((position, idx) => {
+          results.push({
+            doc,
+            position,
+            index: idx + 1,
+            total: positions.length,
+            titleMatch
+          })
+        })
+      } else {
+        // 仅标题匹配
+        results.push({
+          doc,
+          position: -1,
+          index: 1,
+          total: 1,
+          titleMatch: true
+        })
+      }
+    }
+
+    // 排序：标题匹配优先；相同文档内按匹配顺序
+    results.sort((a, b) => {
+      if (a.titleMatch && !b.titleMatch) return -1
+      if (!a.titleMatch && b.titleMatch) return 1
+      if (a.doc.url !== b.doc.url) return 0
+      return a.index - b.index
+    })
+
+    return results
+  }
+
+  function renderResults(results, query) {
+    if (results.length === 0) {
+      container.innerHTML = '<p class="search-status">未找到包含「' + escapeHtml(query) + '」的结果。</p>'
+      return
+    }
+
+    // 统计页面数
+    const uniqueFiles = new Set(results.map(r => r.doc.url))
+    const summary = `找到 ${results.length} 处匹配，来自 ${uniqueFiles.size} 个页面。`
+
+    container.innerHTML = `<p class="search-status">${summary}</p>` +
+      results.map(r => {
+        const snippet = buildSnippetAtPosition(r.doc.content, r.position, query)
+        // 只在同一文档有多个匹配时显示序号
+        const indexTag = r.total > 1
+          ? `<span class="result-index">第 ${r.index} / ${r.total} 处</span>`
+          : ''
+        return `<div class="search-result-item">
+          <a class="result-title" href="${r.doc.url}">${highlight(r.doc.title, query)}</a>${indexTag}
+          <p class="result-snippet">${snippet}</p>
+        </div>`
+      }).join('')
+  }
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    await loadIndex()
+    let timer
+    input.addEventListener('input', (e) => {
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        const q = e.target.value.trim()
+        if (!q) {
+          container.innerHTML = '<p class="search-status">请输入关键词开始搜索（支持完全匹配）。</p>'
+          return
+        }
+        const results = searchDocuments(q)
+        renderResults(results, q)
+      }, 150)
+    })
+  })
 </script>
 
 
@@ -404,6 +613,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+  
+  
 
 
 
